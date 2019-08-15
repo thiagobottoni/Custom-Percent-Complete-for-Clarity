@@ -1,0 +1,43 @@
+<gel:script 
+   xmlns:core="jelly:core" 
+   xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary" 
+   xmlns:sql="jelly:sql" 
+   xmlns:email="jelly:email" 
+   xmlns:file="jelly:com.niku.union.gel.FileTagLibrary" 
+   xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" 
+   xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" 
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+   xmlns:xog="http://www.niku.com/xog" 
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<!-- Parameters -->
+	<gel:parameter default="xog" var="xogUser"/>
+	
+	<!-- Debug: Set to 1 if you need to see debug messages or 0 if you don't (Don't let debug set to 1 in production) -->
+	<core:set value="1" var="debug"/>
+		
+	<!-- Getting session ID for the user defined above (var xogUser) -->
+	<core:new className="com.niku.union.security.DefaultSecurityIdentifier" var="securityId"/>
+	<core:invokeStatic className="com.niku.union.security.UserSessionControllerFactory" method="getInstance" var="xogInstance"/>
+	<core:set var="securityId" value="${xogInstance.init(xogUser, securityId)}"/>
+	<core:set var="sessionID" value="${securityId.getSessionId()}"/>
+
+	<!-- Checking if user can log in to Clarity -->
+	<core:choose>
+		<core:when test="${sessionID == null}">
+			<gel:log level="error" message="Cannot log in to Clarity with user ${xogUser}!"/>
+		</core:when>
+		<core:otherwise>
+			<core:if test="${ debug == 1 }">
+				<gel:log level="debug" message="Logged in with user: ${xogUser}"/>
+				<gel:log level="debug" message="Session ID: ${sessionID}"/>
+			</core:if>
+		</core:otherwise>
+	</core:choose>
+	
+	<!-- Persisting variables -->
+	<gel:persist scope="INSTANCE" value="${sessionID}" var="sessionID"/>
+	<gel:persist scope="INSTANCE" value="${debug}" var="debug"/>
+	
+</gel:script>
