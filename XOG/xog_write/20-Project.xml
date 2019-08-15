@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+	<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<contentPack update="true">
+		<objects>
+			<object code="project" raiseEvents="true" source="niku.com" update="true">
+				<nls description="L'objecte de projecte" languageCode="ca" name="Projecte"/>
+				<nls description="Objekt projektu" languageCode="cs" name="Projekt"/>
+				<nls description="Projektobjektet" languageCode="da" name="Projekt"/>
+				<nls description="Das Objekt 'Projekt'" languageCode="de" name="Projekt"/>
+				<nls description="The Project Object" languageCode="en" name="Project"/>
+				<nls description="El objeto de proyecto" languageCode="es" name="Proyecto"/>
+				<nls description="Projektin objekti" languageCode="fi" name="Projekti"/>
+				<nls description="Objet Projet" languageCode="fr" name="Projet"/>
+				<nls description="A projekt objektum" languageCode="hu" name="Projekt"/>
+				<nls description="Oggetto progetto" languageCode="it" name="Progetto"/>
+				<nls description="プロジェクト オブジェクト" languageCode="ja" name="プロジェクト"/>
+				<nls description="프로젝트 개체" languageCode="ko" name="프로젝트"/>
+				<nls description="Het projectobject" languageCode="nl" name="Project"/>
+				<nls description="Prosjektobjektet" languageCode="no" name="Prosjekt"/>
+				<nls description="Obiekt projektu" languageCode="pl" name="Projekt"/>
+				<nls description="O objeto Projeto" languageCode="pt" name="Projeto"/>
+				<nls description="Объект Проект" languageCode="ru" name="Проект"/>
+				<nls description="Projektobjektet" languageCode="sv" name="Projekt"/>
+				<nls description="Proje Nesnesi" languageCode="tr" name="Proje"/>
+				<nls description="项目对象" languageCode="zh" name="项目"/>
+				<nls description="專案物件" languageCode="zh_TW" name="專案"/>
+				<customAttribute active="true" apiAlias="t_CPCMETHOD" code="cpc_calc_method" column="cpc_calc_method" constant="false" currencyConnected="false"
+      custom="true" dataSize="30" dataType="string" dwEnabled="false" dwTrendEnabled="false" editable="true" extendedType="lookup"
+      lookupType="CPC_CALC_METHODS" multiValued="false" partitionCode="NIKU.ROOT" partitionMode="PARTITION_AND_ANSTRS_DESDNTS"
+      picklistCandidate="true" presenceRequired="false" private="false" required="false" unique="false" virtual="false">
+					<nls languageCode="ca" name="Custom % Complete Calculation"/>
+					<nls languageCode="cs" name="Custom % Complete Calculation"/>
+					<nls languageCode="da" name="Custom % Complete Calculation"/>
+					<nls languageCode="de" name="Custom % Complete Calculation"/>
+					<nls description="Custom % Complete calculation method" languageCode="en" name="Custom % Complete Calculation"/>
+					<nls languageCode="es" name="Custom % Complete Calculation"/>
+					<nls languageCode="fi" name="Custom % Complete Calculation"/>
+					<nls languageCode="fr" name="Custom % Complete Calculation"/>
+					<nls languageCode="hu" name="Custom % Complete Calculation"/>
+					<nls languageCode="it" name="Custom % Complete Calculation"/>
+					<nls languageCode="ja" name="Custom % Complete Calculation"/>
+					<nls languageCode="ko" name="Custom % Complete Calculation"/>
+					<nls languageCode="nl" name="Custom % Complete Calculation"/>
+					<nls languageCode="no" name="Custom % Complete Calculation"/>
+					<nls languageCode="pl" name="Custom % Complete Calculation"/>
+					<nls description="Método de cálculo do % Concluído personalizado" languageCode="pt" name="Cálculo de % Concluído Personalizado"/>
+					<nls languageCode="ru" name="Custom % Complete Calculation"/>
+					<nls languageCode="sv" name="Custom % Complete Calculation"/>
+					<nls languageCode="tr" name="Custom % Complete Calculation"/>
+					<nls languageCode="zh" name="Custom % Complete Calculation"/>
+					<nls languageCode="zh_TW" name="Custom % Complete Calculation"/>
+					<default value="NOT_APPLICABLE"/>
+				</customAttribute>
+			</object>
+		</objects>
+	</contentPack>
+</NikuDataBus>

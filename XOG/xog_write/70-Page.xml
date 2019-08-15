@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+	<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<contentPack update="true">
+		<pages update="true">
+			<page active="true" code="cpc_transp_calc" customizable="true" hidden="false" isSystem="false" layout="row-layout" linkable="true"
+    objectType="SYSTEM" personalizable="false" source="customer" space="cpc_transp_calc" template="application" update="true">
+				<nls languageCode="ca" name="Custom % Complete Control Panel"/>
+				<nls languageCode="cs" name="Custom % Complete Control Panel"/>
+				<nls languageCode="da" name="Custom % Complete Control Panel"/>
+				<nls languageCode="de" name="Custom % Complete Control Panel"/>
+				<nls languageCode="en" name="Custom % Complete Control Panel"/>
+				<nls languageCode="es" name="Custom % Complete Control Panel"/>
+				<nls languageCode="fi" name="Custom % Complete Control Panel"/>
+				<nls languageCode="fr" name="Custom % Complete Control Panel"/>
+				<nls languageCode="hu" name="Custom % Complete Control Panel"/>
+				<nls languageCode="it" name="Custom % Complete Control Panel"/>
+				<nls languageCode="ja" name="Custom % Complete Control Panel"/>
+				<nls languageCode="ko" name="Custom % Complete Control Panel"/>
+				<nls languageCode="nl" name="Custom % Complete Control Panel"/>
+				<nls languageCode="no" name="Custom % Complete Control Panel"/>
+				<nls languageCode="pl" name="Custom % Complete Control Panel"/>
+				<nls languageCode="pt" name="Painel de Controle do % Concluído"/>
+				<nls languageCode="ru" name="Custom % Complete Control Panel"/>
+				<nls languageCode="sv" name="Custom % Complete Control Panel"/>
+				<nls languageCode="tr" name="Custom % Complete Control Panel"/>
+				<nls languageCode="zh" name="Custom % Complete Control Panel"/>
+				<nls languageCode="zh_TW" name="Custom % Complete Control Panel"/>
+				<portlet code="cpc_prj_calcs" col="0" required="false" row="0" source="customer"/>
+				<portlet code="cpc_prj_calc" col="0" required="false" row="1" source="customer"/>
+				<OBSAssocs complete="false"/>
+				<Security/>
+			</page>
+		</pages>
+	</contentPack>
+</NikuDataBus>

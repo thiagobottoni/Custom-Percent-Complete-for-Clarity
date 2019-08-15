@@ -1,0 +1,2081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+	<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<contentPack update="true">
+		<portlets update="true">
+			<gridPortlet allowConfigure="true" allowConfigureLabel="true" allowEditing="false" category="businessIntelligence" code="cpc_prj_calc"
+    dataProviderId="cpc_calc_prj" dataProviderPartitionId="NIKU.ROOT" dataProviderType="nsql" defaultSortColumn="prid" defaultSortOrder="ascending"
+    forceFilter="true" gridAttributeProtection="1" hasEditableColumn="false" metricsLocation="bottom" objectType="SYSTEM" pageSize="20"
+    querySource="customer" showAltValueText="false" showColumnCurrencyCode="false" source="customer">
+				<nls languageCode="de" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="no" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="fi" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="ru" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="sv" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="ko" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="pt" name="% Concluído Personalizado por Projeto"/>
+				<nls languageCode="en" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="it" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="fr" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="hu" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="es" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="zh" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="cs" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="zh_TW" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="ja" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="pl" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="da" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="ca" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="nl" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="tr" name="Custom % Complete Calculation by Project"/>
+				<column align="right" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="prid" isEditable="false" position="1"
+      showHeaderLabel="true" showSeparator="true" type="label">
+					<nls languageCode="de" name="Task ID"/>
+					<nls languageCode="no" name="Task ID"/>
+					<nls languageCode="fi" name="Task ID"/>
+					<nls languageCode="ru" name="Task ID"/>
+					<nls languageCode="sv" name="Task ID"/>
+					<nls languageCode="ko" name="Task ID"/>
+					<nls languageCode="pt" name="ID da Tarefa"/>
+					<nls languageCode="en" name="Task ID"/>
+					<nls languageCode="it" name="Task ID"/>
+					<nls languageCode="fr" name="Task ID"/>
+					<nls languageCode="hu" name="Task ID"/>
+					<nls languageCode="es" name="Task ID"/>
+					<nls languageCode="zh" name="Task ID"/>
+					<nls languageCode="cs" name="Task ID"/>
+					<nls languageCode="zh_TW" name="Task ID"/>
+					<nls languageCode="ja" name="Task ID"/>
+					<nls languageCode="pl" name="Task ID"/>
+					<nls languageCode="da" name="Task ID"/>
+					<nls languageCode="ca" name="Task ID"/>
+					<nls languageCode="nl" name="Task ID"/>
+					<nls languageCode="tr" name="Task ID"/>
+				</column>
+				<column align="left" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="prname" isEditable="false" link="cpc_to_task"
+      linkTarget="new" position="2" showHeaderLabel="true" showSeparator="false" type="label">
+					<nls languageCode="de" name="Task Name"/>
+					<nls languageCode="no" name="Task Name"/>
+					<nls languageCode="fi" name="Task Name"/>
+					<nls languageCode="ru" name="Task Name"/>
+					<nls languageCode="sv" name="Task Name"/>
+					<nls languageCode="ko" name="Task Name"/>
+					<nls languageCode="pt" name="Nome da Tarefa"/>
+					<nls languageCode="en" name="Task Name"/>
+					<nls languageCode="it" name="Task Name"/>
+					<nls languageCode="fr" name="Task Name"/>
+					<nls languageCode="hu" name="Task Name"/>
+					<nls languageCode="es" name="Task Name"/>
+					<nls languageCode="zh" name="Task Name"/>
+					<nls languageCode="cs" name="Task Name"/>
+					<nls languageCode="zh_TW" name="Task Name"/>
+					<nls languageCode="ja" name="Task Name"/>
+					<nls languageCode="pl" name="Task Name"/>
+					<nls languageCode="da" name="Task Name"/>
+					<nls languageCode="ca" name="Task Name"/>
+					<nls languageCode="nl" name="Task Name"/>
+					<nls languageCode="tr" name="Task Name"/>
+				</column>
+				<column align="left" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="task_type" isEditable="false" position="3"
+      showHeaderLabel="true" showSeparator="false" type="label">
+					<nls languageCode="de" name="Task Type"/>
+					<nls languageCode="no" name="Task Type"/>
+					<nls languageCode="fi" name="Task Type"/>
+					<nls languageCode="ru" name="Task Type"/>
+					<nls languageCode="sv" name="Task Type"/>
+					<nls languageCode="ko" name="Task Type"/>
+					<nls languageCode="pt" name="Tipo"/>
+					<nls languageCode="en" name="Task Type"/>
+					<nls languageCode="it" name="Task Type"/>
+					<nls languageCode="fr" name="Task Type"/>
+					<nls languageCode="hu" name="Task Type"/>
+					<nls languageCode="es" name="Task Type"/>
+					<nls languageCode="zh" name="Task Type"/>
+					<nls languageCode="cs" name="Task Type"/>
+					<nls languageCode="zh_TW" name="Task Type"/>
+					<nls languageCode="ja" name="Task Type"/>
+					<nls languageCode="pl" name="Task Type"/>
+					<nls languageCode="da" name="Task Type"/>
+					<nls languageCode="ca" name="Task Type"/>
+					<nls languageCode="nl" name="Task Type"/>
+					<nls languageCode="tr" name="Task Type"/>
+				</column>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="cpc_duration" isEditable="false" position="4"
+      showHeaderLabel="true" showSeparator="true" type="label">
+					<nls languageCode="de" name="Duration"/>
+					<nls languageCode="no" name="Duration"/>
+					<nls languageCode="fi" name="Duration"/>
+					<nls languageCode="ru" name="Duration"/>
+					<nls languageCode="sv" name="Duration"/>
+					<nls languageCode="ko" name="Duration"/>
+					<nls languageCode="pt" name="Duração"/>
+					<nls languageCode="en" name="Duration"/>
+					<nls languageCode="it" name="Duration"/>
+					<nls languageCode="fr" name="Duration"/>
+					<nls languageCode="hu" name="Duration"/>
+					<nls languageCode="es" name="Duration"/>
+					<nls languageCode="zh" name="Duration"/>
+					<nls languageCode="cs" name="Duration"/>
+					<nls languageCode="zh_TW" name="Duration"/>
+					<nls languageCode="ja" name="Duration"/>
+					<nls languageCode="pl" name="Duration"/>
+					<nls languageCode="da" name="Duration"/>
+					<nls languageCode="ca" name="Duration"/>
+					<nls languageCode="nl" name="Duration"/>
+					<nls languageCode="tr" name="Duration"/>
+				</column>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="prpctcomplete" extType="calcPercent"
+      isEditable="false" position="5" showHeaderLabel="true" showSeparator="true" type="label">
+					<nls languageCode="de" name="% Complete"/>
+					<nls languageCode="no" name="% Complete"/>
+					<nls languageCode="fi" name="% Complete"/>
+					<nls languageCode="ru" name="% Complete"/>
+					<nls languageCode="sv" name="% Complete"/>
+					<nls languageCode="ko" name="% Complete"/>
+					<nls languageCode="pt" name="% Concluído"/>
+					<nls languageCode="en" name="% Complete"/>
+					<nls languageCode="it" name="% Complete"/>
+					<nls languageCode="fr" name="% Complete"/>
+					<nls languageCode="hu" name="% Complete"/>
+					<nls languageCode="es" name="% Complete"/>
+					<nls languageCode="zh" name="% Complete"/>
+					<nls languageCode="cs" name="% Complete"/>
+					<nls languageCode="zh_TW" name="% Complete"/>
+					<nls languageCode="ja" name="% Complete"/>
+					<nls languageCode="pl" name="% Complete"/>
+					<nls languageCode="da" name="% Complete"/>
+					<nls languageCode="ca" name="% Complete"/>
+					<nls languageCode="nl" name="% Complete"/>
+					<nls languageCode="tr" name="% Complete"/>
+				</column>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="cpc_days_complete" formatPattern="2"
+      isEditable="false" position="6" showHeaderLabel="true" showSeparator="true" type="label">
+					<nls languageCode="de" name="Days Complete"/>
+					<nls languageCode="no" name="Days Complete"/>
+					<nls languageCode="fi" name="Days Complete"/>
+					<nls languageCode="ru" name="Days Complete"/>
+					<nls languageCode="sv" name="Days Complete"/>
+					<nls languageCode="ko" name="Days Complete"/>
+					<nls languageCode="pt" name="Dias Concluídos"/>
+					<nls languageCode="en" name="Days Complete"/>
+					<nls languageCode="it" name="Days Complete"/>
+					<nls languageCode="fr" name="Days Complete"/>
+					<nls languageCode="hu" name="Days Complete"/>
+					<nls languageCode="es" name="Days Complete"/>
+					<nls languageCode="zh" name="Days Complete"/>
+					<nls languageCode="cs" name="Days Complete"/>
+					<nls languageCode="zh_TW" name="Days Complete"/>
+					<nls languageCode="ja" name="Days Complete"/>
+					<nls languageCode="pl" name="Days Complete"/>
+					<nls languageCode="da" name="Days Complete"/>
+					<nls languageCode="ca" name="Days Complete"/>
+					<nls languageCode="nl" name="Days Complete"/>
+					<nls languageCode="tr" name="Days Complete"/>
+				</column>
+				<column align="left" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="calculation" isEditable="false" position="7"
+      showHeaderLabel="true" showSeparator="false" type="label">
+					<nls languageCode="de" name="Calculation"/>
+					<nls languageCode="no" name="Calculation"/>
+					<nls languageCode="fi" name="Calculation"/>
+					<nls languageCode="ru" name="Calculation"/>
+					<nls languageCode="sv" name="Calculation"/>
+					<nls languageCode="ko" name="Calculation"/>
+					<nls languageCode="pt" name="Cálculo"/>
+					<nls languageCode="en" name="Calculation"/>
+					<nls languageCode="it" name="Calculation"/>
+					<nls languageCode="fr" name="Calculation"/>
+					<nls languageCode="hu" name="Calculation"/>
+					<nls languageCode="es" name="Calculation"/>
+					<nls languageCode="zh" name="Calculation"/>
+					<nls languageCode="cs" name="Calculation"/>
+					<nls languageCode="zh_TW" name="Calculation"/>
+					<nls languageCode="ja" name="Calculation"/>
+					<nls languageCode="pl" name="Calculation"/>
+					<nls languageCode="da" name="Calculation"/>
+					<nls languageCode="ca" name="Calculation"/>
+					<nls languageCode="nl" name="Calculation"/>
+					<nls languageCode="tr" name="Calculation"/>
+				</column>
+				<column align="left" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="description" isEditable="false" position="8"
+      showHeaderLabel="true" showSeparator="false" type="label">
+					<nls languageCode="de" name="Description"/>
+					<nls languageCode="no" name="Description"/>
+					<nls languageCode="fi" name="Description"/>
+					<nls languageCode="ru" name="Description"/>
+					<nls languageCode="sv" name="Description"/>
+					<nls languageCode="ko" name="Description"/>
+					<nls languageCode="pt" name="Descrição"/>
+					<nls languageCode="en" name="Description"/>
+					<nls languageCode="it" name="Description"/>
+					<nls languageCode="fr" name="Description"/>
+					<nls languageCode="hu" name="Description"/>
+					<nls languageCode="es" name="Description"/>
+					<nls languageCode="zh" name="Description"/>
+					<nls languageCode="cs" name="Description"/>
+					<nls languageCode="zh_TW" name="Description"/>
+					<nls languageCode="ja" name="Description"/>
+					<nls languageCode="pl" name="Description"/>
+					<nls languageCode="da" name="Description"/>
+					<nls languageCode="ca" name="Description"/>
+					<nls languageCode="nl" name="Description"/>
+					<nls languageCode="tr" name="Description"/>
+				</column>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="cpc_update" isEditable="false" position="9"
+      showHeaderLabel="true" showSeparator="true" type="image">
+					<nls languageCode="de" name="Needs Update"/>
+					<nls languageCode="no" name="Needs Update"/>
+					<nls languageCode="fi" name="Needs Update"/>
+					<nls languageCode="ru" name="Needs Update"/>
+					<nls languageCode="sv" name="Needs Update"/>
+					<nls languageCode="ko" name="Needs Update"/>
+					<nls languageCode="pt" name="Atualizar?"/>
+					<nls languageCode="en" name="Needs Update"/>
+					<nls languageCode="it" name="Needs Update"/>
+					<nls languageCode="fr" name="Needs Update"/>
+					<nls languageCode="hu" name="Needs Update"/>
+					<nls languageCode="es" name="Needs Update"/>
+					<nls languageCode="zh" name="Needs Update"/>
+					<nls languageCode="cs" name="Needs Update"/>
+					<nls languageCode="zh_TW" name="Needs Update"/>
+					<nls languageCode="ja" name="Needs Update"/>
+					<nls languageCode="pl" name="Needs Update"/>
+					<nls languageCode="da" name="Needs Update"/>
+					<nls languageCode="ca" name="Needs Update"/>
+					<nls languageCode="nl" name="Needs Update"/>
+					<nls languageCode="tr" name="Needs Update"/>
+				</column>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="cpc_exclude" isEditable="false" position="10"
+      showHeaderLabel="true" showSeparator="true" type="image">
+					<nls languageCode="no" name="Exclude from % Complete"/>
+					<nls languageCode="de" name="Exclude from % Complete"/>
+					<nls languageCode="sv" name="Exclude from % Complete"/>
+					<nls languageCode="ru" name="Exclude from % Complete"/>
+					<nls languageCode="fi" name="Exclude from % Complete"/>
+					<nls languageCode="pt" name="Excluir?"/>
+					<nls languageCode="ko" name="Exclude from % Complete"/>
+					<nls languageCode="en" name="Exclude"/>
+					<nls languageCode="it" name="Exclude from % Complete"/>
+					<nls languageCode="fr" name="Exclude from % Complete"/>
+					<nls languageCode="hu" name="Exclude from % Complete"/>
+					<nls languageCode="es" name="Exclude from % Complete"/>
+					<nls languageCode="zh" name="Exclude from % Complete"/>
+					<nls languageCode="cs" name="Exclude from % Complete"/>
+					<nls languageCode="zh_TW" name="Exclude from % Complete"/>
+					<nls languageCode="ja" name="Exclude from % Complete"/>
+					<nls languageCode="pl" name="Exclude from % Complete"/>
+					<nls languageCode="da" name="Exclude from % Complete"/>
+					<nls languageCode="ca" name="Exclude from % Complete"/>
+					<nls languageCode="tr" name="Exclude from % Complete"/>
+					<nls languageCode="nl" name="Exclude from % Complete"/>
+				</column>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="task_level" isEditable="false" position="11"
+      showHeaderLabel="true" showSeparator="true" type="label">
+					<nls languageCode="no" name="Level"/>
+					<nls languageCode="de" name="Level"/>
+					<nls languageCode="sv" name="Level"/>
+					<nls languageCode="ru" name="Level"/>
+					<nls languageCode="fi" name="Level"/>
+					<nls languageCode="pt" name="Level"/>
+					<nls languageCode="ko" name="Level"/>
+					<nls languageCode="en" name="WBS Level"/>
+					<nls languageCode="it" name="Level"/>
+					<nls languageCode="fr" name="Level"/>
+					<nls languageCode="hu" name="Level"/>
+					<nls languageCode="zh" name="Level"/>
+					<nls languageCode="es" name="Level"/>
+					<nls languageCode="cs" name="Level"/>
+					<nls languageCode="zh_TW" name="Level"/>
+					<nls languageCode="ja" name="Level"/>
+					<nls languageCode="pl" name="Level"/>
+					<nls languageCode="da" name="Level"/>
+					<nls languageCode="tr" name="Level"/>
+					<nls languageCode="nl" name="Level"/>
+					<nls languageCode="ca" name="Level"/>
+				</column>
+				<column align="left" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="wbs" isEditable="false" position="12"
+      showHeaderLabel="true" showSeparator="true" type="label">
+					<nls languageCode="de" name="WBS Path"/>
+					<nls languageCode="no" name="WBS Path"/>
+					<nls languageCode="fi" name="WBS Path"/>
+					<nls languageCode="ru" name="WBS Path"/>
+					<nls languageCode="sv" name="WBS Path"/>
+					<nls languageCode="ko" name="WBS Path"/>
+					<nls languageCode="pt" name="WBS Path"/>
+					<nls languageCode="en" name="WBS Path"/>
+					<nls languageCode="it" name="WBS Path"/>
+					<nls languageCode="fr" name="WBS Path"/>
+					<nls languageCode="hu" name="WBS Path"/>
+					<nls languageCode="es" name="WBS Path"/>
+					<nls languageCode="zh" name="WBS Path"/>
+					<nls languageCode="cs" name="WBS Path"/>
+					<nls languageCode="zh_TW" name="WBS Path"/>
+					<nls languageCode="ja" name="WBS Path"/>
+					<nls languageCode="pl" name="WBS Path"/>
+					<nls languageCode="da" name="WBS Path"/>
+					<nls languageCode="ca" name="WBS Path"/>
+					<nls languageCode="nl" name="WBS Path"/>
+					<nls languageCode="tr" name="WBS Path"/>
+				</column>
+				<OBSAssocs complete="false"/>
+				<Security/>
+				<filter code="cpc_prj_calc" componentCode="odf" dataProviderId="cpc_calc_prj" dataProviderType="nsql" isCustomized="true"
+      objectCode="cpc_calc_prj" partitionCode="NIKU.ROOT">
+					<section collapsed="false" currentState="expanded" filterByExpression="false">
+						<column sequence="1">
+							<viewFieldDescriptor active="true" aggregate="false" attributeCode="param_prjid" dataSize="20" decimals="0" fixedWidget="false"
+            hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false"
+            widgetType="numeric" width="20">
+								<nls languageCode="ca" name="param_prjid"/>
+								<nls languageCode="cs" name="param_prjid"/>
+								<nls languageCode="da" name="param_prjid"/>
+								<nls languageCode="de" name="param_prjid"/>
+								<nls languageCode="en" name="Project ID (ID not Code)"/>
+								<nls languageCode="es" name="param_prjid"/>
+								<nls languageCode="fi" name="param_prjid"/>
+								<nls languageCode="fr" name="param_prjid"/>
+								<nls languageCode="hu" name="param_prjid"/>
+								<nls languageCode="it" name="param_prjid"/>
+								<nls languageCode="ja" name="param_prjid"/>
+								<nls languageCode="ko" name="param_prjid"/>
+								<nls languageCode="nl" name="param_prjid"/>
+								<nls languageCode="no" name="param_prjid"/>
+								<nls languageCode="pl" name="param_prjid"/>
+								<nls languageCode="pt" name="ID do Projeto (ID, não o código)"/>
+								<nls languageCode="ru" name="param_prjid"/>
+								<nls languageCode="sv" name="param_prjid"/>
+								<nls languageCode="tr" name="param_prjid"/>
+								<nls languageCode="zh" name="param_prjid"/>
+								<nls languageCode="zh_TW" name="param_prjid"/>
+							</viewFieldDescriptor>
+						</column>
+						<nls languageCode="ca" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="cs" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="da" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="de" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="en" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="es" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="fi" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="fr" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="hu" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="it" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="ja" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="ko" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="nl" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="no" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="pl" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="pt" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="ru" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="sv" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="tr" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="zh" name="Custom % Complete Calculation by Project Filter"/>
+						<nls languageCode="zh_TW" name="Custom % Complete Calculation by Project Filter"/>
+					</section>
+					<defaultDisplay>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="calculation" dataSize="200" decimals="0" fixedWidget="false"
+          hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false"
+          widgetType="text" width="30">
+							<nls languageCode="ca" name="Calculation"/>
+							<nls languageCode="cs" name="Calculation"/>
+							<nls languageCode="da" name="Calculation"/>
+							<nls languageCode="de" name="Calculation"/>
+							<nls languageCode="en" name="Calculation"/>
+							<nls languageCode="es" name="Calculation"/>
+							<nls languageCode="fi" name="Calculation"/>
+							<nls languageCode="fr" name="Calculation"/>
+							<nls languageCode="hu" name="Calculation"/>
+							<nls languageCode="it" name="Calculation"/>
+							<nls languageCode="ja" name="Calculation"/>
+							<nls languageCode="ko" name="Calculation"/>
+							<nls languageCode="nl" name="Calculation"/>
+							<nls languageCode="no" name="Calculation"/>
+							<nls languageCode="pl" name="Calculation"/>
+							<nls languageCode="pt" name="Calculation"/>
+							<nls languageCode="ru" name="Calculation"/>
+							<nls languageCode="sv" name="Calculation"/>
+							<nls languageCode="tr" name="Calculation"/>
+							<nls languageCode="zh" name="Calculation"/>
+							<nls languageCode="zh_TW" name="Calculation"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="cpc_days_complete" dataSize="30" decimals="0" extType="double"
+          fixedWidget="false" hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false"
+          virtual="false" widgetType="numeric">
+							<nls languageCode="ca" name="Days Complete"/>
+							<nls languageCode="cs" name="Days Complete"/>
+							<nls languageCode="da" name="Days Complete"/>
+							<nls languageCode="de" name="Days Complete"/>
+							<nls languageCode="en" name="Days Complete"/>
+							<nls languageCode="es" name="Days Complete"/>
+							<nls languageCode="fi" name="Days Complete"/>
+							<nls languageCode="fr" name="Days Complete"/>
+							<nls languageCode="hu" name="Days Complete"/>
+							<nls languageCode="it" name="Days Complete"/>
+							<nls languageCode="ja" name="Days Complete"/>
+							<nls languageCode="ko" name="Days Complete"/>
+							<nls languageCode="nl" name="Days Complete"/>
+							<nls languageCode="no" name="Days Complete"/>
+							<nls languageCode="pl" name="Days Complete"/>
+							<nls languageCode="pt" name="Days Complete"/>
+							<nls languageCode="ru" name="Days Complete"/>
+							<nls languageCode="sv" name="Days Complete"/>
+							<nls languageCode="tr" name="Days Complete"/>
+							<nls languageCode="zh" name="Days Complete"/>
+							<nls languageCode="zh_TW" name="Days Complete"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="cpc_duration" dataSize="30" decimals="0" extType="double"
+          fixedWidget="false" hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false"
+          virtual="false" widgetType="numeric">
+							<nls languageCode="ca" name="Duration"/>
+							<nls languageCode="cs" name="Duration"/>
+							<nls languageCode="da" name="Duration"/>
+							<nls languageCode="de" name="Duration"/>
+							<nls languageCode="en" name="Duration"/>
+							<nls languageCode="es" name="Duration"/>
+							<nls languageCode="fi" name="Duration"/>
+							<nls languageCode="fr" name="Duration"/>
+							<nls languageCode="hu" name="Duration"/>
+							<nls languageCode="it" name="Duration"/>
+							<nls languageCode="ja" name="Duration"/>
+							<nls languageCode="ko" name="Duration"/>
+							<nls languageCode="nl" name="Duration"/>
+							<nls languageCode="no" name="Duration"/>
+							<nls languageCode="pl" name="Duration"/>
+							<nls languageCode="pt" name="Duration"/>
+							<nls languageCode="ru" name="Duration"/>
+							<nls languageCode="sv" name="Duration"/>
+							<nls languageCode="tr" name="Duration"/>
+							<nls languageCode="zh" name="Duration"/>
+							<nls languageCode="zh_TW" name="Duration"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="prid" dataSize="30" decimals="0" fixedWidget="false" hidden="false"
+          isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false" widgetType="numeric">
+							<nls languageCode="ca" name="Task ID"/>
+							<nls languageCode="cs" name="Task ID"/>
+							<nls languageCode="da" name="Task ID"/>
+							<nls languageCode="de" name="Task ID"/>
+							<nls languageCode="en" name="Task ID"/>
+							<nls languageCode="es" name="Task ID"/>
+							<nls languageCode="fi" name="Task ID"/>
+							<nls languageCode="fr" name="Task ID"/>
+							<nls languageCode="hu" name="Task ID"/>
+							<nls languageCode="it" name="Task ID"/>
+							<nls languageCode="ja" name="Task ID"/>
+							<nls languageCode="ko" name="Task ID"/>
+							<nls languageCode="nl" name="Task ID"/>
+							<nls languageCode="no" name="Task ID"/>
+							<nls languageCode="pl" name="Task ID"/>
+							<nls languageCode="pt" name="Task ID"/>
+							<nls languageCode="ru" name="Task ID"/>
+							<nls languageCode="sv" name="Task ID"/>
+							<nls languageCode="tr" name="Task ID"/>
+							<nls languageCode="zh" name="Task ID"/>
+							<nls languageCode="zh_TW" name="Task ID"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="prname" dataSize="200" decimals="0" fixedWidget="false" hidden="false"
+          isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false" widgetType="text" width="30">
+							<nls languageCode="ca" name="Task Name"/>
+							<nls languageCode="cs" name="Task Name"/>
+							<nls languageCode="da" name="Task Name"/>
+							<nls languageCode="de" name="Task Name"/>
+							<nls languageCode="en" name="Task Name"/>
+							<nls languageCode="es" name="Task Name"/>
+							<nls languageCode="fi" name="Task Name"/>
+							<nls languageCode="fr" name="Task Name"/>
+							<nls languageCode="hu" name="Task Name"/>
+							<nls languageCode="it" name="Task Name"/>
+							<nls languageCode="ja" name="Task Name"/>
+							<nls languageCode="ko" name="Task Name"/>
+							<nls languageCode="nl" name="Task Name"/>
+							<nls languageCode="no" name="Task Name"/>
+							<nls languageCode="pl" name="Task Name"/>
+							<nls languageCode="pt" name="Task Name"/>
+							<nls languageCode="ru" name="Task Name"/>
+							<nls languageCode="sv" name="Task Name"/>
+							<nls languageCode="tr" name="Task Name"/>
+							<nls languageCode="zh" name="Task Name"/>
+							<nls languageCode="zh_TW" name="Task Name"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="prpctcomplete" dataSize="30" decimals="0" extType="double"
+          fixedWidget="false" hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false"
+          virtual="false" widgetType="numeric">
+							<nls languageCode="ca" name="% Complete"/>
+							<nls languageCode="cs" name="% Complete"/>
+							<nls languageCode="da" name="% Complete"/>
+							<nls languageCode="de" name="% Complete"/>
+							<nls languageCode="en" name="% Complete"/>
+							<nls languageCode="es" name="% Complete"/>
+							<nls languageCode="fi" name="% Complete"/>
+							<nls languageCode="fr" name="% Complete"/>
+							<nls languageCode="hu" name="% Complete"/>
+							<nls languageCode="it" name="% Complete"/>
+							<nls languageCode="ja" name="% Complete"/>
+							<nls languageCode="ko" name="% Complete"/>
+							<nls languageCode="nl" name="% Complete"/>
+							<nls languageCode="no" name="% Complete"/>
+							<nls languageCode="pl" name="% Complete"/>
+							<nls languageCode="pt" name="% Complete"/>
+							<nls languageCode="ru" name="% Complete"/>
+							<nls languageCode="sv" name="% Complete"/>
+							<nls languageCode="tr" name="% Complete"/>
+							<nls languageCode="zh" name="% Complete"/>
+							<nls languageCode="zh_TW" name="% Complete"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="prprojectid" dataSize="30" decimals="0" fixedWidget="false" hidden="false"
+          isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false" widgetType="numeric">
+							<nls languageCode="ca" name="Project ID"/>
+							<nls languageCode="cs" name="Project ID"/>
+							<nls languageCode="da" name="Project ID"/>
+							<nls languageCode="de" name="Project ID"/>
+							<nls languageCode="en" name="Project ID"/>
+							<nls languageCode="es" name="Project ID"/>
+							<nls languageCode="fi" name="Project ID"/>
+							<nls languageCode="fr" name="Project ID"/>
+							<nls languageCode="hu" name="Project ID"/>
+							<nls languageCode="it" name="Project ID"/>
+							<nls languageCode="ja" name="Project ID"/>
+							<nls languageCode="ko" name="Project ID"/>
+							<nls languageCode="nl" name="Project ID"/>
+							<nls languageCode="no" name="Project ID"/>
+							<nls languageCode="pl" name="Project ID"/>
+							<nls languageCode="pt" name="Project ID"/>
+							<nls languageCode="ru" name="Project ID"/>
+							<nls languageCode="sv" name="Project ID"/>
+							<nls languageCode="tr" name="Project ID"/>
+							<nls languageCode="zh" name="Project ID"/>
+							<nls languageCode="zh_TW" name="Project ID"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="task_type" dataSize="200" decimals="0" fixedWidget="false" hidden="false"
+          isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false" widgetType="text" width="30">
+							<nls languageCode="ca" name="Task Type"/>
+							<nls languageCode="cs" name="Task Type"/>
+							<nls languageCode="da" name="Task Type"/>
+							<nls languageCode="de" name="Task Type"/>
+							<nls languageCode="en" name="Task Type"/>
+							<nls languageCode="es" name="Task Type"/>
+							<nls languageCode="fi" name="Task Type"/>
+							<nls languageCode="fr" name="Task Type"/>
+							<nls languageCode="hu" name="Task Type"/>
+							<nls languageCode="it" name="Task Type"/>
+							<nls languageCode="ja" name="Task Type"/>
+							<nls languageCode="ko" name="Task Type"/>
+							<nls languageCode="nl" name="Task Type"/>
+							<nls languageCode="no" name="Task Type"/>
+							<nls languageCode="pl" name="Task Type"/>
+							<nls languageCode="pt" name="Task Type"/>
+							<nls languageCode="ru" name="Task Type"/>
+							<nls languageCode="sv" name="Task Type"/>
+							<nls languageCode="tr" name="Task Type"/>
+							<nls languageCode="zh" name="Task Type"/>
+							<nls languageCode="zh_TW" name="Task Type"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="cpc_exclude" dataSize="20" decimals="0" extType="double"
+          fixedWidget="false" hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false"
+          virtual="false" widgetType="text" width="20">
+							<nls languageCode="ca" name="cpc_exclude"/>
+							<nls languageCode="cs" name="cpc_exclude"/>
+							<nls languageCode="da" name="cpc_exclude"/>
+							<nls languageCode="de" name="cpc_exclude"/>
+							<nls languageCode="en" name="cpc_exclude"/>
+							<nls languageCode="es" name="cpc_exclude"/>
+							<nls languageCode="fi" name="cpc_exclude"/>
+							<nls languageCode="fr" name="cpc_exclude"/>
+							<nls languageCode="hu" name="cpc_exclude"/>
+							<nls languageCode="it" name="cpc_exclude"/>
+							<nls languageCode="ja" name="cpc_exclude"/>
+							<nls languageCode="ko" name="cpc_exclude"/>
+							<nls languageCode="nl" name="cpc_exclude"/>
+							<nls languageCode="no" name="cpc_exclude"/>
+							<nls languageCode="pl" name="cpc_exclude"/>
+							<nls languageCode="pt" name="cpc_exclude"/>
+							<nls languageCode="ru" name="cpc_exclude"/>
+							<nls languageCode="sv" name="cpc_exclude"/>
+							<nls languageCode="tr" name="cpc_exclude"/>
+							<nls languageCode="zh" name="cpc_exclude"/>
+							<nls languageCode="zh_TW" name="cpc_exclude"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="cpc_update" dataSize="20" decimals="0" extType="double"
+          fixedWidget="false" hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false"
+          virtual="false" widgetType="text" width="20">
+							<nls languageCode="ca" name="cpc_update"/>
+							<nls languageCode="cs" name="cpc_update"/>
+							<nls languageCode="da" name="cpc_update"/>
+							<nls languageCode="de" name="cpc_update"/>
+							<nls languageCode="en" name="cpc_update"/>
+							<nls languageCode="es" name="cpc_update"/>
+							<nls languageCode="fi" name="cpc_update"/>
+							<nls languageCode="fr" name="cpc_update"/>
+							<nls languageCode="hu" name="cpc_update"/>
+							<nls languageCode="it" name="cpc_update"/>
+							<nls languageCode="ja" name="cpc_update"/>
+							<nls languageCode="ko" name="cpc_update"/>
+							<nls languageCode="nl" name="cpc_update"/>
+							<nls languageCode="no" name="cpc_update"/>
+							<nls languageCode="pl" name="cpc_update"/>
+							<nls languageCode="pt" name="cpc_update"/>
+							<nls languageCode="ru" name="cpc_update"/>
+							<nls languageCode="sv" name="cpc_update"/>
+							<nls languageCode="tr" name="cpc_update"/>
+							<nls languageCode="zh" name="cpc_update"/>
+							<nls languageCode="zh_TW" name="cpc_update"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="description" dataSize="200" decimals="0" fixedWidget="false"
+          hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false"
+          widgetType="text" width="20">
+							<nls languageCode="ca" name="description"/>
+							<nls languageCode="cs" name="description"/>
+							<nls languageCode="da" name="description"/>
+							<nls languageCode="de" name="description"/>
+							<nls languageCode="en" name="description"/>
+							<nls languageCode="es" name="description"/>
+							<nls languageCode="fi" name="description"/>
+							<nls languageCode="fr" name="description"/>
+							<nls languageCode="hu" name="description"/>
+							<nls languageCode="it" name="description"/>
+							<nls languageCode="ja" name="description"/>
+							<nls languageCode="ko" name="description"/>
+							<nls languageCode="nl" name="description"/>
+							<nls languageCode="no" name="description"/>
+							<nls languageCode="pl" name="description"/>
+							<nls languageCode="pt" name="description"/>
+							<nls languageCode="ru" name="description"/>
+							<nls languageCode="sv" name="description"/>
+							<nls languageCode="tr" name="description"/>
+							<nls languageCode="zh" name="description"/>
+							<nls languageCode="zh_TW" name="description"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="task_level" dataSize="20" decimals="0" extType="double"
+          fixedWidget="false" hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false"
+          virtual="false" widgetType="text" width="20">
+							<nls languageCode="ca" name="task_level"/>
+							<nls languageCode="cs" name="task_level"/>
+							<nls languageCode="da" name="task_level"/>
+							<nls languageCode="de" name="task_level"/>
+							<nls languageCode="en" name="task_level"/>
+							<nls languageCode="es" name="task_level"/>
+							<nls languageCode="fi" name="task_level"/>
+							<nls languageCode="fr" name="task_level"/>
+							<nls languageCode="hu" name="task_level"/>
+							<nls languageCode="it" name="task_level"/>
+							<nls languageCode="ja" name="task_level"/>
+							<nls languageCode="ko" name="task_level"/>
+							<nls languageCode="nl" name="task_level"/>
+							<nls languageCode="no" name="task_level"/>
+							<nls languageCode="pl" name="task_level"/>
+							<nls languageCode="pt" name="task_level"/>
+							<nls languageCode="ru" name="task_level"/>
+							<nls languageCode="sv" name="task_level"/>
+							<nls languageCode="tr" name="task_level"/>
+							<nls languageCode="zh" name="task_level"/>
+							<nls languageCode="zh_TW" name="task_level"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="wbs" dataSize="200" decimals="0" fixedWidget="false" hidden="false"
+          isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false" widgetType="text" width="20">
+							<nls languageCode="ca" name="wbs"/>
+							<nls languageCode="cs" name="wbs"/>
+							<nls languageCode="da" name="wbs"/>
+							<nls languageCode="de" name="wbs"/>
+							<nls languageCode="en" name="wbs"/>
+							<nls languageCode="es" name="wbs"/>
+							<nls languageCode="fi" name="wbs"/>
+							<nls languageCode="fr" name="wbs"/>
+							<nls languageCode="hu" name="wbs"/>
+							<nls languageCode="it" name="wbs"/>
+							<nls languageCode="ja" name="wbs"/>
+							<nls languageCode="ko" name="wbs"/>
+							<nls languageCode="nl" name="wbs"/>
+							<nls languageCode="no" name="wbs"/>
+							<nls languageCode="pl" name="wbs"/>
+							<nls languageCode="pt" name="wbs"/>
+							<nls languageCode="ru" name="wbs"/>
+							<nls languageCode="sv" name="wbs"/>
+							<nls languageCode="tr" name="wbs"/>
+							<nls languageCode="zh" name="wbs"/>
+							<nls languageCode="zh_TW" name="wbs"/>
+						</viewFieldDescriptor>
+					</defaultDisplay>
+				</filter>
+			</gridPortlet>
+			<gridPortlet allowConfigure="true" allowConfigureLabel="true" allowEditing="false" category="businessIntelligence" code="cpc_prj_calcs"
+    dataProviderId="cpc_prj_custom" dataProviderPartitionId="NIKU.ROOT" dataProviderType="nsql" defaultSortColumn="id" defaultSortOrder="ascending"
+    forceFilter="false" gridAttributeProtection="1" hasEditableColumn="false" metricsLocation="bottom" objectType="SYSTEM" querySource="customer"
+    showAltValueText="false" showColumnCurrencyCode="false" source="customer">
+				<nls languageCode="de" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="no" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="fi" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="ru" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="sv" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="ko" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="pt" name="Projetos Usando o % Concluído Personalizado"/>
+				<nls languageCode="en" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="it" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="fr" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="hu" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="es" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="zh" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="cs" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="zh_TW" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="ja" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="pl" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="da" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="ca" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="nl" name="Projects Using Custom % Complete Calculation"/>
+				<nls languageCode="tr" name="Projects Using Custom % Complete Calculation"/>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="id" isEditable="false" position="1"
+      showHeaderLabel="true" showSeparator="true" type="label">
+					<nls languageCode="de" name="ID"/>
+					<nls languageCode="no" name="ID"/>
+					<nls languageCode="fi" name="ID"/>
+					<nls languageCode="ru" name="ID"/>
+					<nls languageCode="sv" name="ID"/>
+					<nls languageCode="ko" name="ID"/>
+					<nls languageCode="pt" name="ID"/>
+					<nls languageCode="en" name="ID"/>
+					<nls languageCode="it" name="ID"/>
+					<nls languageCode="fr" name="ID"/>
+					<nls languageCode="hu" name="ID"/>
+					<nls languageCode="es" name="ID"/>
+					<nls languageCode="zh" name="ID"/>
+					<nls languageCode="cs" name="ID"/>
+					<nls languageCode="zh_TW" name="ID"/>
+					<nls languageCode="ja" name="ID"/>
+					<nls languageCode="pl" name="ID"/>
+					<nls languageCode="da" name="ID"/>
+					<nls languageCode="ca" name="ID"/>
+					<nls languageCode="nl" name="ID"/>
+					<nls languageCode="tr" name="ID"/>
+				</column>
+				<column align="left" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="name" isEditable="false"
+      link="cpc_project_overview" linkTarget="new" position="2" showHeaderLabel="true" showSeparator="false" type="label">
+					<nls languageCode="de" name="Project Name"/>
+					<nls languageCode="no" name="Project Name"/>
+					<nls languageCode="fi" name="Project Name"/>
+					<nls languageCode="ru" name="Project Name"/>
+					<nls languageCode="sv" name="Project Name"/>
+					<nls languageCode="ko" name="Project Name"/>
+					<nls languageCode="pt" name="Nome do Projeto"/>
+					<nls languageCode="en" name="Project Name"/>
+					<nls languageCode="it" name="Project Name"/>
+					<nls languageCode="fr" name="Project Name"/>
+					<nls languageCode="hu" name="Project Name"/>
+					<nls languageCode="es" name="Project Name"/>
+					<nls languageCode="zh" name="Project Name"/>
+					<nls languageCode="cs" name="Project Name"/>
+					<nls languageCode="zh_TW" name="Project Name"/>
+					<nls languageCode="ja" name="Project Name"/>
+					<nls languageCode="pl" name="Project Name"/>
+					<nls languageCode="da" name="Project Name"/>
+					<nls languageCode="ca" name="Project Name"/>
+					<nls languageCode="nl" name="Project Name"/>
+					<nls languageCode="tr" name="Project Name"/>
+				</column>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="code" isEditable="false" position="3"
+      showHeaderLabel="true" showSeparator="false" type="label">
+					<nls languageCode="de" name="Code"/>
+					<nls languageCode="no" name="Code"/>
+					<nls languageCode="fi" name="Code"/>
+					<nls languageCode="ru" name="Code"/>
+					<nls languageCode="sv" name="Code"/>
+					<nls languageCode="ko" name="Code"/>
+					<nls languageCode="pt" name="Código"/>
+					<nls languageCode="en" name="Code"/>
+					<nls languageCode="it" name="Code"/>
+					<nls languageCode="fr" name="Code"/>
+					<nls languageCode="hu" name="Code"/>
+					<nls languageCode="es" name="Code"/>
+					<nls languageCode="zh" name="Code"/>
+					<nls languageCode="cs" name="Code"/>
+					<nls languageCode="zh_TW" name="Code"/>
+					<nls languageCode="ja" name="Code"/>
+					<nls languageCode="pl" name="Code"/>
+					<nls languageCode="da" name="Code"/>
+					<nls languageCode="ca" name="Code"/>
+					<nls languageCode="nl" name="Code"/>
+					<nls languageCode="tr" name="Code"/>
+				</column>
+				<column align="center" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="percent_complete" extType="calcPercent"
+      isEditable="false" position="4" showHeaderLabel="true" showSeparator="true" type="label">
+					<nls languageCode="de" name="% Complete"/>
+					<nls languageCode="no" name="% Complete"/>
+					<nls languageCode="fi" name="% Complete"/>
+					<nls languageCode="ru" name="% Complete"/>
+					<nls languageCode="sv" name="% Complete"/>
+					<nls languageCode="ko" name="% Complete"/>
+					<nls languageCode="pt" name="% Concluído"/>
+					<nls languageCode="en" name="% Complete"/>
+					<nls languageCode="it" name="% Complete"/>
+					<nls languageCode="fr" name="% Complete"/>
+					<nls languageCode="hu" name="% Complete"/>
+					<nls languageCode="es" name="% Complete"/>
+					<nls languageCode="zh" name="% Complete"/>
+					<nls languageCode="cs" name="% Complete"/>
+					<nls languageCode="zh_TW" name="% Complete"/>
+					<nls languageCode="ja" name="% Complete"/>
+					<nls languageCode="pl" name="% Complete"/>
+					<nls languageCode="da" name="% Complete"/>
+					<nls languageCode="ca" name="% Complete"/>
+					<nls languageCode="nl" name="% Complete"/>
+					<nls languageCode="tr" name="% Complete"/>
+				</column>
+				<column align="left" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="calculation" isEditable="false" position="5"
+      showHeaderLabel="true" showSeparator="false" type="label">
+					<nls languageCode="de" name="Calculation"/>
+					<nls languageCode="no" name="Calculation"/>
+					<nls languageCode="fi" name="Calculation"/>
+					<nls languageCode="ru" name="Calculation"/>
+					<nls languageCode="sv" name="Calculation"/>
+					<nls languageCode="ko" name="Calculation"/>
+					<nls languageCode="pt" name="Cálculo"/>
+					<nls languageCode="en" name="Calculation"/>
+					<nls languageCode="it" name="Calculation"/>
+					<nls languageCode="fr" name="Calculation"/>
+					<nls languageCode="hu" name="Calculation"/>
+					<nls languageCode="es" name="Calculation"/>
+					<nls languageCode="zh" name="Calculation"/>
+					<nls languageCode="cs" name="Calculation"/>
+					<nls languageCode="zh_TW" name="Calculation"/>
+					<nls languageCode="ja" name="Calculation"/>
+					<nls languageCode="pl" name="Calculation"/>
+					<nls languageCode="da" name="Calculation"/>
+					<nls languageCode="ca" name="Calculation"/>
+					<nls languageCode="nl" name="Calculation"/>
+					<nls languageCode="tr" name="Calculation"/>
+				</column>
+				<column align="left" allowEditing="false" allowHeaderWrapping="false" allowWrapping="true" code="description" isEditable="false" position="6"
+      showHeaderLabel="true" showSeparator="false" type="label">
+					<nls languageCode="de" name="Description"/>
+					<nls languageCode="no" name="Description"/>
+					<nls languageCode="fi" name="Description"/>
+					<nls languageCode="ru" name="Description"/>
+					<nls languageCode="sv" name="Description"/>
+					<nls languageCode="ko" name="Description"/>
+					<nls languageCode="pt" name="Descrição"/>
+					<nls languageCode="en" name="Description"/>
+					<nls languageCode="it" name="Description"/>
+					<nls languageCode="fr" name="Description"/>
+					<nls languageCode="hu" name="Description"/>
+					<nls languageCode="es" name="Description"/>
+					<nls languageCode="zh" name="Description"/>
+					<nls languageCode="cs" name="Description"/>
+					<nls languageCode="zh_TW" name="Description"/>
+					<nls languageCode="ja" name="Description"/>
+					<nls languageCode="pl" name="Description"/>
+					<nls languageCode="da" name="Description"/>
+					<nls languageCode="ca" name="Description"/>
+					<nls languageCode="nl" name="Description"/>
+					<nls languageCode="tr" name="Description"/>
+				</column>
+				<OBSAssocs complete="false"/>
+				<Security/>
+				<filter code="cpc_prj_calcs" componentCode="odf" dataProviderId="cpc_prj_custom" dataProviderType="nsql" objectCode="cpc_prj_custom" partitionCode="NIKU.ROOT">
+					<section collapsed="true" currentState="expanded" filterByExpression="false">
+						<nls languageCode="ca" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="cs" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="da" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="de" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="en" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="es" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="fi" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="fr" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="hu" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="it" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="ja" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="ko" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="nl" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="no" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="pl" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="pt" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="ru" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="sv" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="tr" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="zh" name="Projects Using Custom % Complete Calculation Filter"/>
+						<nls languageCode="zh_TW" name="Projects Using Custom % Complete Calculation Filter"/>
+					</section>
+					<defaultDisplay>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="code" dataSize="200" decimals="0" fixedWidget="false" hidden="false"
+          isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false" widgetType="text" width="30">
+							<nls languageCode="ca" name="Code"/>
+							<nls languageCode="cs" name="Code"/>
+							<nls languageCode="da" name="Code"/>
+							<nls languageCode="de" name="Code"/>
+							<nls languageCode="en" name="Code"/>
+							<nls languageCode="es" name="Code"/>
+							<nls languageCode="fi" name="Code"/>
+							<nls languageCode="fr" name="Code"/>
+							<nls languageCode="hu" name="Code"/>
+							<nls languageCode="it" name="Code"/>
+							<nls languageCode="ja" name="Code"/>
+							<nls languageCode="ko" name="Code"/>
+							<nls languageCode="nl" name="Code"/>
+							<nls languageCode="no" name="Code"/>
+							<nls languageCode="pl" name="Code"/>
+							<nls languageCode="pt" name="Code"/>
+							<nls languageCode="ru" name="Code"/>
+							<nls languageCode="sv" name="Code"/>
+							<nls languageCode="tr" name="Code"/>
+							<nls languageCode="zh" name="Code"/>
+							<nls languageCode="zh_TW" name="Code"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="id" dataSize="30" decimals="0" extType="double" fixedWidget="false"
+          hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false" widgetType="numeric">
+							<nls languageCode="ca" name="ID"/>
+							<nls languageCode="cs" name="ID"/>
+							<nls languageCode="da" name="ID"/>
+							<nls languageCode="de" name="ID"/>
+							<nls languageCode="en" name="ID"/>
+							<nls languageCode="es" name="ID"/>
+							<nls languageCode="fi" name="ID"/>
+							<nls languageCode="fr" name="ID"/>
+							<nls languageCode="hu" name="ID"/>
+							<nls languageCode="it" name="ID"/>
+							<nls languageCode="ja" name="ID"/>
+							<nls languageCode="ko" name="ID"/>
+							<nls languageCode="nl" name="ID"/>
+							<nls languageCode="no" name="ID"/>
+							<nls languageCode="pl" name="ID"/>
+							<nls languageCode="pt" name="ID"/>
+							<nls languageCode="ru" name="ID"/>
+							<nls languageCode="sv" name="ID"/>
+							<nls languageCode="tr" name="ID"/>
+							<nls languageCode="zh" name="ID"/>
+							<nls languageCode="zh_TW" name="ID"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="name" dataSize="200" decimals="0" fixedWidget="false" hidden="false"
+          isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false" widgetType="text" width="30">
+							<nls languageCode="ca" name="Project Name"/>
+							<nls languageCode="cs" name="Project Name"/>
+							<nls languageCode="da" name="Project Name"/>
+							<nls languageCode="de" name="Project Name"/>
+							<nls languageCode="en" name="Project Name"/>
+							<nls languageCode="es" name="Project Name"/>
+							<nls languageCode="fi" name="Project Name"/>
+							<nls languageCode="fr" name="Project Name"/>
+							<nls languageCode="hu" name="Project Name"/>
+							<nls languageCode="it" name="Project Name"/>
+							<nls languageCode="ja" name="Project Name"/>
+							<nls languageCode="ko" name="Project Name"/>
+							<nls languageCode="nl" name="Project Name"/>
+							<nls languageCode="no" name="Project Name"/>
+							<nls languageCode="pl" name="Project Name"/>
+							<nls languageCode="pt" name="Project Name"/>
+							<nls languageCode="ru" name="Project Name"/>
+							<nls languageCode="sv" name="Project Name"/>
+							<nls languageCode="tr" name="Project Name"/>
+							<nls languageCode="zh" name="Project Name"/>
+							<nls languageCode="zh_TW" name="Project Name"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="percent_complete" dataSize="30" decimals="0" extType="double"
+          fixedWidget="false" hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false"
+          virtual="false" widgetType="numeric">
+							<nls languageCode="ca" name="% Complete"/>
+							<nls languageCode="cs" name="% Complete"/>
+							<nls languageCode="da" name="% Complete"/>
+							<nls languageCode="de" name="% Complete"/>
+							<nls languageCode="en" name="% Complete"/>
+							<nls languageCode="es" name="% Complete"/>
+							<nls languageCode="fi" name="% Complete"/>
+							<nls languageCode="fr" name="% Complete"/>
+							<nls languageCode="hu" name="% Complete"/>
+							<nls languageCode="it" name="% Complete"/>
+							<nls languageCode="ja" name="% Complete"/>
+							<nls languageCode="ko" name="% Complete"/>
+							<nls languageCode="nl" name="% Complete"/>
+							<nls languageCode="no" name="% Complete"/>
+							<nls languageCode="pl" name="% Complete"/>
+							<nls languageCode="pt" name="% Complete"/>
+							<nls languageCode="ru" name="% Complete"/>
+							<nls languageCode="sv" name="% Complete"/>
+							<nls languageCode="tr" name="% Complete"/>
+							<nls languageCode="zh" name="% Complete"/>
+							<nls languageCode="zh_TW" name="% Complete"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="calculation" dataSize="200" decimals="0" fixedWidget="false"
+          hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false"
+          widgetType="text" width="20">
+							<nls languageCode="ca" name="calculation"/>
+							<nls languageCode="cs" name="calculation"/>
+							<nls languageCode="da" name="calculation"/>
+							<nls languageCode="de" name="calculation"/>
+							<nls languageCode="en" name="calculation"/>
+							<nls languageCode="es" name="calculation"/>
+							<nls languageCode="fi" name="calculation"/>
+							<nls languageCode="fr" name="calculation"/>
+							<nls languageCode="hu" name="calculation"/>
+							<nls languageCode="it" name="calculation"/>
+							<nls languageCode="ja" name="calculation"/>
+							<nls languageCode="ko" name="calculation"/>
+							<nls languageCode="nl" name="calculation"/>
+							<nls languageCode="no" name="calculation"/>
+							<nls languageCode="pl" name="calculation"/>
+							<nls languageCode="pt" name="calculation"/>
+							<nls languageCode="ru" name="calculation"/>
+							<nls languageCode="sv" name="calculation"/>
+							<nls languageCode="tr" name="calculation"/>
+							<nls languageCode="zh" name="calculation"/>
+							<nls languageCode="zh_TW" name="calculation"/>
+						</viewFieldDescriptor>
+						<viewFieldDescriptor active="true" aggregate="false" attributeCode="description" dataSize="200" decimals="0" fixedWidget="false"
+          hidden="false" isMVLookup="false" multiValued="false" notEqualXPath="false" readOnly="false" required="false" virtual="false"
+          widgetType="text" width="20">
+							<nls languageCode="ca" name="description"/>
+							<nls languageCode="cs" name="description"/>
+							<nls languageCode="da" name="description"/>
+							<nls languageCode="de" name="description"/>
+							<nls languageCode="en" name="description"/>
+							<nls languageCode="es" name="description"/>
+							<nls languageCode="fi" name="description"/>
+							<nls languageCode="fr" name="description"/>
+							<nls languageCode="hu" name="description"/>
+							<nls languageCode="it" name="description"/>
+							<nls languageCode="ja" name="description"/>
+							<nls languageCode="ko" name="description"/>
+							<nls languageCode="nl" name="description"/>
+							<nls languageCode="no" name="description"/>
+							<nls languageCode="pl" name="description"/>
+							<nls languageCode="pt" name="description"/>
+							<nls languageCode="ru" name="description"/>
+							<nls languageCode="sv" name="description"/>
+							<nls languageCode="tr" name="description"/>
+							<nls languageCode="zh" name="description"/>
+							<nls languageCode="zh_TW" name="description"/>
+						</viewFieldDescriptor>
+					</defaultDisplay>
+				</filter>
+			</gridPortlet>
+		</portlets>
+		<queries update="true">
+			<query code="cpc_calc_prj" isUserPortletAvailable="1" source="customer">
+				<nls languageCode="ca" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="cs" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="da" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="de" name="Custom % Complete Calculation by Project"/>
+				<nls description="Lists tasks and % Complete calculations by project" languageCode="en" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="es" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="fi" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="fr" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="hu" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="it" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="ja" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="ko" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="nl" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="no" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="pl" name="Custom % Complete Calculation by Project"/>
+				<nls description="Lista tarefas e os métodos de cálculo do % Concluído por projeto" languageCode="pt" name="Cálculo de % Concluído por Projeto"/>
+				<nls languageCode="ru" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="sv" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="tr" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="zh" name="Custom % Complete Calculation by Project"/>
+				<nls languageCode="zh_TW" name="Custom % Complete Calculation by Project"/>
+				<nsql dbId="Niku" dbVendor="all"><![CDATA[SELECT	@SELECT:DIM:USER_DEF:IMPLIED:PROJECT:tasks.prid:prid@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.prprojectid:prprojectid@, 
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.prname:prname@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.task_type:task_type@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.cpc_duration:cpc_duration@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.prpctcomplete:prpctcomplete@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.cpc_days_complete:cpc_days_complete@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.calculation:calculation@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.description:description@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.cpc_update:cpc_update@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.cpc_exclude:cpc_exclude@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.wbs:wbs@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:tasks.task_level:task_level@
+							FROM	(
+
+							SELECT  tsk.prid,
+									tsk.prprojectid,
+									LPAD(' ', 2 * LEVEL-2) || tsk.prname prname,
+									CASE CONNECT_BY_ISLEAF WHEN 0 THEN 'SUMMARY' WHEN 1 THEN 'TASK' ELSE 'N/A' END task_type,
+									odf_tsk.cpc_duration,
+									tsk.prpctcomplete,
+									odf_tsk.cpc_days_complete,
+									CASE CONNECT_BY_ISLEAF WHEN 1 THEN 'Days Complete = Duration * Percent Complete' WHEN 0 THEN '% Complete = Total Childs Days Complete / Total Childs Duration' END calculation,
+									CASE CONNECT_BY_ISLEAF WHEN 1 THEN 'You update the detail task duration and/or % Complete. Clarity calculates the days complete' WHEN 0 THEN 'Clarity calculates total duration, days complete and % complete for summary tasks automatically' END description,
+									CASE CONNECT_BY_ISLEAF WHEN 1 THEN odf_tsk.cpc_update ELSE 0 END cpc_update,
+									odf_tsk.cpc_exclude,
+									SYS_CONNECT_BY_PATH(tsk.prname, '\') wbs,
+									LEVEL task_level
+							FROM        prtask tsk
+							LEFT JOIN   ( SELECT prid, prname, prprojectid, prwbssequence, pristask
+										  FROM prtask ) parent_task    ON   parent_task.prwbssequence = tsk.wbs_parseq
+																	   AND  parent_task.prprojectid = tsk.prprojectid
+																	   AND  parent_task.pristask = 0
+							JOIN    odf_ca_task odf_tsk                ON tsk.prid = odf_tsk.id
+							WHERE tsk.prprojectid = @WHERE:PARAM:USER_DEF:INTEGER:prjid@
+							CONNECT BY PRIOR tsk.prid = parent_task.prid
+							START WITH parent_task.prid IS NULL
+							ORDER BY tsk.prwbssequence	
+								) tasks
+							WHERE	@FILTER@
+							HAVING	@HAVING_FILTER@]]></nsql>
+				<attribute id="task_level" required="false">
+					<nls languageCode="ca" name="Level"/>
+					<nls languageCode="cs" name="Level"/>
+					<nls languageCode="da" name="Level"/>
+					<nls languageCode="de" name="Level"/>
+					<nls languageCode="en" name="WBS Level"/>
+					<nls languageCode="es" name="Level"/>
+					<nls languageCode="fi" name="Level"/>
+					<nls languageCode="fr" name="Level"/>
+					<nls languageCode="hu" name="Level"/>
+					<nls languageCode="it" name="Level"/>
+					<nls languageCode="ja" name="Level"/>
+					<nls languageCode="ko" name="Level"/>
+					<nls languageCode="nl" name="Level"/>
+					<nls languageCode="no" name="Level"/>
+					<nls languageCode="pl" name="Level"/>
+					<nls languageCode="pt" name="Level"/>
+					<nls languageCode="ru" name="Level"/>
+					<nls languageCode="sv" name="Level"/>
+					<nls languageCode="tr" name="Level"/>
+					<nls languageCode="zh" name="Level"/>
+					<nls languageCode="zh_TW" name="Level"/>
+				</attribute>
+				<attribute id="cpc_update" required="false">
+					<nls languageCode="ca" name="Needs Update"/>
+					<nls languageCode="cs" name="Needs Update"/>
+					<nls languageCode="da" name="Needs Update"/>
+					<nls languageCode="de" name="Needs Update"/>
+					<nls languageCode="en" name="Needs Update"/>
+					<nls languageCode="es" name="Needs Update"/>
+					<nls languageCode="fi" name="Needs Update"/>
+					<nls languageCode="fr" name="Needs Update"/>
+					<nls languageCode="hu" name="Needs Update"/>
+					<nls languageCode="it" name="Needs Update"/>
+					<nls languageCode="ja" name="Needs Update"/>
+					<nls languageCode="ko" name="Needs Update"/>
+					<nls languageCode="nl" name="Needs Update"/>
+					<nls languageCode="no" name="Needs Update"/>
+					<nls languageCode="pl" name="Needs Update"/>
+					<nls languageCode="pt" name="Atualizar?"/>
+					<nls languageCode="ru" name="Needs Update"/>
+					<nls languageCode="sv" name="Needs Update"/>
+					<nls languageCode="tr" name="Needs Update"/>
+					<nls languageCode="zh" name="Needs Update"/>
+					<nls languageCode="zh_TW" name="Needs Update"/>
+					<displayMapping type="image">
+						<mapping hi="1" lo="1" mappingCode="mapping-1" typeCode="Checkmark"/>
+					</displayMapping>
+				</attribute>
+				<attribute id="prid" required="false">
+					<nls languageCode="ca" name="Task ID"/>
+					<nls languageCode="cs" name="Task ID"/>
+					<nls languageCode="da" name="Task ID"/>
+					<nls languageCode="de" name="Task ID"/>
+					<nls languageCode="en" name="Task ID"/>
+					<nls languageCode="es" name="Task ID"/>
+					<nls languageCode="fi" name="Task ID"/>
+					<nls languageCode="fr" name="Task ID"/>
+					<nls languageCode="hu" name="Task ID"/>
+					<nls languageCode="it" name="Task ID"/>
+					<nls languageCode="ja" name="Task ID"/>
+					<nls languageCode="ko" name="Task ID"/>
+					<nls languageCode="nl" name="Task ID"/>
+					<nls languageCode="no" name="Task ID"/>
+					<nls languageCode="pl" name="Task ID"/>
+					<nls languageCode="pt" name="ID da Tarefa"/>
+					<nls languageCode="ru" name="Task ID"/>
+					<nls languageCode="sv" name="Task ID"/>
+					<nls languageCode="tr" name="Task ID"/>
+					<nls languageCode="zh" name="Task ID"/>
+					<nls languageCode="zh_TW" name="Task ID"/>
+				</attribute>
+				<attribute id="prname" required="false">
+					<nls languageCode="ca" name="Task Name"/>
+					<nls languageCode="cs" name="Task Name"/>
+					<nls languageCode="da" name="Task Name"/>
+					<nls languageCode="de" name="Task Name"/>
+					<nls languageCode="en" name="Task Name"/>
+					<nls languageCode="es" name="Task Name"/>
+					<nls languageCode="fi" name="Task Name"/>
+					<nls languageCode="fr" name="Task Name"/>
+					<nls languageCode="hu" name="Task Name"/>
+					<nls languageCode="it" name="Task Name"/>
+					<nls languageCode="ja" name="Task Name"/>
+					<nls languageCode="ko" name="Task Name"/>
+					<nls languageCode="nl" name="Task Name"/>
+					<nls languageCode="no" name="Task Name"/>
+					<nls languageCode="pl" name="Task Name"/>
+					<nls languageCode="pt" name="Nome da Tarefa"/>
+					<nls languageCode="ru" name="Task Name"/>
+					<nls languageCode="sv" name="Task Name"/>
+					<nls languageCode="tr" name="Task Name"/>
+					<nls languageCode="zh" name="Task Name"/>
+					<nls languageCode="zh_TW" name="Task Name"/>
+				</attribute>
+				<attribute id="task_type" required="false">
+					<nls languageCode="ca" name="Task Type"/>
+					<nls languageCode="cs" name="Task Type"/>
+					<nls languageCode="da" name="Task Type"/>
+					<nls languageCode="de" name="Task Type"/>
+					<nls languageCode="en" name="Task Type"/>
+					<nls languageCode="es" name="Task Type"/>
+					<nls languageCode="fi" name="Task Type"/>
+					<nls languageCode="fr" name="Task Type"/>
+					<nls languageCode="hu" name="Task Type"/>
+					<nls languageCode="it" name="Task Type"/>
+					<nls languageCode="ja" name="Task Type"/>
+					<nls languageCode="ko" name="Task Type"/>
+					<nls languageCode="nl" name="Task Type"/>
+					<nls languageCode="no" name="Task Type"/>
+					<nls languageCode="pl" name="Task Type"/>
+					<nls languageCode="pt" name="Tipo"/>
+					<nls languageCode="ru" name="Task Type"/>
+					<nls languageCode="sv" name="Task Type"/>
+					<nls languageCode="tr" name="Task Type"/>
+					<nls languageCode="zh" name="Task Type"/>
+					<nls languageCode="zh_TW" name="Task Type"/>
+				</attribute>
+				<attribute id="cpc_duration" required="false">
+					<nls languageCode="ca" name="Duration"/>
+					<nls languageCode="cs" name="Duration"/>
+					<nls languageCode="da" name="Duration"/>
+					<nls languageCode="de" name="Duration"/>
+					<nls languageCode="en" name="Duration"/>
+					<nls languageCode="es" name="Duration"/>
+					<nls languageCode="fi" name="Duration"/>
+					<nls languageCode="fr" name="Duration"/>
+					<nls languageCode="hu" name="Duration"/>
+					<nls languageCode="it" name="Duration"/>
+					<nls languageCode="ja" name="Duration"/>
+					<nls languageCode="ko" name="Duration"/>
+					<nls languageCode="nl" name="Duration"/>
+					<nls languageCode="no" name="Duration"/>
+					<nls languageCode="pl" name="Duration"/>
+					<nls languageCode="pt" name="Duração"/>
+					<nls languageCode="ru" name="Duration"/>
+					<nls languageCode="sv" name="Duration"/>
+					<nls languageCode="tr" name="Duration"/>
+					<nls languageCode="zh" name="Duration"/>
+					<nls languageCode="zh_TW" name="Duration"/>
+				</attribute>
+				<attribute id="prpctcomplete" required="false">
+					<nls languageCode="ca" name="% Complete"/>
+					<nls languageCode="cs" name="% Complete"/>
+					<nls languageCode="da" name="% Complete"/>
+					<nls languageCode="de" name="% Complete"/>
+					<nls languageCode="en" name="% Complete"/>
+					<nls languageCode="es" name="% Complete"/>
+					<nls languageCode="fi" name="% Complete"/>
+					<nls languageCode="fr" name="% Complete"/>
+					<nls languageCode="hu" name="% Complete"/>
+					<nls languageCode="it" name="% Complete"/>
+					<nls languageCode="ja" name="% Complete"/>
+					<nls languageCode="ko" name="% Complete"/>
+					<nls languageCode="nl" name="% Complete"/>
+					<nls languageCode="no" name="% Complete"/>
+					<nls languageCode="pl" name="% Complete"/>
+					<nls languageCode="pt" name="% Concluído"/>
+					<nls languageCode="ru" name="% Complete"/>
+					<nls languageCode="sv" name="% Complete"/>
+					<nls languageCode="tr" name="% Complete"/>
+					<nls languageCode="zh" name="% Complete"/>
+					<nls languageCode="zh_TW" name="% Complete"/>
+				</attribute>
+				<attribute id="cpc_days_complete" required="false">
+					<nls languageCode="ca" name="Days Complete"/>
+					<nls languageCode="cs" name="Days Complete"/>
+					<nls languageCode="da" name="Days Complete"/>
+					<nls languageCode="de" name="Days Complete"/>
+					<nls languageCode="en" name="Days Complete"/>
+					<nls languageCode="es" name="Days Complete"/>
+					<nls languageCode="fi" name="Days Complete"/>
+					<nls languageCode="fr" name="Days Complete"/>
+					<nls languageCode="hu" name="Days Complete"/>
+					<nls languageCode="it" name="Days Complete"/>
+					<nls languageCode="ja" name="Days Complete"/>
+					<nls languageCode="ko" name="Days Complete"/>
+					<nls languageCode="nl" name="Days Complete"/>
+					<nls languageCode="no" name="Days Complete"/>
+					<nls languageCode="pl" name="Days Complete"/>
+					<nls languageCode="pt" name="Dias Concluídos"/>
+					<nls languageCode="ru" name="Days Complete"/>
+					<nls languageCode="sv" name="Days Complete"/>
+					<nls languageCode="tr" name="Days Complete"/>
+					<nls languageCode="zh" name="Days Complete"/>
+					<nls languageCode="zh_TW" name="Days Complete"/>
+				</attribute>
+				<attribute id="calculation" required="false">
+					<nls languageCode="ca" name="Calculation"/>
+					<nls languageCode="cs" name="Calculation"/>
+					<nls languageCode="da" name="Calculation"/>
+					<nls languageCode="de" name="Calculation"/>
+					<nls languageCode="en" name="Calculation"/>
+					<nls languageCode="es" name="Calculation"/>
+					<nls languageCode="fi" name="Calculation"/>
+					<nls languageCode="fr" name="Calculation"/>
+					<nls languageCode="hu" name="Calculation"/>
+					<nls languageCode="it" name="Calculation"/>
+					<nls languageCode="ja" name="Calculation"/>
+					<nls languageCode="ko" name="Calculation"/>
+					<nls languageCode="nl" name="Calculation"/>
+					<nls languageCode="no" name="Calculation"/>
+					<nls languageCode="pl" name="Calculation"/>
+					<nls languageCode="pt" name="Cálculo"/>
+					<nls languageCode="ru" name="Calculation"/>
+					<nls languageCode="sv" name="Calculation"/>
+					<nls languageCode="tr" name="Calculation"/>
+					<nls languageCode="zh" name="Calculation"/>
+					<nls languageCode="zh_TW" name="Calculation"/>
+				</attribute>
+				<attribute id="param_prjid" required="true">
+					<nls languageCode="ca" name="param_prjid"/>
+					<nls languageCode="cs" name="param_prjid"/>
+					<nls languageCode="da" name="param_prjid"/>
+					<nls languageCode="de" name="param_prjid"/>
+					<nls languageCode="en" name="Project ID (ID not Code)"/>
+					<nls languageCode="es" name="param_prjid"/>
+					<nls languageCode="fi" name="param_prjid"/>
+					<nls languageCode="fr" name="param_prjid"/>
+					<nls languageCode="hu" name="param_prjid"/>
+					<nls languageCode="it" name="param_prjid"/>
+					<nls languageCode="ja" name="param_prjid"/>
+					<nls languageCode="ko" name="param_prjid"/>
+					<nls languageCode="nl" name="param_prjid"/>
+					<nls languageCode="no" name="param_prjid"/>
+					<nls languageCode="pl" name="param_prjid"/>
+					<nls languageCode="pt" name="ID do Projeto (ID, não o código)"/>
+					<nls languageCode="ru" name="param_prjid"/>
+					<nls languageCode="sv" name="param_prjid"/>
+					<nls languageCode="tr" name="param_prjid"/>
+					<nls languageCode="zh" name="param_prjid"/>
+					<nls languageCode="zh_TW" name="param_prjid"/>
+				</attribute>
+				<attribute id="prprojectid" required="false">
+					<nls languageCode="ca" name="Project ID"/>
+					<nls languageCode="cs" name="Project ID"/>
+					<nls languageCode="da" name="Project ID"/>
+					<nls languageCode="de" name="Project ID"/>
+					<nls languageCode="en" name="Project ID"/>
+					<nls languageCode="es" name="Project ID"/>
+					<nls languageCode="fi" name="Project ID"/>
+					<nls languageCode="fr" name="Project ID"/>
+					<nls languageCode="hu" name="Project ID"/>
+					<nls languageCode="it" name="Project ID"/>
+					<nls languageCode="ja" name="Project ID"/>
+					<nls languageCode="ko" name="Project ID"/>
+					<nls languageCode="nl" name="Project ID"/>
+					<nls languageCode="no" name="Project ID"/>
+					<nls languageCode="pl" name="Project ID"/>
+					<nls languageCode="pt" name="ID do Projeto"/>
+					<nls languageCode="ru" name="Project ID"/>
+					<nls languageCode="sv" name="Project ID"/>
+					<nls languageCode="tr" name="Project ID"/>
+					<nls languageCode="zh" name="Project ID"/>
+					<nls languageCode="zh_TW" name="Project ID"/>
+				</attribute>
+				<attribute id="wbs" required="false">
+					<nls languageCode="ca" name="WBS Path"/>
+					<nls languageCode="cs" name="WBS Path"/>
+					<nls languageCode="da" name="WBS Path"/>
+					<nls languageCode="de" name="WBS Path"/>
+					<nls languageCode="en" name="WBS Path"/>
+					<nls languageCode="es" name="WBS Path"/>
+					<nls languageCode="fi" name="WBS Path"/>
+					<nls languageCode="fr" name="WBS Path"/>
+					<nls languageCode="hu" name="WBS Path"/>
+					<nls languageCode="it" name="WBS Path"/>
+					<nls languageCode="ja" name="WBS Path"/>
+					<nls languageCode="ko" name="WBS Path"/>
+					<nls languageCode="nl" name="WBS Path"/>
+					<nls languageCode="no" name="WBS Path"/>
+					<nls languageCode="pl" name="WBS Path"/>
+					<nls languageCode="pt" name="WBS Path"/>
+					<nls languageCode="ru" name="WBS Path"/>
+					<nls languageCode="sv" name="WBS Path"/>
+					<nls languageCode="tr" name="WBS Path"/>
+					<nls languageCode="zh" name="WBS Path"/>
+					<nls languageCode="zh_TW" name="WBS Path"/>
+				</attribute>
+				<attribute id="cpc_exclude" required="false">
+					<nls languageCode="ca" name="Exclude from % Complete"/>
+					<nls languageCode="cs" name="Exclude from % Complete"/>
+					<nls languageCode="da" name="Exclude from % Complete"/>
+					<nls languageCode="de" name="Exclude from % Complete"/>
+					<nls languageCode="en" name="Exclude from % Complete"/>
+					<nls languageCode="es" name="Exclude from % Complete"/>
+					<nls languageCode="fi" name="Exclude from % Complete"/>
+					<nls languageCode="fr" name="Exclude from % Complete"/>
+					<nls languageCode="hu" name="Exclude from % Complete"/>
+					<nls languageCode="it" name="Exclude from % Complete"/>
+					<nls languageCode="ja" name="Exclude from % Complete"/>
+					<nls languageCode="ko" name="Exclude from % Complete"/>
+					<nls languageCode="nl" name="Exclude from % Complete"/>
+					<nls languageCode="no" name="Exclude from % Complete"/>
+					<nls languageCode="pl" name="Exclude from % Complete"/>
+					<nls languageCode="pt" name="Excluir do % Concluído"/>
+					<nls languageCode="ru" name="Exclude from % Complete"/>
+					<nls languageCode="sv" name="Exclude from % Complete"/>
+					<nls languageCode="tr" name="Exclude from % Complete"/>
+					<nls languageCode="zh" name="Exclude from % Complete"/>
+					<nls languageCode="zh_TW" name="Exclude from % Complete"/>
+					<displayMapping type="image">
+						<mapping hi="1" lo="1" mappingCode="mapping-1" typeCode="CheckRed"/>
+					</displayMapping>
+				</attribute>
+				<attribute id="description" required="false">
+					<nls languageCode="ca" name="Description"/>
+					<nls languageCode="cs" name="Description"/>
+					<nls languageCode="da" name="Description"/>
+					<nls languageCode="de" name="Description"/>
+					<nls languageCode="en" name="Description"/>
+					<nls languageCode="es" name="Description"/>
+					<nls languageCode="fi" name="Description"/>
+					<nls languageCode="fr" name="Description"/>
+					<nls languageCode="hu" name="Description"/>
+					<nls languageCode="it" name="Description"/>
+					<nls languageCode="ja" name="Description"/>
+					<nls languageCode="ko" name="Description"/>
+					<nls languageCode="nl" name="Description"/>
+					<nls languageCode="no" name="Description"/>
+					<nls languageCode="pl" name="Description"/>
+					<nls languageCode="pt" name="Descrição"/>
+					<nls languageCode="ru" name="Description"/>
+					<nls languageCode="sv" name="Description"/>
+					<nls languageCode="tr" name="Description"/>
+					<nls languageCode="zh" name="Description"/>
+					<nls languageCode="zh_TW" name="Description"/>
+				</attribute>
+				<links>
+					<link action="projmgr.taskProperties" code="cpc_to_task">
+						<nls languageCode="ca" name="Link to Task"/>
+						<nls languageCode="cs" name="Link to Task"/>
+						<nls languageCode="da" name="Link to Task"/>
+						<nls languageCode="de" name="Link to Task"/>
+						<nls languageCode="en" name="Link to Task"/>
+						<nls languageCode="es" name="Link to Task"/>
+						<nls languageCode="fi" name="Link to Task"/>
+						<nls languageCode="fr" name="Link to Task"/>
+						<nls languageCode="hu" name="Link to Task"/>
+						<nls languageCode="it" name="Link to Task"/>
+						<nls languageCode="ja" name="Link to Task"/>
+						<nls languageCode="ko" name="Link to Task"/>
+						<nls languageCode="nl" name="Link to Task"/>
+						<nls languageCode="no" name="Link to Task"/>
+						<nls languageCode="pl" name="Link to Task"/>
+						<nls languageCode="pt" name="Link to Task"/>
+						<nls languageCode="ru" name="Link to Task"/>
+						<nls languageCode="sv" name="Link to Task"/>
+						<nls languageCode="tr" name="Link to Task"/>
+						<nls languageCode="zh" name="Link to Task"/>
+						<nls languageCode="zh_TW" name="Link to Task"/>
+						<linkParam dataRef="/data/header/action/@id" dataSource="input" paramCode="returnAction"/>
+						<linkParam dataRef="prprojectid" dataSource="data" paramCode="projectId"/>
+						<linkParam dataRef="prid" dataSource="data" paramCode="id"/>
+					</link>
+				</links>
+			</query>
+			<query code="cpc_prj_custom" isUserPortletAvailable="1" source="customer">
+				<nls languageCode="ca" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="cs" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="da" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="de" name="Projects Using Custom % Complete Calc"/>
+				<nls description="Lists projects using the custom % Complete package" languageCode="en" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="es" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="fi" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="fr" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="hu" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="it" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="ja" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="ko" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="nl" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="no" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="pl" name="Projects Using Custom % Complete Calc"/>
+				<nls description="Lista projetos que utilizam o pacote de % Concluído Personalizado" languageCode="pt" name="Projetos Usando o % Concluído Personalizado"/>
+				<nls languageCode="ru" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="sv" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="tr" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="zh" name="Projects Using Custom % Complete Calc"/>
+				<nls languageCode="zh_TW" name="Projects Using Custom % Complete Calc"/>
+				<nsql dbId="Niku" dbVendor="all"><![CDATA[SELECT	@SELECT:DIM:USER_DEF:IMPLIED:PROJECT:projects.id:id@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:projects.name:name@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:projects.code:code@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:projects.percent_complete:percent_complete@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:projects.calculation:calculation@,
+									@SELECT:DIM_PROP:USER_DEF:IMPLIED:PROJECT:projects.description:description@
+							FROM	(
+
+							SELECT DISTINCT 
+									inv.id,
+									inv.name,
+									inv.code,
+									prj.percent_complete,
+									'% Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration' calculation,
+									'Clarity calculates Project % Complete automatically' description
+							FROM        inv_projects prj
+								JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+								JOIN    inv_investments inv     ON prj.prid = inv.id
+								JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+								JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+							WHERE       prj.is_template = 0 
+								AND     inv.odf_object_code = 'project' 
+								AND     inv.is_active = 1
+								AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+								AND     tsk.pristask = 1
+								
+								) projects
+							WHERE	@FILTER@
+							HAVING	@HAVING_FILTER@]]></nsql>
+				<attribute id="calculation" required="false">
+					<nls languageCode="ca" name="Calculation"/>
+					<nls languageCode="cs" name="Calculation"/>
+					<nls languageCode="da" name="Calculation"/>
+					<nls languageCode="de" name="Calculation"/>
+					<nls languageCode="en" name="Calculation"/>
+					<nls languageCode="es" name="Calculation"/>
+					<nls languageCode="fi" name="Calculation"/>
+					<nls languageCode="fr" name="Calculation"/>
+					<nls languageCode="hu" name="Calculation"/>
+					<nls languageCode="it" name="Calculation"/>
+					<nls languageCode="ja" name="Calculation"/>
+					<nls languageCode="ko" name="Calculation"/>
+					<nls languageCode="nl" name="Calculation"/>
+					<nls languageCode="no" name="Calculation"/>
+					<nls languageCode="pl" name="Calculation"/>
+					<nls languageCode="pt" name="Cálculo"/>
+					<nls languageCode="ru" name="Calculation"/>
+					<nls languageCode="sv" name="Calculation"/>
+					<nls languageCode="tr" name="Calculation"/>
+					<nls languageCode="zh" name="Calculation"/>
+					<nls languageCode="zh_TW" name="Calculation"/>
+				</attribute>
+				<attribute id="description" required="false">
+					<nls languageCode="ca" name="Description"/>
+					<nls languageCode="cs" name="Description"/>
+					<nls languageCode="da" name="Description"/>
+					<nls languageCode="de" name="Description"/>
+					<nls languageCode="en" name="Description"/>
+					<nls languageCode="es" name="Description"/>
+					<nls languageCode="fi" name="Description"/>
+					<nls languageCode="fr" name="Description"/>
+					<nls languageCode="hu" name="Description"/>
+					<nls languageCode="it" name="Description"/>
+					<nls languageCode="ja" name="Description"/>
+					<nls languageCode="ko" name="Description"/>
+					<nls languageCode="nl" name="Description"/>
+					<nls languageCode="no" name="Description"/>
+					<nls languageCode="pl" name="Description"/>
+					<nls languageCode="pt" name="Descrição"/>
+					<nls languageCode="ru" name="Description"/>
+					<nls languageCode="sv" name="Description"/>
+					<nls languageCode="tr" name="Description"/>
+					<nls languageCode="zh" name="Description"/>
+					<nls languageCode="zh_TW" name="Description"/>
+				</attribute>
+				<attribute id="id" required="false">
+					<nls languageCode="ca" name="ID"/>
+					<nls languageCode="cs" name="ID"/>
+					<nls languageCode="da" name="ID"/>
+					<nls languageCode="de" name="ID"/>
+					<nls languageCode="en" name="ID"/>
+					<nls languageCode="es" name="ID"/>
+					<nls languageCode="fi" name="ID"/>
+					<nls languageCode="fr" name="ID"/>
+					<nls languageCode="hu" name="ID"/>
+					<nls languageCode="it" name="ID"/>
+					<nls languageCode="ja" name="ID"/>
+					<nls languageCode="ko" name="ID"/>
+					<nls languageCode="nl" name="ID"/>
+					<nls languageCode="no" name="ID"/>
+					<nls languageCode="pl" name="ID"/>
+					<nls languageCode="pt" name="ID"/>
+					<nls languageCode="ru" name="ID"/>
+					<nls languageCode="sv" name="ID"/>
+					<nls languageCode="tr" name="ID"/>
+					<nls languageCode="zh" name="ID"/>
+					<nls languageCode="zh_TW" name="ID"/>
+				</attribute>
+				<attribute id="name" required="false">
+					<nls languageCode="ca" name="Project Name"/>
+					<nls languageCode="cs" name="Project Name"/>
+					<nls languageCode="da" name="Project Name"/>
+					<nls languageCode="de" name="Project Name"/>
+					<nls languageCode="en" name="Project Name"/>
+					<nls languageCode="es" name="Project Name"/>
+					<nls languageCode="fi" name="Project Name"/>
+					<nls languageCode="fr" name="Project Name"/>
+					<nls languageCode="hu" name="Project Name"/>
+					<nls languageCode="it" name="Project Name"/>
+					<nls languageCode="ja" name="Project Name"/>
+					<nls languageCode="ko" name="Project Name"/>
+					<nls languageCode="nl" name="Project Name"/>
+					<nls languageCode="no" name="Project Name"/>
+					<nls languageCode="pl" name="Project Name"/>
+					<nls languageCode="pt" name="Nome do Projeto"/>
+					<nls languageCode="ru" name="Project Name"/>
+					<nls languageCode="sv" name="Project Name"/>
+					<nls languageCode="tr" name="Project Name"/>
+					<nls languageCode="zh" name="Project Name"/>
+					<nls languageCode="zh_TW" name="Project Name"/>
+				</attribute>
+				<attribute id="code" required="false">
+					<nls languageCode="ca" name="Code"/>
+					<nls languageCode="cs" name="Code"/>
+					<nls languageCode="da" name="Code"/>
+					<nls languageCode="de" name="Code"/>
+					<nls languageCode="en" name="Code"/>
+					<nls languageCode="es" name="Code"/>
+					<nls languageCode="fi" name="Code"/>
+					<nls languageCode="fr" name="Code"/>
+					<nls languageCode="hu" name="Code"/>
+					<nls languageCode="it" name="Code"/>
+					<nls languageCode="ja" name="Code"/>
+					<nls languageCode="ko" name="Code"/>
+					<nls languageCode="nl" name="Code"/>
+					<nls languageCode="no" name="Code"/>
+					<nls languageCode="pl" name="Code"/>
+					<nls languageCode="pt" name="Código"/>
+					<nls languageCode="ru" name="Code"/>
+					<nls languageCode="sv" name="Code"/>
+					<nls languageCode="tr" name="Code"/>
+					<nls languageCode="zh" name="Code"/>
+					<nls languageCode="zh_TW" name="Code"/>
+				</attribute>
+				<attribute id="percent_complete" required="false">
+					<nls languageCode="ca" name="% Complete"/>
+					<nls languageCode="cs" name="% Complete"/>
+					<nls languageCode="da" name="% Complete"/>
+					<nls languageCode="de" name="% Complete"/>
+					<nls languageCode="en" name="% Complete"/>
+					<nls languageCode="es" name="% Complete"/>
+					<nls languageCode="fi" name="% Complete"/>
+					<nls languageCode="fr" name="% Complete"/>
+					<nls languageCode="hu" name="% Complete"/>
+					<nls languageCode="it" name="% Complete"/>
+					<nls languageCode="ja" name="% Complete"/>
+					<nls languageCode="ko" name="% Complete"/>
+					<nls languageCode="nl" name="% Complete"/>
+					<nls languageCode="no" name="% Complete"/>
+					<nls languageCode="pl" name="% Complete"/>
+					<nls languageCode="pt" name="% Concluído"/>
+					<nls languageCode="ru" name="% Complete"/>
+					<nls languageCode="sv" name="% Complete"/>
+					<nls languageCode="tr" name="% Complete"/>
+					<nls languageCode="zh" name="% Complete"/>
+					<nls languageCode="zh_TW" name="% Complete"/>
+				</attribute>
+				<links>
+					<link action="projmgr.projectProperties" code="cpc_project_overview">
+						<nls languageCode="ca" name="Project Properties"/>
+						<nls languageCode="cs" name="Project Properties"/>
+						<nls languageCode="da" name="Project Properties"/>
+						<nls languageCode="de" name="Project Properties"/>
+						<nls languageCode="en" name="Project Properties"/>
+						<nls languageCode="es" name="Project Properties"/>
+						<nls languageCode="fi" name="Project Properties"/>
+						<nls languageCode="fr" name="Project Properties"/>
+						<nls languageCode="hu" name="Project Properties"/>
+						<nls languageCode="it" name="Project Properties"/>
+						<nls languageCode="ja" name="Project Properties"/>
+						<nls languageCode="ko" name="Project Properties"/>
+						<nls languageCode="nl" name="Project Properties"/>
+						<nls languageCode="no" name="Project Properties"/>
+						<nls languageCode="pl" name="Project Properties"/>
+						<nls languageCode="pt" name="Project Properties"/>
+						<nls languageCode="ru" name="Project Properties"/>
+						<nls languageCode="sv" name="Project Properties"/>
+						<nls languageCode="tr" name="Project Properties"/>
+						<nls languageCode="zh" name="Project Properties"/>
+						<nls languageCode="zh_TW" name="Project Properties"/>
+						<linkParam dataRef="id" dataSource="data" paramCode="id"/>
+					</link>
+				</links>
+			</query>
+		</queries>
+		<lookups update="true">
+			<staticLookup autoSuggestEnabled="true" autoSuggestMaxSuggestions="10" code="CMN_CATEGORIES" hiddenAttributeName="id" sortStyle="alphanumeric"
+    source="niku.com" status="active" update="true">
+				<nls description="Categories per a portlets" languageCode="ca" name="Categories de portlet"/>
+				<nls description="Kategorie portletů" languageCode="cs" name="Kategorie portletu"/>
+				<nls description="Portletkategorier" languageCode="da" name="Portletkategorier"/>
+				<nls description="Kategorien für Portlets" languageCode="de" name="Portlet-Kategorien"/>
+				<nls description="Categories for Portlets" languageCode="en" name="Portlet Categories"/>
+				<nls description="Categorías para portlets" languageCode="es" name="Categorías de portlet"/>
+				<nls description="Portletien kategoriat" languageCode="fi" name="Portlet-kategoriat"/>
+				<nls description="Catégories des portlets" languageCode="fr" name="Catégories de portlets"/>
+				<nls description="Kategóriák portletekhez" languageCode="hu" name="Portletkategóriák"/>
+				<nls description="Categorie per portlet" languageCode="it" name="Categorie portlet"/>
+				<nls description="ポートレットのカテゴリ" languageCode="ja" name="ポートレット カテゴリ"/>
+				<nls description="포틀릿 범주" languageCode="ko" name="포틀릿 범주"/>
+				<nls description="Categorieën voor portlets" languageCode="nl" name="Portletcategorieën"/>
+				<nls description="Kategorier for portleter" languageCode="no" name="Portletkategorier"/>
+				<nls description="Kategorie dla portletów" languageCode="pl" name="Kategorie portletów"/>
+				<nls description="Categorias para portlets" languageCode="pt" name="Categorias de portlet"/>
+				<nls description="Категории для портлетов" languageCode="ru" name="Категории портлетов"/>
+				<nls description="Kategorier för portlets" languageCode="sv" name="Portlet-kategorier"/>
+				<nls description="Portlet Kategorileri" languageCode="tr" name="Portlet Kategorileri"/>
+				<nls description="Portlet 类别" languageCode="zh" name="Portlet 类别"/>
+				<nls description="Portlet 的類別" languageCode="zh_TW" name="Portlet 類別"/>
+				<lookupValue code="businessIntelligence" enum="0" sortOrder="30" status="active">
+					<nls description="Categoria de portlet d'intel·ligència de negocis" languageCode="ca" name="Intel·ligència de negocis"/>
+					<nls description="Kategorie portletu obchodních informací" languageCode="cs" name="Obchodní informace"/>
+					<nls description="Business Intelligence - portletkategori" languageCode="da" name="Business Intelligence"/>
+					<nls description="Business Intelligence-Portlet - Kategorie" languageCode="de" name="Business Intelligence"/>
+					<nls description="Business Intelligence Portlet Category" languageCode="en" name="Business Intelligence"/>
+					<nls description="Categoría de portlet de inteligencia de negocios" languageCode="es" name="Inteligencia de negocios"/>
+					<nls description="Business Intelligence -portletin kategoria" languageCode="fi" name="Business Intelligence"/>
+					<nls description="Catégorie de portlet d'aide à la décision" languageCode="fr" name="Aide à la décision"/>
+					<nls description="Business Intelligence portletkategóriája" languageCode="hu" name="Business Intelligence"/>
+					<nls description="Categoria portlet Business Intelligence" languageCode="it" name="Business Intelligence"/>
+					<nls description="ビジネス インテリジェンス ポートレット カテゴリ" languageCode="ja" name="ビジネス インテリジェンス"/>
+					<nls description="비즈니스 인텔리전스 포틀릿 범주" languageCode="ko" name="비즈니스 인텔리전스"/>
+					<nls description="Portletcategorie bedrijfsinlichtingen" languageCode="nl" name="Bedrijfsinlichtingen"/>
+					<nls description="Business Intelligence - portletkategori" languageCode="no" name="Business Intelligence"/>
+					<nls description="Kategoria portletu Business Intelligence" languageCode="pl" name="Business Intelligence"/>
+					<nls description="Categoria de portlet da inteligência de negócios" languageCode="pt" name="Inteligência de negócios"/>
+					<nls description="Категория портлета бизнес-аналитики" languageCode="ru" name="Бизнес-аналитика"/>
+					<nls description="Företagsintelligens Portletkategori" languageCode="sv" name="Företagsintelligens"/>
+					<nls description="İş Zekası Portlet Kategorisi" languageCode="tr" name="İş Zekası"/>
+					<nls description="商业智能 Portlet 类别" languageCode="zh" name="Business Intelligence"/>
+					<nls description="商務智慧 Portlet 類別" languageCode="zh_TW" name="商務智慧"/>
+				</lookupValue>
+				<lookupValue code="COLLABORATION" enum="0" sortOrder="0" status="active">
+					<nls description="Col·laboració" languageCode="ca" name="Col·laboració"/>
+					<nls description="Spolupráce" languageCode="cs" name="Spolupráce"/>
+					<nls description="Samarbejde" languageCode="da" name="Samarbejde"/>
+					<nls description="Zusammenarbeit" languageCode="de" name="Zusammenarbeit"/>
+					<nls description="Collaboration" languageCode="en" name="Collaboration"/>
+					<nls description="Colaboración" languageCode="es" name="Colaboración"/>
+					<nls description="Yhteistyö" languageCode="fi" name="Yhteistyö"/>
+					<nls description="Collaboration" languageCode="fr" name="Collaboration"/>
+					<nls description="Együttműködés" languageCode="hu" name="Együttműködés"/>
+					<nls description="Collaborazione" languageCode="it" name="Collaborazione"/>
+					<nls description="コラボレーション" languageCode="ja" name="コラボレーション"/>
+					<nls description="공동 작업" languageCode="ko" name="공동 작업"/>
+					<nls description="Samenwerking" languageCode="nl" name="Samenwerking"/>
+					<nls description="Samarbeid" languageCode="no" name="Samarbeid"/>
+					<nls description="Współpraca" languageCode="pl" name="Współpraca"/>
+					<nls description="Colaboração" languageCode="pt" name="Colaboração"/>
+					<nls description="Совместная работа" languageCode="ru" name="Совместная работа"/>
+					<nls description="Samarbete" languageCode="sv" name="Samarbete"/>
+					<nls description="İşbirliği" languageCode="tr" name="İşbirliği"/>
+					<nls description="协作" languageCode="zh" name="协作"/>
+					<nls description="共同作業" languageCode="zh_TW" name="共同作業"/>
+				</lookupValue>
+				<lookupValue code="framework" enum="0" sortOrder="30" status="active">
+					<nls description="Categoria de portlet de marc" languageCode="ca" name="Marc"/>
+					<nls description="Kategorie portletu rámců" languageCode="cs" name="Rámec"/>
+					<nls description="Portletkategori for ramme" languageCode="da" name="Ramme"/>
+					<nls description="Framework-Portlet - Kategorie" languageCode="de" name="Framework"/>
+					<nls description="Framework Portlet Category" languageCode="en" name="Framework"/>
+					<nls description="Categoría de portlet de marco" languageCode="es" name="Marco"/>
+					<nls description="Kehys-portletin kategoria" languageCode="fi" name="Kehys"/>
+					<nls description="Catégorie de portlet de cadre d'applications" languageCode="fr" name="Cadre d'applications"/>
+					<nls description="Keretrendszer portlet-kategória" languageCode="hu" name="Keretrendszer"/>
+					<nls description="Categoria portlet schema" languageCode="it" name="Schema"/>
+					<nls description="フレームワーク ポートレット カテゴリ" languageCode="ja" name="フレームワーク"/>
+					<nls description="프레임워크 포틀릿 범주" languageCode="ko" name="프레임워크"/>
+					<nls description="Raamwerk portletcategorie" languageCode="nl" name="Raamwerk"/>
+					<nls description="Portletkategori for rammeverk" languageCode="no" name="Rammeverk"/>
+					<nls description="Kategoria portletów struktury" languageCode="pl" name="Struktura"/>
+					<nls description="Categoria de portlet de estrutura" languageCode="pt" name="Estrutura"/>
+					<nls description="Категория портлета платформы" languageCode="ru" name="Платформа"/>
+					<nls description="Ramverk Portletkategori" languageCode="sv" name="Ramverk"/>
+					<nls description="Çerçeve Portleti Kategorisi" languageCode="tr" name="Çerçeve"/>
+					<nls description="框架 Portlet 类别" languageCode="zh" name="框架"/>
+					<nls description="架構 Portlet 類別" languageCode="zh_TW" name="架構"/>
+				</lookupValue>
+				<lookupValue code="npd.ca.com" sortOrder="0" status="active">
+					<nls description="Categoria de portlet per al desenvolupament de nous productes (DNP)" languageCode="ca" name="Nou desenvolupament de producte"/>
+					<nls description="Kategorie portletu pro vývoj nového produktu (NPD)" languageCode="cs" name="Vývoj nového produktu"/>
+					<nls description="Portlet til kategori for ny produktudvikling (NPD)" languageCode="da" name="Ny produktudvikling"/>
+					<nls description="Portlet-Kategorie für Entwicklung neuer Produkte (NPE)" languageCode="de" name="Entwicklung neuer Produkte"/>
+					<nls description="Portlet category for New Product Development (NPD)" languageCode="en" name="New Product Development"/>
+					<nls description="Categoría de portlet para el desarrollo de nuevos productos (DNP)" languageCode="es" name="Nuevo desarrollo de producto"/>
+					<nls description="Portlet-kategoria uutta tuotekehitystä (NPD) varten" languageCode="fi" name="Uusi tuotekehitys"/>
+					<nls description="Catégorie de portlet pour le développement d'un nouveau produit (DNP)" languageCode="fr" name="Développement d'un nouveau produit"/>
+					<nls description="Portletkategória termékfejlesztéshez (NPD)" languageCode="hu" name="Új termék fejlesztése"/>
+					<nls description="Categoria portlet per Sviluppo nuovo prodotto (NPD)" languageCode="it" name="Sviluppo nuovo prodotto"/>
+					<nls description="NPD (新製品開発) のポートレット カテゴリ" languageCode="ja" name="新製品開発"/>
+					<nls description="[ko: Portlet category for New Product Development (NPD)]" languageCode="ko" name="[ko: New Product Development]"/>
+					<nls description="Portletcategorie voor Productontwikkeling" languageCode="nl" name="Ontwikkeling nieuw product"/>
+					<nls description="Portletkategori for produktutvikling (NPD)" languageCode="no" name="Nytt produkt under utvikling"/>
+					<nls description="Kategoria portletu dotycząca rozwoju nowego produktu (RNP)" languageCode="pl" name="Rozwój nowego produktu"/>
+					<nls description="Categoria de portlet para Desenvolvimento de novos produtos" languageCode="pt" name="Desenvolvimento de novos produtos"/>
+					<nls description="Категория портлета для разработки нового продукта (NPD)" languageCode="ru" name="Разработка нового продукта"/>
+					<nls description="Portletkategori för Ny produktutveckling (NPD)" languageCode="sv" name="Ny produktutveckling"/>
+					<nls description="Yeni Ürün Geliştirme (YÜG) için portlet kategorisi" languageCode="tr" name="Yeni Ürün Geliştirme"/>
+					<nls description="新产品开发 (NPD) 组件的 Portlet 类别" languageCode="zh" name="新产品开发"/>
+					<nls description="新產品開發 (NPD) 的 Portlet 類別" languageCode="zh_TW" name="新產品開發"/>
+				</lookupValue>
+				<lookupValue code="PERSONALIZATION" enum="0" sortOrder="0" status="active">
+					<nls description="Personal" languageCode="ca" name="Personal"/>
+					<nls description="Osobní" languageCode="cs" name="Osobní"/>
+					<nls description="Personlig" languageCode="da" name="Personlig"/>
+					<nls description="Persönlich" languageCode="de" name="Persönlich"/>
+					<nls description="Personal" languageCode="en" name="Personal"/>
+					<nls description="Personal" languageCode="es" name="Personal"/>
+					<nls description="Henkilökohtainen" languageCode="fi" name="Henkilökohtainen"/>
+					<nls description="Personnel" languageCode="fr" name="Personnel"/>
+					<nls description="Személyes" languageCode="hu" name="Személyes"/>
+					<nls description="Personale" languageCode="it" name="Personale"/>
+					<nls description="パーソナル" languageCode="ja" name="パーソナル"/>
+					<nls description="개인" languageCode="ko" name="개인"/>
+					<nls description="Persoonlijk" languageCode="nl" name="Persoonlijk"/>
+					<nls description="Personlig" languageCode="no" name="Personlig"/>
+					<nls description="Osobiste" languageCode="pl" name="Osobiste"/>
+					<nls description="Pessoal" languageCode="pt" name="Pessoal"/>
+					<nls description="Личные данные" languageCode="ru" name="Личные данные"/>
+					<nls description="Personligt" languageCode="sv" name="Personligt"/>
+					<nls description="Kişisel" languageCode="tr" name="Kişisel"/>
+					<nls description="个人" languageCode="zh" name="个人"/>
+					<nls description="個人" languageCode="zh_TW" name="個人"/>
+				</lookupValue>
+				<lookupValue code="PRODUCTIVITY" enum="0" sortOrder="0" status="active">
+					<nls description="Ajuda de productivitat" languageCode="ca" name="Productivitat"/>
+					<nls description="Nástroj pro zvýšení produktivity" languageCode="cs" name="Produktivita"/>
+					<nls description="Produktivitetshjælp" languageCode="da" name="Produktivitet"/>
+					<nls description="Produktivitätshilfe" languageCode="de" name="Produktivität"/>
+					<nls description="Productivity aid" languageCode="en" name="Productivity"/>
+					<nls description="Ayuda de productividad" languageCode="es" name="Productividad"/>
+					<nls description="Tuottavuusapu" languageCode="fi" name="Tuottavuus"/>
+					<nls description="Aide à la productivité" languageCode="fr" name="Productivité"/>
+					<nls description="Produktivitási segédlet" languageCode="hu" name="Produktivitás"/>
+					<nls description="Bonus di produttività" languageCode="it" name="Produttività"/>
+					<nls description="生産性向上支援" languageCode="ja" name="生産性"/>
+					<nls description="생산성 지원" languageCode="ko" name="생산성"/>
+					<nls description="Productiviteitshulp" languageCode="nl" name="Productiviteit"/>
+					<nls description="Produktivitetsbistand" languageCode="no" name="Produktivitet"/>
+					<nls description="Wspomaganie produktywności" languageCode="pl" name="Produktywność"/>
+					<nls description="Auxílio produtivo" languageCode="pt" name="Produtividade"/>
+					<nls description="Поддержка производительности" languageCode="ru" name="Производительность"/>
+					<nls description="Produktivitetshjälp" languageCode="sv" name="Produktivitet"/>
+					<nls description="Üretkenlik yardımı" languageCode="tr" name="Üretkenlik"/>
+					<nls description="生产力援助" languageCode="zh" name="生产力"/>
+					<nls description="生產力輔助" languageCode="zh_TW" name="生產力"/>
+				</lookupValue>
+				<lookupValue code="PROJECT" enum="0" sortOrder="0" status="active">
+					<nls description="Projecte" languageCode="ca" name="Projecte"/>
+					<nls description="Projekt" languageCode="cs" name="Projekt"/>
+					<nls description="Projekt" languageCode="da" name="Projekt"/>
+					<nls description="Projekt" languageCode="de" name="Projekt"/>
+					<nls description="Project" languageCode="en" name="Project"/>
+					<nls description="Proyecto" languageCode="es" name="Proyecto"/>
+					<nls description="Projekti" languageCode="fi" name="Projekti"/>
+					<nls description="Projet" languageCode="fr" name="Projet"/>
+					<nls description="Projekt" languageCode="hu" name="Projekt"/>
+					<nls description="Progetto" languageCode="it" name="Progetto"/>
+					<nls description="プロジェクト" languageCode="ja" name="プロジェクト"/>
+					<nls description="프로젝트" languageCode="ko" name="프로젝트"/>
+					<nls description="Project" languageCode="nl" name="Project"/>
+					<nls description="Prosjekt" languageCode="no" name="Prosjekt"/>
+					<nls description="Projekt" languageCode="pl" name="Projekt"/>
+					<nls description="Projeto" languageCode="pt" name="Projeto"/>
+					<nls description="Проект" languageCode="ru" name="Проект"/>
+					<nls description="Projekt" languageCode="sv" name="Projekt"/>
+					<nls description="Proje" languageCode="tr" name="Proje"/>
+					<nls description="项目" languageCode="zh" name="项目"/>
+					<nls description="專案" languageCode="zh_TW" name="專案"/>
+				</lookupValue>
+				<lookupValue code="RESOURCE" enum="0" sortOrder="0" status="active">
+					<nls description="Recurs" languageCode="ca" name="Recurs"/>
+					<nls description="Zdroj" languageCode="cs" name="Zdroj"/>
+					<nls description="Ressource" languageCode="da" name="Ressource"/>
+					<nls description="Ressource" languageCode="de" name="Ressource"/>
+					<nls description="Resource" languageCode="en" name="Resource"/>
+					<nls description="Recurso" languageCode="es" name="Recurso"/>
+					<nls description="Resurssi" languageCode="fi" name="Resurssi"/>
+					<nls description="Ressource" languageCode="fr" name="Ressource"/>
+					<nls description="Erőforrás" languageCode="hu" name="Erőforrás"/>
+					<nls description="Risorsa" languageCode="it" name="Risorsa"/>
+					<nls description="リソース" languageCode="ja" name="リソース"/>
+					<nls description="리소스" languageCode="ko" name="리소스"/>
+					<nls description="Resource" languageCode="nl" name="Resource"/>
+					<nls description="Ressurs" languageCode="no" name="Ressurs"/>
+					<nls description="Zasób" languageCode="pl" name="Zasób"/>
+					<nls description="Recurso" languageCode="pt" name="Recurso"/>
+					<nls description="Ресурс" languageCode="ru" name="Ресурс"/>
+					<nls description="Resurs" languageCode="sv" name="Resurs"/>
+					<nls description="Kaynak" languageCode="tr" name="Kaynak"/>
+					<nls description="资源" languageCode="zh" name="资源"/>
+					<nls description="資源" languageCode="zh_TW" name="資源"/>
+				</lookupValue>
+				<displayedSuggestionAttributes>
+					<displayedSuggestionAttribute value="name"/>
+				</displayedSuggestionAttributes>
+				<searchedSuggestionAttributes>
+					<searchedSuggestionAttribute value="name"/>
+				</searchedSuggestionAttributes>
+			</staticLookup>
+			<staticLookup autoSuggestEnabled="true" autoSuggestMaxSuggestions="10" code="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" hiddenAttributeName="lookup_code"
+    sortStyle="alphanumeric" source="niku.com" status="active" update="true">
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="ca" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="cs" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="da" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="de" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="en" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="es" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="fi" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="fr" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="hu" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="it" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="ja" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="ko" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="nl" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="no" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="pl" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="pt" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="ru" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="sv" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="tr" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="zh" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE" languageCode="zh_TW" name="ODF.NSQL.CPC_CALC_PRJ.CPC_EXCLUDE"/>
+				<lookupValue code="mapping-1" enum="0" sortOrder="0" status="active">
+					<nls description="YES" languageCode="ca" name="YES"/>
+					<nls description="YES" languageCode="cs" name="YES"/>
+					<nls description="YES" languageCode="da" name="YES"/>
+					<nls description="YES" languageCode="de" name="YES"/>
+					<nls description="YES" languageCode="en" name="YES"/>
+					<nls description="YES" languageCode="es" name="YES"/>
+					<nls description="YES" languageCode="fi" name="YES"/>
+					<nls description="YES" languageCode="fr" name="YES"/>
+					<nls description="YES" languageCode="hu" name="YES"/>
+					<nls description="YES" languageCode="it" name="YES"/>
+					<nls description="YES" languageCode="ja" name="YES"/>
+					<nls description="YES" languageCode="ko" name="YES"/>
+					<nls description="YES" languageCode="nl" name="YES"/>
+					<nls description="YES" languageCode="no" name="YES"/>
+					<nls description="YES" languageCode="pl" name="YES"/>
+					<nls description="YES" languageCode="pt" name="YES"/>
+					<nls description="YES" languageCode="ru" name="YES"/>
+					<nls description="YES" languageCode="sv" name="YES"/>
+					<nls description="YES" languageCode="tr" name="YES"/>
+					<nls description="YES" languageCode="zh" name="YES"/>
+					<nls description="YES" languageCode="zh_TW" name="YES"/>
+				</lookupValue>
+				<displayedSuggestionAttributes>
+					<displayedSuggestionAttribute value="name"/>
+				</displayedSuggestionAttributes>
+				<searchedSuggestionAttributes>
+					<searchedSuggestionAttribute value="name"/>
+				</searchedSuggestionAttributes>
+			</staticLookup>
+			<staticLookup autoSuggestEnabled="true" autoSuggestMaxSuggestions="10" code="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" hiddenAttributeName="lookup_code"
+    sortStyle="alphanumeric" source="niku.com" status="active" update="true">
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="ca" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="cs" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="da" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="de" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="en" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="es" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="fi" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="fr" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="hu" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="it" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="ja" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="ko" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="nl" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="no" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="pl" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="pt" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="ru" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="sv" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="tr" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="zh" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE" languageCode="zh_TW" name="ODF.NSQL.CPC_CALC_PRJ.CPC_UPDATE"/>
+				<lookupValue code="mapping-1" enum="0" sortOrder="0" status="active">
+					<nls description="YES" languageCode="ca" name="YES"/>
+					<nls description="YES" languageCode="cs" name="YES"/>
+					<nls description="YES" languageCode="da" name="YES"/>
+					<nls description="YES" languageCode="de" name="YES"/>
+					<nls description="YES" languageCode="en" name="YES"/>
+					<nls description="YES" languageCode="es" name="YES"/>
+					<nls description="YES" languageCode="fi" name="YES"/>
+					<nls description="YES" languageCode="fr" name="YES"/>
+					<nls description="YES" languageCode="hu" name="YES"/>
+					<nls description="YES" languageCode="it" name="YES"/>
+					<nls description="YES" languageCode="ja" name="YES"/>
+					<nls description="YES" languageCode="ko" name="YES"/>
+					<nls description="YES" languageCode="nl" name="YES"/>
+					<nls description="YES" languageCode="no" name="YES"/>
+					<nls description="YES" languageCode="pl" name="YES"/>
+					<nls description="YES" languageCode="pt" name="YES"/>
+					<nls description="YES" languageCode="ru" name="YES"/>
+					<nls description="YES" languageCode="sv" name="YES"/>
+					<nls description="YES" languageCode="tr" name="YES"/>
+					<nls description="YES" languageCode="zh" name="YES"/>
+					<nls description="YES" languageCode="zh_TW" name="YES"/>
+				</lookupValue>
+				<displayedSuggestionAttributes>
+					<displayedSuggestionAttribute value="name"/>
+				</displayedSuggestionAttributes>
+				<searchedSuggestionAttributes>
+					<searchedSuggestionAttribute value="name"/>
+				</searchedSuggestionAttributes>
+			</staticLookup>
+			<staticLookup autoSuggestEnabled="true" autoSuggestMaxSuggestions="10" code="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" hiddenAttributeName="lookup_code"
+    sortStyle="alphanumeric" source="niku.com" status="active" update="true">
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="ca" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="cs" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="da" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="de" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="en" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="es" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="fi" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="fr" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="hu" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="it" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="ja" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="ko" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="nl" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="no" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="pl" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="pt" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="ru" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="sv" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="tr" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="zh" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<nls description="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE" languageCode="zh_TW" name="ODF.NSQL.CPC_PRJ_CUSTOM.CPC_UPDATE"/>
+				<lookupValue code="mapping-1" enum="0" sortOrder="0" status="active">
+					<nls description="NO" languageCode="ca" name="NO"/>
+					<nls description="NO" languageCode="cs" name="NO"/>
+					<nls description="NO" languageCode="da" name="NO"/>
+					<nls description="NO" languageCode="de" name="NO"/>
+					<nls description="NO" languageCode="en" name="NO"/>
+					<nls description="NO" languageCode="es" name="NO"/>
+					<nls description="NO" languageCode="fi" name="NO"/>
+					<nls description="NO" languageCode="fr" name="NO"/>
+					<nls description="NO" languageCode="hu" name="NO"/>
+					<nls description="NO" languageCode="it" name="NO"/>
+					<nls description="NO" languageCode="ja" name="NO"/>
+					<nls description="NO" languageCode="ko" name="NO"/>
+					<nls description="NO" languageCode="nl" name="NO"/>
+					<nls description="NO" languageCode="no" name="NO"/>
+					<nls description="NO" languageCode="pl" name="NO"/>
+					<nls description="NO" languageCode="pt" name="NO"/>
+					<nls description="NO" languageCode="ru" name="NO"/>
+					<nls description="NO" languageCode="sv" name="NO"/>
+					<nls description="NO" languageCode="tr" name="NO"/>
+					<nls description="NO" languageCode="zh" name="NO"/>
+					<nls description="NO" languageCode="zh_TW" name="NO"/>
+				</lookupValue>
+				<lookupValue code="mapping-2" enum="1" sortOrder="1" status="active">
+					<nls description="YES" languageCode="ca" name="YES"/>
+					<nls description="YES" languageCode="cs" name="YES"/>
+					<nls description="YES" languageCode="da" name="YES"/>
+					<nls description="YES" languageCode="de" name="YES"/>
+					<nls description="YES" languageCode="en" name="YES"/>
+					<nls description="YES" languageCode="es" name="YES"/>
+					<nls description="YES" languageCode="fi" name="YES"/>
+					<nls description="YES" languageCode="fr" name="YES"/>
+					<nls description="YES" languageCode="hu" name="YES"/>
+					<nls description="YES" languageCode="it" name="YES"/>
+					<nls description="YES" languageCode="ja" name="YES"/>
+					<nls description="YES" languageCode="ko" name="YES"/>
+					<nls description="YES" languageCode="nl" name="YES"/>
+					<nls description="YES" languageCode="no" name="YES"/>
+					<nls description="YES" languageCode="pl" name="YES"/>
+					<nls description="YES" languageCode="pt" name="YES"/>
+					<nls description="YES" languageCode="ru" name="YES"/>
+					<nls description="YES" languageCode="sv" name="YES"/>
+					<nls description="YES" languageCode="tr" name="YES"/>
+					<nls description="YES" languageCode="zh" name="YES"/>
+					<nls description="YES" languageCode="zh_TW" name="YES"/>
+				</lookupValue>
+				<displayedSuggestionAttributes>
+					<displayedSuggestionAttribute value="name"/>
+				</displayedSuggestionAttributes>
+				<searchedSuggestionAttributes>
+					<searchedSuggestionAttribute value="name"/>
+				</searchedSuggestionAttributes>
+			</staticLookup>
+		</lookups>
+	</contentPack>
+</NikuDataBus>

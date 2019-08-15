@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<contentPack update="true">
+		<objects>
+			<object code="task" raiseEvents="true" source="niku.com" update="true">
+					<nls description="L'objecte de la tasca" languageCode="ca" name="Tasca"/>
+					<nls description="Objekt úkolu" languageCode="cs" name="Úkol"/>
+					<nls description="Opgaveobjektet" languageCode="da" name="Opgave"/>
+					<nls description="Das Objekt 'Aufgabe'" languageCode="de" name="Aufgabe"/>
+					<nls description="The Task Object" languageCode="en" name="Task"/>
+					<nls description="El objeto de la tarea" languageCode="es" name="Tarea"/>
+					<nls description="Tehtäväobjekti" languageCode="fi" name="Tehtävä"/>
+					<nls description="Objet Tâche" languageCode="fr" name="Tâche"/>
+					<nls description="A feladat objektum" languageCode="hu" name="Feladat"/>
+					<nls description="Oggetto Attività" languageCode="it" name="Attività"/>
+					<nls description="タスク オブジェクト" languageCode="ja" name="タスク"/>
+					<nls description="태스크 개체" languageCode="ko" name="태스크"/>
+					<nls description="Het object Taak" languageCode="nl" name="Taak"/>
+					<nls description="Aktivitetsobjektet" languageCode="no" name="Aktivitet"/>
+					<nls description="Obiekt zadania" languageCode="pl" name="Zadanie"/>
+					<nls description="O objeto Tarefa" languageCode="pt" name="Tarefa"/>
+					<nls description="Объект Задача" languageCode="ru" name="Задача"/>
+					<nls description="Uppgiftsobjektet" languageCode="sv" name="Uppgift"/>
+					<nls description="Görev Nesnesi" languageCode="tr" name="Görev"/>
+					<nls description="任务对象" languageCode="zh" name="任务"/>
+					<nls description="任務物件" languageCode="zh_TW" name="任務"/>
+					<customAttribute active="true" code="cpc_update" column="cpc_update" constant="false" currencyConnected="false" custom="true" dataSize="20"
+        dataType="number" dwEnabled="false" editable="true" extendedType="boolean" multiValued="false" partitionCode="NIKU.ROOT"
+        partitionMode="PARTITION_AND_ANSTRS_DESDNTS" presenceRequired="false" private="false" required="false" unique="false" virtual="false">
+						<nls languageCode="ca" name="Update Custom % Complete"/>
+						<nls languageCode="cs" name="Update Custom % Complete"/>
+						<nls languageCode="da" name="Update Custom % Complete"/>
+						<nls languageCode="de" name="Update Custom % Complete"/>
+						<nls description="Flag task to update % Complete" languageCode="en" name="Update Custom % Complete"/>
+						<nls languageCode="es" name="Update Custom % Complete"/>
+						<nls languageCode="fi" name="Update Custom % Complete"/>
+						<nls languageCode="fr" name="Update Custom % Complete"/>
+						<nls languageCode="hu" name="Update Custom % Complete"/>
+						<nls languageCode="it" name="Update Custom % Complete"/>
+						<nls languageCode="ja" name="Update Custom % Complete"/>
+						<nls languageCode="ko" name="Update Custom % Complete"/>
+						<nls languageCode="nl" name="Update Custom % Complete"/>
+						<nls languageCode="no" name="Update Custom % Complete"/>
+						<nls languageCode="pl" name="Update Custom % Complete"/>
+						<nls description="Marca tarefa para atualização do % Concluído" languageCode="pt" name="Atualiza % Concluído"/>
+						<nls languageCode="ru" name="Update Custom % Complete"/>
+						<nls languageCode="sv" name="Update Custom % Complete"/>
+						<nls languageCode="tr" name="Update Custom % Complete"/>
+						<nls languageCode="zh" name="Update Custom % Complete"/>
+						<nls languageCode="zh_TW" name="Update Custom % Complete"/>
+						<default value="1"/>
+					</customAttribute>
+					<customAttribute active="true" apiAlias="t_CPCDAYSCOMPLETE" code="cpc_days_complete" column="cpc_days_complete" constant="false"
+        currencyConnected="false" custom="true" dataSize="20" dataType="number" dwEnabled="false" editable="true" multiValued="false"
+        partitionCode="NIKU.ROOT" partitionMode="PARTITION_AND_ANSTRS_DESDNTS" presenceRequired="false" private="false" required="false" scale="2"
+        unique="false" virtual="false">
+						<nls languageCode="ca" name="Days Complete"/>
+						<nls languageCode="cs" name="Days Complete"/>
+						<nls languageCode="da" name="Days Complete"/>
+						<nls languageCode="de" name="Days Complete"/>
+						<nls description="Days Complete = Duration * Percent Complete" languageCode="en" name="Days Complete"/>
+						<nls languageCode="es" name="Days Complete"/>
+						<nls languageCode="fi" name="Days Complete"/>
+						<nls languageCode="fr" name="Days Complete"/>
+						<nls languageCode="hu" name="Days Complete"/>
+						<nls languageCode="it" name="Days Complete"/>
+						<nls languageCode="ja" name="Days Complete"/>
+						<nls languageCode="ko" name="Days Complete"/>
+						<nls languageCode="nl" name="Days Complete"/>
+						<nls languageCode="no" name="Days Complete"/>
+						<nls languageCode="pl" name="Days Complete"/>
+						<nls description="Dias Concluídos = Duração * % Concluído" languageCode="pt" name="Dias Concluídos"/>
+						<nls languageCode="ru" name="Days Complete"/>
+						<nls languageCode="sv" name="Days Complete"/>
+						<nls languageCode="tr" name="Days Complete"/>
+						<nls languageCode="zh" name="Days Complete"/>
+						<nls languageCode="zh_TW" name="Days Complete"/>
+					</customAttribute>
+					<customAttribute active="true" apiAlias="t_CPCEXCLUDE" code="cpc_exclude" column="cpc_exclude" constant="false" currencyConnected="false"
+        custom="true" dataSize="20" dataType="number" dwEnabled="false" editable="true" extendedType="boolean" multiValued="false"
+        partitionCode="NIKU.ROOT" partitionMode="PARTITION_AND_ANSTRS_DESDNTS" presenceRequired="false" private="false" required="false"
+        unique="false" virtual="false">
+						<nls languageCode="ca" name="Exclude from % Complete"/>
+						<nls languageCode="cs" name="Exclude from % Complete"/>
+						<nls languageCode="da" name="Exclude from % Complete"/>
+						<nls languageCode="de" name="Exclude from % Complete"/>
+						<nls description="Exclude task from % Completed" languageCode="en" name="Exclude from % Complete"/>
+						<nls languageCode="es" name="Exclude from % Complete"/>
+						<nls languageCode="fi" name="Exclude from % Complete"/>
+						<nls languageCode="fr" name="Exclude from % Complete"/>
+						<nls languageCode="hu" name="Exclude from % Complete"/>
+						<nls languageCode="it" name="Exclude from % Complete"/>
+						<nls languageCode="ja" name="Exclude from % Complete"/>
+						<nls languageCode="ko" name="Exclude from % Complete"/>
+						<nls languageCode="nl" name="Exclude from % Complete"/>
+						<nls languageCode="no" name="Exclude from % Complete"/>
+						<nls languageCode="pl" name="Exclude from % Complete"/>
+						<nls description="Excluir tarefa do cálculo de % Concluído" languageCode="pt" name="Excluir do % Concluído"/>
+						<nls languageCode="ru" name="Exclude from % Complete"/>
+						<nls languageCode="sv" name="Exclude from % Complete"/>
+						<nls languageCode="tr" name="Exclude from % Complete"/>
+						<nls languageCode="zh" name="Exclude from % Complete"/>
+						<nls languageCode="zh_TW" name="Exclude from % Complete"/>
+						<default value="0"/>
+					</customAttribute>
+					<customAttribute active="true" apiAlias="t_DURATION" code="cpc_duration" column="cpc_duration" constant="false" currencyConnected="false"
+        custom="true" dataSize="20" dataType="number" dwEnabled="false" editable="true" multiValued="false" partitionCode="NIKU.ROOT"
+        partitionMode="PARTITION_AND_ANSTRS_DESDNTS" presenceRequired="false" private="false" required="false" scale="3" unique="false" virtual="false">
+						<nls languageCode="ca" name="Custom Duration"/>
+						<nls languageCode="cs" name="Custom Duration"/>
+						<nls languageCode="da" name="Custom Duration"/>
+						<nls languageCode="de" name="Custom Duration"/>
+						<nls description="Stores the task total duration. If it's a summary task, stores the total duration of the child tasks" languageCode="en" name="Custom Duration"/>
+						<nls languageCode="es" name="Custom Duration"/>
+						<nls languageCode="fi" name="Custom Duration"/>
+						<nls languageCode="fr" name="Custom Duration"/>
+						<nls languageCode="hu" name="Custom Duration"/>
+						<nls languageCode="it" name="Custom Duration"/>
+						<nls languageCode="ja" name="Custom Duration"/>
+						<nls languageCode="ko" name="Custom Duration"/>
+						<nls languageCode="nl" name="Custom Duration"/>
+						<nls languageCode="no" name="Custom Duration"/>
+						<nls languageCode="pl" name="Custom Duration"/>
+						<nls description="Guarda a duração total das tarefas. Se for agregadora, guarda a duração total das tarefas filhas" languageCode="pt" name="Duração Personalizada"/>
+						<nls languageCode="ru" name="Custom Duration"/>
+						<nls languageCode="sv" name="Custom Duration"/>
+						<nls languageCode="tr" name="Custom Duration"/>
+						<nls languageCode="zh" name="Custom Duration"/>
+						<nls languageCode="zh_TW" name="Custom Duration"/>
+					</customAttribute>
+			</object>
+		</objects>
+	</contentPack>
+</NikuDataBus>

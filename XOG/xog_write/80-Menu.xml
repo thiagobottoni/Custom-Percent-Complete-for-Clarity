@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+	<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<contentPack update="true">
+		<menus update="true">
+			<menu code="application" source="niku.com" update="true">
+				<nls description="Menú d'aplicacions" languageCode="ca" name="Menú d'aplicacions"/>
+				<nls description="Nabídka aplikace" languageCode="cs" name="Nabídka aplikace"/>
+				<nls description="Applikationsmenu" languageCode="da" name="Applikationsmenu"/>
+				<nls description="Anwendungsmenü" languageCode="de" name="Anwendungsmenü"/>
+				<nls description="Application Menu" languageCode="en" name="Application Menu"/>
+				<nls description="Menú de aplicaciones" languageCode="es" name="Menú de aplicaciones"/>
+				<nls description="Sovellusvalikko" languageCode="fi" name="Sovellusvalikko"/>
+				<nls description="Menu d'application" languageCode="fr" name="Menu d'application"/>
+				<nls description="Alkalmazásmenü" languageCode="hu" name="Alkalmazásmenü"/>
+				<nls description="Menu Applicazione" languageCode="it" name="Menu Applicazione"/>
+				<nls description="アプリケーション メニュー" languageCode="ja" name="アプリケーション メニュー"/>
+				<nls description="애플리케이션 메뉴" languageCode="ko" name="애플리케이션 메뉴"/>
+				<nls description="Toepassingsmenu" languageCode="nl" name="Menu Toepassing"/>
+				<nls description="Programmeny" languageCode="no" name="Applikasjonsmeny"/>
+				<nls description="Menu aplikacji" languageCode="pl" name="Menu aplikacji"/>
+				<nls description="Menu de Aplicativo" languageCode="pt" name="Menu de Aplicativo"/>
+				<nls description="Меню приложения" languageCode="ru" name="Меню приложения"/>
+				<nls description="Applikationermeny" languageCode="sv" name="Applikation-meny"/>
+				<nls description="Uygulama Menüsü" languageCode="tr" name="Uygulama Menüsü"/>
+				<nls description="应用程序菜单" languageCode="zh" name="应用程序菜单"/>
+				<nls description="應用程式功能表" languageCode="zh_TW" name="應用程式功能表"/>
+				<section code="odf.custom.customSection" position="99" update="true">
+					<nls description="Objectes personalitzats" languageCode="ca" name="Objectes personalitzats"/>
+					<nls description="Vlastní objekty" languageCode="cs" name="Vlastní objekty"/>
+					<nls description="Brugerdefinerede objekter" languageCode="da" name="Brugerdefinerede objekter"/>
+					<nls description="Benutzerdefinierte Objekte" languageCode="de" name="Benutzerdefinierte Objekte"/>
+					<nls description="Custom Objects" languageCode="en" name="Custom Objects"/>
+					<nls description="Objetos personalizados" languageCode="es" name="Objetos personalizados"/>
+					<nls description="Mukautetut objektit" languageCode="fi" name="Mukautetut objektit"/>
+					<nls description="Objets personnalisés" languageCode="fr" name="Objets personnalisés"/>
+					<nls description="Egyéni objektumok" languageCode="hu" name="Egyéni objektumok"/>
+					<nls description="Oggetti personalizzati" languageCode="it" name="Oggetti personalizzati"/>
+					<nls description="カスタム オブジェクト" languageCode="ja" name="カスタム オブジェクト"/>
+					<nls description="사용자 지정 개체" languageCode="ko" name="사용자 지정 개체"/>
+					<nls description="Aangepaste objecten" languageCode="nl" name="Aangepaste objecten"/>
+					<nls description="Tilpassede objekter" languageCode="no" name="Tilpassede objekter"/>
+					<nls description="Obiekty niestandardowe" languageCode="pl" name="Obiekty niestandardowe"/>
+					<nls description="Personalizar objetos" languageCode="pt" name="Personalizar objetos"/>
+					<nls description="Пользовательские объекты" languageCode="ru" name="Пользовательские объекты"/>
+					<nls description="Anpassade objekt" languageCode="sv" name="Anpassade objekt"/>
+					<nls description="Özel Nesneler" languageCode="tr" name="Özel Nesneler"/>
+					<nls description="自定义对象" languageCode="zh" name="自定义对象"/>
+					<nls description="自訂物件" languageCode="zh_TW" name="自訂物件"/>
+					<link pageCode="cpc_transp_calc" pageSource="customer" position="100" update="true">
+						<nls languageCode="ca" name="Custom % Complete Control Panel"/>
+						<nls languageCode="cs" name="Custom % Complete Control Panel"/>
+						<nls languageCode="da" name="Custom % Complete Control Panel"/>
+						<nls languageCode="de" name="Custom % Complete Control Panel"/>
+						<nls languageCode="en" name="Custom % Complete Control Panel"/>
+						<nls languageCode="es" name="Custom % Complete Control Panel"/>
+						<nls languageCode="fi" name="Custom % Complete Control Panel"/>
+						<nls languageCode="fr" name="Custom % Complete Control Panel"/>
+						<nls languageCode="hu" name="Custom % Complete Control Panel"/>
+						<nls languageCode="it" name="Custom % Complete Control Panel"/>
+						<nls languageCode="ja" name="Custom % Complete Control Panel"/>
+						<nls languageCode="ko" name="Custom % Complete Control Panel"/>
+						<nls languageCode="nl" name="Custom % Complete Control Panel"/>
+						<nls languageCode="no" name="Custom % Complete Control Panel"/>
+						<nls languageCode="pl" name="Custom % Complete Control Panel"/>
+						<nls languageCode="pt" name="Painel de Controle do % Concluído"/>
+						<nls languageCode="ru" name="Custom % Complete Control Panel"/>
+						<nls languageCode="sv" name="Custom % Complete Control Panel"/>
+						<nls languageCode="tr" name="Custom % Complete Control Panel"/>
+						<nls languageCode="zh" name="Custom % Complete Control Panel"/>
+						<nls languageCode="zh_TW" name="Custom % Complete Control Panel"/>
+					</link>
+				</section>
+			</menu>
+		</menus>
+	</contentPack>
+</NikuDataBus>
