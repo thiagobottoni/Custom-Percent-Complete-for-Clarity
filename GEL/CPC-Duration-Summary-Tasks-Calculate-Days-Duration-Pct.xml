@@ -1,0 +1,210 @@
+<gel:script 
+   xmlns:core="jelly:core" 
+   xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary" 
+   xmlns:sql="jelly:sql" 
+   xmlns:email="jelly:email" 
+   xmlns:file="jelly:com.niku.union.gel.FileTagLibrary" 
+   xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" 
+   xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" 
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+   xmlns:xog="http://www.niku.com/xog" 
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<!-- Setting the database -->
+	<core:catch var="connFail">
+		<gel:setDataSource dbId="Niku" var="database"/>
+	</core:catch>
+	
+	<!-- Checking if database is available -->
+	<core:if test="${ connFail != null }">
+		<gel:log level="error" message="Database not available!"/>
+	</core:if>
+	
+	<!-- Debugging -->
+	<core:if test="${ debug == 1 }">
+		<gel:log level="debug" message="Session ID: ${sessionID}"/>
+		<gel:log level="debug" message="Database Connection: ${database} | ${connFail}"/>
+	</core:if>
+	
+	<!-- Capturing custom script output -->
+	<core:catch var="customScript">
+		
+		<!-- Fetching active projects, no templates, which native calculation method is manual,  -->
+		<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
+		<!-- If there's no change on detail tasks, there's no need to update summary tasks -->
+		<sql:query var="projects" dataSource="${database}" escapeText="false">
+		<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+		]]>
+		</sql:query>
+		
+		<core:forEach items="${projects.rows}" trim="true" var="row">
+			<core:set value="${row.id}" var="prj_id"/>
+			<core:set value="${row.name}" var="prj_name"/>
+			<core:set value="${row.code}" var="prj_code"/>
+			
+			<core:set value="0" var="wbs_level"/>
+			
+			<sql:query var="wbs" dataSource="${database}" escapeText="false">
+			<![CDATA[
+				SELECT MAX(prwbslevel) wbs_levels
+				FROM 	prtask
+				WHERE 	prprojectid = ?
+				AND 	pristask = 0
+			]]>
+			<sql:param value="${prj_id}"/>
+			</sql:query>
+			<core:set value="${wbs.rows[0].wbs_levels}" var="wbs_level"/>
+			
+			<core:if test="${ debug == 1 }">
+				<gel:log level="debug" message="Working with Project: ${prj_name} | ID: ${prj_id} | Code: ${prj_code}"/>
+				<gel:log level="debug" message="This Gantt has ${wbs_level} levels of summary tasks"/>
+			</core:if>
+			
+			<core:while test="${wbs_level &gt; 0}">
+				
+				<!-- Fetching only summary tasks that need to be updated -->
+				<sql:query var="tasks" dataSource="${database}" escapeText="false">
+				<![CDATA[
+					SELECT  gantt.parent_id,
+							gantt.parent_task,
+							gantt.prwbslevel,
+							gantt.prexternalid,
+							SUM(gantt.cpc_duration) prduration,
+							SUM(gantt.days_complete) days_complete,
+							CASE SUM(gantt.cpc_duration) WHEN 0 THEN 0 ELSE ROUND(SUM(gantt.days_complete) / SUM(gantt.cpc_duration), 2) END pct_complete
+					FROM (
+						SELECT  tsk.prprojectid,
+								parent_task.prid parent_id,
+								parent_task.prname parent_task,
+								parent_task.prwbslevel,
+								parent_task.prexternalid,
+								odf_tsk.cpc_duration,
+								cpc_days_complete days_complete
+						FROM        prtask tsk
+						LEFT JOIN   ( SELECT prid, prname, prprojectid, prwbssequence, pristask, prwbslevel, prexternalid
+									  FROM prtask ) parent_task    ON   parent_task.prwbssequence = tsk.wbs_parseq
+																   AND  parent_task.prprojectid = tsk.prprojectid
+																   AND  parent_task.pristask = 0
+						JOIN    odf_ca_task odf_tsk                ON   tsk.prid = odf_tsk.id
+						WHERE 	odf_tsk.cpc_exclude = 0 
+								AND tsk.prismilestone = 0
+						CONNECT BY PRIOR tsk.prid = parent_task.prid
+						START WITH parent_task.prid IS NULL
+						ORDER BY tsk. prwbssequence
+					) gantt
+					WHERE gantt.prprojectid = ?
+						  AND gantt.parent_id IS NOT NULL
+						  AND gantt.prwbslevel = ?
+					GROUP BY gantt.parent_id, gantt.parent_task, gantt.prwbslevel, gantt.prexternalid
+				]]>
+				<sql:param value="${prj_id}"/>
+				<sql:param value="${wbs_level}"/>
+				</sql:query>
+				
+				<core:forEach items="${tasks.rows}" trim="true" var="row2">
+					<core:set value="${row2.parent_id}" var="tsk_id"/>
+					<core:set value="${row2.parent_task}" var="tsk_name"/>
+					<core:set value="${row2.prwbslevel}" var="tsk_outline_level"/>
+					<core:set value="${row2.prexternalid}" var="tsk_ext_id"/>
+					<core:set value="${row2.days_complete}" var="tsk_days_complete"/>
+					<core:set value="${row2.prduration}" var="tsk_duration"/>
+					<core:set value="${row2.pct_complete}" var="tsk_pctcomplete"/>
+				
+					<core:if test="${ debug == 1 }">
+						<gel:log level="debug" message="Working with Summary Task: ${tsk_name} | ID: ${tsk_id} | Level: ${tsk_outline_level} | External ID: ${tsk_ext_id} | Duration: ${tsk_duration} | Days Complete: ${tsk_days_complete} | Pct Complete: ${tsk_pctcomplete}"/>
+					</core:if>
+					
+					<!-- If the external ID is null, it's not possible to update the task through XOG, so I'm filling out this field before updating -->
+					<!-- I'm doing a direct database update, because there's no way to update only the task external ID through XOG -->
+					<core:if test="${ tsk_ext_id == null }">
+					
+						<sql:update dataSource="${database}" escapeText="0">
+							<![CDATA[
+								UPDATE prtask SET prexternalid=? where prid=?
+							]]>
+							<sql:param value="${tsk_id}"/>
+							<sql:param value="${tsk_id}"/>
+							<core:set value="${tsk_id}" var="tsk_ext_id"/>
+							
+							<core:if test="${ debug == 1 }">
+								<gel:log level="debug" message="Task External ID updated from null to ${tsk_id}"/>
+							</core:if>
+							
+						</sql:update>					
+						
+					</core:if>
+					
+					<!-- Creating xog write to update tasks -->
+					<gel:parse var="updateTasks">
+						<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_project.xsd">
+						  <Header action="write" externalSource="NIKU" objectType="project" version="15.6.1.265"/>
+						  <Projects>
+							<Project name="${prj_name}" projectID="${prj_code}">
+							  <Tasks>
+								<Task internalTaskID="${tsk_id}" name="${tsk_name}" percComp="${tsk_pctcomplete}" outlineLevel="${tsk_outline_level}" taskID="${tsk_ext_id}">
+								  <CustomInformation>
+									<ColumnValue name="cpc_days_complete">${tsk_days_complete}</ColumnValue>
+									<ColumnValue name="cpc_duration">${tsk_duration}</ColumnValue>
+								  </CustomInformation>
+								</Task>
+							  </Tasks>
+							</Project>
+						  </Projects>
+						</NikuDataBus>
+					</gel:parse>
+								
+					<!-- Executing xog write -->
+					<soap:invoke endpoint="internal" var="result">
+						<soap:message>
+							<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+									  xmlns:xog="http://www.niku.com/xog">
+								<soapenv:Header>
+									<xog:Auth>
+										<xog:SessionID>${sessionID}</xog:SessionID>
+									</xog:Auth>
+								</soapenv:Header>
+								<soapenv:Body>
+									<gel:include select="$updateTasks"/>
+								</soapenv:Body>
+							</soapenv:Envelope>
+						</soap:message>
+					</soap:invoke>
+					
+					<!-- Checking if xog returned any error -->
+					<gel:set asString="true" select="$result//Statistics/@failureRecords" var="failureRecs"/>
+					<core:if test="${failureRecs != '0'}">
+						<gel:log level="error" message="A Problem with the XOG happened!"/>
+						<gel:log level="error">Caught Exception was: <gel:expr select="$result"/> </gel:log>
+					</core:if>
+				
+				</core:forEach>
+
+				<core:set value="${wbs_level - 1}" var="wbs_level"/>
+			</core:while>
+
+		</core:forEach>
+		
+	</core:catch>
+	
+	<!-- Checking if custom script has returned any error -->
+	<core:if test="${ customScript != null }">
+		<gel:log level="error" message="Error: ${customScript}"/>
+	</core:if>
+	
+</gel:script>
