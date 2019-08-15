@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+	<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<contentPack update="true">
+		<lookups update="true">
+			<staticLookup autoSuggestEnabled="true" autoSuggestMaxSuggestions="10" code="CPC_CALC_METHODS" hiddenAttributeName="lookup_code"
+    sortStyle="alphanumeric" source="niku.com" status="active" update="true">
+				<nls description="" languageCode="ca" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="cs" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="da" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="de" name="Custom Calculation Methods"/>
+				<nls description="List of custom % Complete calculation methods" languageCode="en" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="es" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="fi" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="fr" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="hu" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="it" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="ja" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="ko" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="nl" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="no" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="pl" name="Custom Calculation Methods"/>
+				<nls description="Lista dos métodos de cálculos personalizados para % Concluído" languageCode="pt" name="Métodos de Cálculos Personalizados"/>
+				<nls description="" languageCode="ru" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="sv" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="tr" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="zh" name="Custom Calculation Methods"/>
+				<nls description="" languageCode="zh_TW" name="Custom Calculation Methods"/>
+				<lookupValue code="CUSTOM" enum="0" sortOrder="0" status="inactive">
+					<nls description="" languageCode="ca" name="Custom"/>
+					<nls description="" languageCode="cs" name="Custom"/>
+					<nls description="" languageCode="da" name="Custom"/>
+					<nls description="" languageCode="de" name="Custom"/>
+					<nls description="" languageCode="en" name="Custom"/>
+					<nls description="" languageCode="es" name="Custom"/>
+					<nls description="" languageCode="fi" name="Custom"/>
+					<nls description="" languageCode="fr" name="Custom"/>
+					<nls description="" languageCode="hu" name="Custom"/>
+					<nls description="" languageCode="it" name="Custom"/>
+					<nls description="" languageCode="ja" name="Custom"/>
+					<nls description="" languageCode="ko" name="Custom"/>
+					<nls description="" languageCode="nl" name="Custom"/>
+					<nls description="" languageCode="no" name="Custom"/>
+					<nls description="" languageCode="pl" name="Custom"/>
+					<nls description="" languageCode="pt" name="Custom"/>
+					<nls description="" languageCode="ru" name="Custom"/>
+					<nls description="" languageCode="sv" name="Custom"/>
+					<nls description="" languageCode="tr" name="Custom"/>
+					<nls description="" languageCode="zh" name="Custom"/>
+					<nls description="" languageCode="zh_TW" name="Custom"/>
+				</lookupValue>
+				<lookupValue code="DURATION" enum="0" sortOrder="0" status="active">
+					<nls description="" languageCode="ca" name="Duration"/>
+					<nls description="" languageCode="cs" name="Duration"/>
+					<nls description="" languageCode="da" name="Duration"/>
+					<nls description="" languageCode="de" name="Duration"/>
+					<nls description="" languageCode="en" name="Duration"/>
+					<nls description="" languageCode="es" name="Duration"/>
+					<nls description="" languageCode="fi" name="Duration"/>
+					<nls description="" languageCode="fr" name="Duration"/>
+					<nls description="" languageCode="hu" name="Duration"/>
+					<nls description="" languageCode="it" name="Duration"/>
+					<nls description="" languageCode="ja" name="Duration"/>
+					<nls description="" languageCode="ko" name="Duration"/>
+					<nls description="" languageCode="nl" name="Duration"/>
+					<nls description="" languageCode="no" name="Duration"/>
+					<nls description="" languageCode="pl" name="Duration"/>
+					<nls description="" languageCode="pt" name="Duration"/>
+					<nls description="" languageCode="ru" name="Duration"/>
+					<nls description="" languageCode="sv" name="Duration"/>
+					<nls description="" languageCode="tr" name="Duration"/>
+					<nls description="" languageCode="zh" name="Duration"/>
+					<nls description="" languageCode="zh_TW" name="Duration"/>
+				</lookupValue>
+				<lookupValue code="EFFORT" enum="0" sortOrder="0" status="inactive">
+					<nls description="" languageCode="ca" name="Effort"/>
+					<nls description="" languageCode="cs" name="Effort"/>
+					<nls description="" languageCode="da" name="Effort"/>
+					<nls description="" languageCode="de" name="Effort"/>
+					<nls description="" languageCode="en" name="Effort"/>
+					<nls description="" languageCode="es" name="Effort"/>
+					<nls description="" languageCode="fi" name="Effort"/>
+					<nls description="" languageCode="fr" name="Effort"/>
+					<nls description="" languageCode="hu" name="Effort"/>
+					<nls description="" languageCode="it" name="Effort"/>
+					<nls description="" languageCode="ja" name="Effort"/>
+					<nls description="" languageCode="ko" name="Effort"/>
+					<nls description="" languageCode="nl" name="Effort"/>
+					<nls description="" languageCode="no" name="Effort"/>
+					<nls description="" languageCode="pl" name="Effort"/>
+					<nls description="" languageCode="pt" name="Effort"/>
+					<nls description="" languageCode="ru" name="Effort"/>
+					<nls description="" languageCode="sv" name="Effort"/>
+					<nls description="" languageCode="tr" name="Effort"/>
+					<nls description="" languageCode="zh" name="Effort"/>
+					<nls description="" languageCode="zh_TW" name="Effort"/>
+				</lookupValue>
+				<lookupValue code="NOT_APPLICABLE" enum="0" sortOrder="0" status="active">
+					<nls description="" languageCode="ca" name="N/A"/>
+					<nls description="" languageCode="cs" name="N/A"/>
+					<nls description="" languageCode="da" name="N/A"/>
+					<nls description="" languageCode="de" name="N/A"/>
+					<nls description="" languageCode="en" name="N/A"/>
+					<nls description="" languageCode="es" name="N/A"/>
+					<nls description="" languageCode="fi" name="N/A"/>
+					<nls description="" languageCode="fr" name="N/A"/>
+					<nls description="" languageCode="hu" name="N/A"/>
+					<nls description="" languageCode="it" name="N/A"/>
+					<nls description="" languageCode="ja" name="N/A"/>
+					<nls description="" languageCode="ko" name="N/A"/>
+					<nls description="" languageCode="nl" name="N/A"/>
+					<nls description="" languageCode="no" name="N/A"/>
+					<nls description="" languageCode="pl" name="N/A"/>
+					<nls description="" languageCode="pt" name="N/A"/>
+					<nls description="" languageCode="ru" name="N/A"/>
+					<nls description="" languageCode="sv" name="N/A"/>
+					<nls description="" languageCode="tr" name="N/A"/>
+					<nls description="" languageCode="zh" name="N/A"/>
+					<nls description="" languageCode="zh_TW" name="N/A"/>
+				</lookupValue>
+				<displayedSuggestionAttributes>
+					<displayedSuggestionAttribute value="name"/>
+				</displayedSuggestionAttributes>
+				<searchedSuggestionAttributes>
+					<searchedSuggestionAttribute value="name"/>
+				</searchedSuggestionAttributes>
+			</staticLookup>
+		</lookups>
+	</contentPack>
+</NikuDataBus>
