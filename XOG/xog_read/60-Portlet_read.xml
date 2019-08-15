@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_read.xsd">
+  <Header version="8.0" action="read" objectType="contentPack" externalSource="NIKU">
+    <args name="order_by_1" value="code"/>
+    <args name="documentLocation" value="C:\niku"/>
+	<args name="no_dependencies" value="true"/>
+  </Header>
+  <PortletQuery>
+    <Filter name="code" criteria="OR">cpc_prj_calc,cpc_prj_calcs</Filter>
+  </PortletQuery>
+</NikuDataBus>
