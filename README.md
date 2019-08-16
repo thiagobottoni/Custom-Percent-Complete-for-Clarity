@@ -6,6 +6,9 @@ Several customers create "dummy" tasks on project schedules just to process fina
 
 # Considerations
 The release 1.0 implements the custom calculation by duration only.
+
 The package is available in two languages: English and Brazilian Portuguese
+
 For more details on how to install, configure and use, please see the package documentation.
+
 [Release 1.0](https://github.com/thiagobottoni/Custom-Percent-Complete-for-Clarity/releases/tag/v1.0)
