@@ -8,4 +8,4 @@ Several customers create "dummy" tasks on project schedules just to process fina
 The release 1.0 only implements the calculation by duration.
 The package is available in two languages: English and Brazilian Portuguese
 
-For more details on how to install, configure and use please see the package documentation.
+For more details on how to install, configure and use, please see the package documentation.
