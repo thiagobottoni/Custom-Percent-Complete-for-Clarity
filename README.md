@@ -4,11 +4,11 @@ This package makes possible to exclude tasks from the project % complete calcula
 ## Business Reason
 Several customers create "dummy" tasks on project schedules just to process financial transactions or to post timesheets. The problem is that these tasks generally have a huge impact on the Project % Complete. This package allows customers to exclude these tasks from the % Complete calculation and also makes easier to add their very own calculation methods.
 
-## Considerations
-The release 1.0 implements the custom calculation by duration only.
+## Release Notes
+This release was tested in multiple environments
 
-The package is available in two languages: English and Brazilian Portuguese
+This release implements the custom calculation by duration only
 
-For more details on how to install, configure and use, please see the package documentation.
+This release is available in two languages: English and Brazilian Portuguese
 
 [Release 1.0](https://github.com/thiagobottoni/Custom-Percent-Complete-for-Clarity/releases/tag/v1.0)
