@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+	<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<contentPack update="true">
+		<objects>
+			<object code="project" raiseEvents="true" source="niku.com" update="true">
+				<nls description="L'objecte de projecte" languageCode="ca" name="Projecte"/>
+				<nls description="Objekt projektu" languageCode="cs" name="Projekt"/>
+				<nls description="Projektobjektet" languageCode="da" name="Projekt"/>
+				<nls description="Das Objekt 'Projekt'" languageCode="de" name="Projekt"/>
+				<nls description="The Project Object" languageCode="en" name="Project"/>
+				<nls description="El objeto de proyecto" languageCode="es" name="Proyecto"/>
+				<nls description="Projektin objekti" languageCode="fi" name="Projekti"/>
+				<nls description="Objet Projet" languageCode="fr" name="Projet"/>
+				<nls description="A projekt objektum" languageCode="hu" name="Projekt"/>
+				<nls description="Oggetto progetto" languageCode="it" name="Progetto"/>
+				<nls description="プロジェクト オブジェクト" languageCode="ja" name="プロジェクト"/>
+				<nls description="프로젝트 개체" languageCode="ko" name="프로젝트"/>
+				<nls description="Het projectobject" languageCode="nl" name="Project"/>
+				<nls description="Prosjektobjektet" languageCode="no" name="Prosjekt"/>
+				<nls description="Obiekt projektu" languageCode="pl" name="Projekt"/>
+				<nls description="O objeto Projeto" languageCode="pt" name="Projeto"/>
+				<nls description="Объект Проект" languageCode="ru" name="Проект"/>
+				<nls description="Projektobjektet" languageCode="sv" name="Projekt"/>
+				<nls description="Proje Nesnesi" languageCode="tr" name="Proje"/>
+				<nls description="项目对象" languageCode="zh" name="项目"/>
+				<nls description="專案物件" languageCode="zh_TW" name="專案"/>
+				<actions>
+					<action action="bpm.startProcess" code="cpc_update_pct" component="projmgr" isActive="true" isCustom="true" isGeneric="false" isInstance="true"
+				isSingleSelect="false" jobDefinitionCode="NONE" needUserConfirmation="false" needUserInput="false" needsBridge="false" needsSelection="false"
+				objectCode="project" partitionCode="NIKU.ROOT" partitionMode="PARTITION_AND_ANSTRS_DESDNTS" processCode="cpc_calc_on_demand"
+				rendering="cviewAction" targetWidget="none" type="process">
+						<nls languageCode="ca" name="CPC - Update Pct Complete"/>
+						<nls languageCode="cs" name="CPC - Update Pct Complete"/>
+						<nls languageCode="da" name="CPC - Update Pct Complete"/>
+						<nls languageCode="de" name="CPC - Update Pct Complete"/>
+						<nls description="Updates project % complete" languageCode="en" name="CPC - Update Pct Complete"/>
+						<nls languageCode="es" name="CPC - Update Pct Complete"/>
+						<nls languageCode="fi" name="CPC - Update Pct Complete"/>
+						<nls languageCode="fr" name="CPC - Update Pct Complete"/>
+						<nls languageCode="hu" name="CPC - Update Pct Complete"/>
+						<nls languageCode="it" name="CPC - Update Pct Complete"/>
+						<nls languageCode="ja" name="CPC - Update Pct Complete"/>
+						<nls languageCode="ko" name="CPC - Update Pct Complete"/>
+						<nls languageCode="nl" name="CPC - Update Pct Complete"/>
+						<nls languageCode="no" name="CPC - Update Pct Complete"/>
+						<nls languageCode="pl" name="CPC - Update Pct Complete"/>
+						<nls languageCode="pt" name="CPC - Atualizar Pct Concluído"/>
+						<nls languageCode="ru" name="CPC - Update Pct Complete"/>
+						<nls languageCode="sv" name="CPC - Update Pct Complete"/>
+						<nls languageCode="tr" name="CPC - Update Pct Complete"/>
+						<nls languageCode="zh" name="CPC - Update Pct Complete"/>
+						<nls languageCode="zh_TW" name="CPC - Update Pct Complete"/>
+						<linkParam dataRef="odf_pk" dataSource="data" paramCode="primaryObjAttr"/>
+					</action>
+				</actions>
+			</object>
+		</objects>
+	</contentPack>
+</NikuDataBus>
