@@ -2,6 +2,6 @@
 <NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_read.xsd">
   <Header version="8.0" action="read" objectType="contentPack" externalSource="NIKU"/>
   <ProcessQuery>
-    <Filter name="code" criteria="OR">cpc_calc_duration,cpc_to_update</Filter>
+    <Filter name="code" criteria="OR">cpc_calc_duration,cpc_to_update,cpc_calc_on_demand</Filter>
   </ProcessQuery>
 </NikuDataBus>

@@ -1,0 +1,120 @@
+<gel:script 
+   xmlns:core="jelly:core" 
+   xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary" 
+   xmlns:sql="jelly:sql" 
+   xmlns:email="jelly:email" 
+   xmlns:file="jelly:com.niku.union.gel.FileTagLibrary" 
+   xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" 
+   xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" 
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+   xmlns:xog="http://www.niku.com/xog" 
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<!-- Setting the database -->
+	<core:catch var="connFail">
+		<gel:setDataSource dbId="Niku" var="database"/>
+	</core:catch>
+	
+	<!-- Checking if database is available -->
+	<core:if test="${ connFail != null }">
+		<gel:log level="error" message="Database not available!"/>
+	</core:if>
+	
+	<!-- Debugging -->
+	<core:if test="${ debug == 1 }">
+		<gel:log level="debug" message="Session ID: ${sessionID}"/>
+		<gel:log level="debug" message="Database Connection: ${database} | ${connFail}"/>
+	</core:if>
+	
+	<!-- Capturing custom script output -->
+	<core:catch var="customScript">
+		
+		<!-- Fetching active projects, no templates, which native calculation method is manual,  -->
+		<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
+		<!-- If there's no change on detail tasks, there's no need to update the project % complete -->
+		<sql:query var="project" dataSource="${database}" escapeText="false">
+		<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+				AND		inv.id = ${gel_objectInstanceId}
+		]]>
+		</sql:query>
+		
+		<core:set value="${project.rows[0].id}" var="prj_id"/>
+		<core:set value="${project.rows[0].name}" var="prj_name"/>
+		<core:set value="${project.rows[0].code}" var="prj_code"/>
+			
+		<sql:query var="prj_cpc" dataSource="${database}" escapeText="false">
+		<![CDATA[
+			SELECT  CASE SUM(tsk.prduration) WHEN 0 THEN 0 ELSE ROUND(SUM(odf_tsk.cpc_days_complete) / SUM(odf_tsk.cpc_duration), 2) END pct_complete
+			FROM    prtask tsk
+			JOIN    odf_ca_task odf_tsk ON tsk.prid = odf_tsk.id
+			WHERE   tsk.prwbslevel = 1
+				AND odf_tsk.cpc_exclude = 0
+				AND tsk.prprojectid = ?
+				AND tsk.prismilestone = 0
+		]]>
+		<sql:param value="${prj_id}"/>
+		</sql:query>
+		<core:set value="${prj_cpc.rows[0].pct_complete}" var="prj_pctcomplete"/>
+		
+		<core:if test="${ debug == 1 }">
+			<gel:log level="debug" message="Working with Project: ${prj_name} | ID: ${prj_id} | Code: ${prj_code} | Pct Complete: ${prj_pctcomplete}"/>
+		</core:if>			
+		
+		<!-- Creating xog write to update the Project % Complete -->
+		<gel:parse var="updateProject">
+			<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_project.xsd">
+			  <Header action="write" externalSource="NIKU" objectType="project" version="15.6.1.265"/>
+			  <Projects>
+				<Project name="${prj_name}" projectID="${prj_code}" percentComplete="${prj_pctcomplete}"/>
+			  </Projects>
+			</NikuDataBus>
+		</gel:parse>
+					
+		<!-- Executing xog write -->
+		<soap:invoke endpoint="internal" var="result">
+			<soap:message>
+				<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+						  xmlns:xog="http://www.niku.com/xog">
+					<soapenv:Header>
+						<xog:Auth>
+							<xog:SessionID>${sessionID}</xog:SessionID>
+						</xog:Auth>
+					</soapenv:Header>
+					<soapenv:Body>
+						<gel:include select="$updateProject"/>
+					</soapenv:Body>
+				</soapenv:Envelope>
+			</soap:message>
+		</soap:invoke>
+		
+		<!-- Checking if xog returned any error -->
+		<gel:set asString="true" select="$result//Statistics/@failureRecords" var="failureRecs"/>
+		<core:if test="${failureRecs != '0'}">
+			<gel:log level="error" message="A Problem with the XOG happened!"/>
+			<gel:log level="error">Caught Exception was: <gel:expr select="$result"/> </gel:log>
+		</core:if>
+		
+	</core:catch>
+	
+	<!-- Checking if custom script has returned any error -->
+	<core:if test="${ customScript != null }">
+		<gel:log level="error" message="Error: ${customScript}"/>
+	</core:if>
+	
+</gel:script>

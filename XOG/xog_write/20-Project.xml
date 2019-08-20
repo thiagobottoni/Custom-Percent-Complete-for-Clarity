@@ -52,6 +52,35 @@
 					<nls languageCode="zh_TW" name="Custom % Complete Calculation"/>
 					<default value="NOT_APPLICABLE"/>
 				</customAttribute>
+				<actions>
+					<action action="bpm.startProcess" code="cpc_update_pct" component="projmgr" isActive="true" isCustom="true" isGeneric="false" isInstance="true"
+				isSingleSelect="false" jobDefinitionCode="NONE" needUserConfirmation="false" needUserInput="false" needsBridge="false" needsSelection="false"
+				objectCode="project" partitionCode="NIKU.ROOT" partitionMode="PARTITION_AND_ANSTRS_DESDNTS" processCode="cpc_calc_on_demand"
+				rendering="cviewAction" targetWidget="none" type="process">
+						<nls languageCode="ca" name="CPC - Update Pct Complete"/>
+						<nls languageCode="cs" name="CPC - Update Pct Complete"/>
+						<nls languageCode="da" name="CPC - Update Pct Complete"/>
+						<nls languageCode="de" name="CPC - Update Pct Complete"/>
+						<nls description="Updates project % complete" languageCode="en" name="CPC - Update Pct Complete"/>
+						<nls languageCode="es" name="CPC - Update Pct Complete"/>
+						<nls languageCode="fi" name="CPC - Update Pct Complete"/>
+						<nls languageCode="fr" name="CPC - Update Pct Complete"/>
+						<nls languageCode="hu" name="CPC - Update Pct Complete"/>
+						<nls languageCode="it" name="CPC - Update Pct Complete"/>
+						<nls languageCode="ja" name="CPC - Update Pct Complete"/>
+						<nls languageCode="ko" name="CPC - Update Pct Complete"/>
+						<nls languageCode="nl" name="CPC - Update Pct Complete"/>
+						<nls languageCode="no" name="CPC - Update Pct Complete"/>
+						<nls languageCode="pl" name="CPC - Update Pct Complete"/>
+						<nls languageCode="pt" name="CPC - Atualizar Pct Concluído"/>
+						<nls languageCode="ru" name="CPC - Update Pct Complete"/>
+						<nls languageCode="sv" name="CPC - Update Pct Complete"/>
+						<nls languageCode="tr" name="CPC - Update Pct Complete"/>
+						<nls languageCode="zh" name="CPC - Update Pct Complete"/>
+						<nls languageCode="zh_TW" name="CPC - Update Pct Complete"/>
+						<linkParam dataRef="odf_pk" dataSource="data" paramCode="primaryObjAttr"/>
+					</action>
+				</actions>
 			</object>
 		</objects>
 	</contentPack>

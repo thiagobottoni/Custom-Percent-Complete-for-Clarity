@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
-	<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<Header action="write" externalSource="NIKU" objectType="contentPack" version="15.6.1.265"/>
 	<contentPack update="true">
 		<Processes>
 			<Process allowOneRunningInstance="true" code="cpc_to_update" createdBy="admin" endStep="Finish" source="customer" startEvent="update"
@@ -200,6 +200,1166 @@
 				<Groups/>
 				<OBSAssocs complete="false"/>
 			</Process>
+			<Process allowOneRunningInstance="false" code="cpc_calc_on_demand" createdBy="admin" endStep="Finish" source="customer" startOption="ON_DEMAND" startStep="Start">
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="ca" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="cs" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="da" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="de" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="en" name="CPC - Calculate Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="es" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="fi" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="fr" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="hu" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="it" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="ja" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="ko" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="nl" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="no" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="pl" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="pt" name="CPC - Calcular Pct Concluído - Sob Demanda"/>
+				<nls
+      description="Calcula o % Concluído para tarefas agregadoras e projeto. Exclui tarefas marcadas do cálculo. Usuários podem rodar este processo sob demanda."
+      languageCode="ru" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="sv" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="tr" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="zh" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<nls
+      description="Calculates % Complete for Summary Tasks and Projects. It excludes marked tasks from the calculation. Users are allowed to run this process on demand."
+      languageCode="zh_TW" name="CPC - Calculate Project Pct Complete - On Demand"/>
+				<Security>
+					<UserSecurity rightCode="PROCESS-DEF-INST-INITIATE" userName="admin"/>
+					<UserSecurity rightCode="PROCESS-DEF-INST-WRITE" userName="admin"/>
+				</Security>
+				<Objects>
+					<Object manualStart="true" name="p" objectType="project" partitionCode="NIKU.ROOT" partitionModeCode="PARTITION_AND_ANSTRS_DESDNTS" type="BPM_POT_PRIMARY"/>
+				</Objects>
+				<Steps>
+					<Step id="Start" isMileStone="false" sequenceNo="1">
+						<nls languageCode="ca" name="Start"/>
+						<nls languageCode="cs" name="Start"/>
+						<nls languageCode="da" name="Start"/>
+						<nls languageCode="de" name="Start"/>
+						<nls languageCode="en" name="Start"/>
+						<nls languageCode="es" name="Start"/>
+						<nls languageCode="fi" name="Start"/>
+						<nls languageCode="fr" name="Start"/>
+						<nls languageCode="hu" name="Start"/>
+						<nls languageCode="it" name="Start"/>
+						<nls languageCode="ja" name="Start"/>
+						<nls languageCode="ko" name="Start"/>
+						<nls languageCode="nl" name="Start"/>
+						<nls languageCode="no" name="Start"/>
+						<nls languageCode="pl" name="Start"/>
+						<nls languageCode="pt" name="Início"/>
+						<nls languageCode="ru" name="Start"/>
+						<nls languageCode="sv" name="Start"/>
+						<nls languageCode="tr" name="Start"/>
+						<nls languageCode="zh" name="Start"/>
+						<nls languageCode="zh_TW" name="Start"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations>
+							<Action code="cpc_init" synchronized="true" type="BPM_SAT_CUSTOM">
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="ca" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="cs" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="da" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="de" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="en" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="es" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="fi" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="fr" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="hu" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="it" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="ja" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="ko" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="nl" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="no" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="pl" name="Initializing Variables"/>
+								<nls description="Define o usuário, acessa o Clarity e guarda o Session ID em variável persistente" languageCode="pt" name="Inicializar Variáveis"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="ru" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="sv" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="tr" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="zh" name="Initializing Variables"/>
+								<nls description="Define xog user, log in to Clarity and stores the session ID in a persistent variable" languageCode="zh_TW" name="Initializing Variables"/>
+								<customScript languageCode="gel">
+									<scriptText>
+										<gel:script xmlns:core="jelly:core" xmlns:email="jelly:email" xmlns:file="jelly:com.niku.union.gel.FileTagLibrary"
+                  xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary"
+                  xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sql="jelly:sql"
+                  xmlns:xog="http://www.niku.com/xog" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+											<!-- Parameters -->
+											<gel:parameter default="xog" var="xogUser"/>
+											<!-- Debug: Set to 1 if you need to see debug messages or 0 if you don't (Don't let debug set to 1 in production) -->
+											<core:set value="0" var="debug"/>
+											<!-- Getting session ID for the user defined above (var xogUser) -->
+											<core:new className="com.niku.union.security.DefaultSecurityIdentifier" var="securityId"/>
+											<core:invokeStatic className="com.niku.union.security.UserSessionControllerFactory" method="getInstance" var="xogInstance"/>
+											<core:set value="${xogInstance.init(xogUser, securityId)}" var="securityId"/>
+											<core:set value="${securityId.getSessionId()}" var="sessionID"/>
+											<!-- Checking if user can log in to Clarity -->
+											<core:choose>
+												<core:when test="${sessionID == null}">
+													<gel:log level="error" message="Cannot log in to Clarity with user ${xogUser}!"/>
+												</core:when>
+												<core:otherwise>
+													<core:if test="${ debug == 1 }">
+														<gel:log level="debug" message="Logged in with user: ${xogUser}"/>
+														<gel:log level="debug" message="Session ID: ${sessionID}"/>
+													</core:if>
+												</core:otherwise>
+											</core:choose>
+											<!-- Persistent varibles -->
+											<gel:persist scope="INSTANCE" value="${sessionID}" var="sessionID"/>
+											<gel:persist scope="INSTANCE" value="${debug}" var="debug"/>
+										</gel:script>
+									</scriptText>
+									<scriptParameter isSecure="false" name="xogUser" value="xog"/>
+								</customScript>
+								<Notifications notifyOwner="false">
+									<NotifyWhen stepActionInError="false" stepActionPerformed="false" value="0"/>
+									<Assignees/>
+								</Notifications>
+							</Action>
+						</Operations>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_NONE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_EXCLUSIVE_CHOICE">
+									<Condition note="Project not configured properly to use CPC" sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<nls description="Project not configured properly to use CPC" languageCode="ca" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="cs" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="da" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="de" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="en" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="es" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="fi" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="fr" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="hu" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="it" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="ja" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="ko" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="nl" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="no" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="pl" name="Project not configured properly to use CPC"/>
+										<nls description="Projeto não configurado para uso do CPC" languageCode="pt" name="Projeto não configurado para uso do CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="ru" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="sv" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="tr" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="zh" name="Project not configured properly to use CPC"/>
+										<nls description="Project not configured properly to use CPC" languageCode="zh_TW" name="Project not configured properly to use CPC"/>
+										<ExpressionText><![CDATA[( project.p.percent_calc_mode !=  lookup("PRJ_PERCENT_CALC_MODE", 0) ) ||  ( project.p.cpc_calc_method !=  lookup("CPC_CALC_METHODS", "DURATION") )]]></ExpressionText>
+										<Transitions>
+											<Transition to="Finish"/>
+										</Transitions>
+									</Condition>
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<ExpressionText><![CDATA[( project.p.percent_calc_mode ==  lookup("PRJ_PERCENT_CALC_MODE", 0) ) &&  ( project.p.cpc_calc_method ==  lookup("CPC_CALC_METHODS", "DURATION") )]]></ExpressionText>
+										<Transitions>
+											<Transition to="cpc_duration"/>
+										</Transitions>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+					<Step id="Finish" isMileStone="false" sequenceNo="2">
+						<nls languageCode="ca" name="Finish"/>
+						<nls languageCode="cs" name="Finish"/>
+						<nls languageCode="da" name="Finish"/>
+						<nls languageCode="de" name="Finish"/>
+						<nls languageCode="en" name="Finish"/>
+						<nls languageCode="es" name="Finish"/>
+						<nls languageCode="fi" name="Finish"/>
+						<nls languageCode="fr" name="Finish"/>
+						<nls languageCode="hu" name="Finish"/>
+						<nls languageCode="it" name="Finish"/>
+						<nls languageCode="ja" name="Finish"/>
+						<nls languageCode="ko" name="Finish"/>
+						<nls languageCode="nl" name="Finish"/>
+						<nls languageCode="no" name="Finish"/>
+						<nls languageCode="pl" name="Finish"/>
+						<nls languageCode="pt" name="Fim"/>
+						<nls languageCode="ru" name="Finish"/>
+						<nls languageCode="sv" name="Finish"/>
+						<nls languageCode="tr" name="Finish"/>
+						<nls languageCode="zh" name="Finish"/>
+						<nls languageCode="zh_TW" name="Finish"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations>
+							<Action code="cpc_logout" synchronized="true" type="BPM_SAT_CUSTOM">
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="ca" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="cs" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="da" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="de" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="en" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="es" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="fi" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="fr" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="hu" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="it" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="ja" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="ko" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="nl" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="no" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="pl" name="Logging Out"/>
+								<nls description="Atualiza cpc_update para 0 e encerra a sessão do Clarity" languageCode="pt" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="ru" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="sv" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="tr" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="zh" name="Logging Out"/>
+								<nls description="Set tasks cpc_update field to 0 and log out of Clarity" languageCode="zh_TW" name="Logging Out"/>
+								<customScript languageCode="gel">
+									<scriptText>
+										<gel:script xmlns:core="jelly:core" xmlns:email="jelly:email" xmlns:file="jelly:com.niku.union.gel.FileTagLibrary"
+                  xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary"
+                  xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sql="jelly:sql"
+                  xmlns:xog="http://www.niku.com/xog" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+											<!-- Setting the database -->
+											<core:catch var="connFail">
+												<gel:setDataSource dbId="Niku" var="database"/>
+											</core:catch>
+											<!-- Checking if database is available -->
+											<core:if test="${ connFail != null }">
+												<gel:log level="error" message="Database not available!"/>
+											</core:if>
+											<!-- Debugging -->
+											<core:if test="${ debug == 1 }">
+												<gel:log level="debug" message="Session ID: ${sessionID}"/>
+												<gel:log level="debug" message="Database Connection: ${database} | ${connFail}"/>
+											</core:if>
+											<!-- Capturing custom script output -->
+											<core:catch var="customScript">
+												<!-- Fetching active projects, no templates, which native calculation method is manual,  -->
+												<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
+												<sql:query dataSource="${database}" escapeText="false" var="project">
+													<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+				AND		inv.id = ${gel_objectInstanceId}
+		]]>
+												</sql:query>
+												<core:set value="${project.rows[0].id}" var="prj_id"/>
+												<core:set value="${project.rows[0].name}" var="prj_name"/>
+												<core:set value="${project.rows[0].code}" var="prj_code"/>
+												<core:if test="${ debug == 1 }">
+													<gel:log level="debug" message="Working with Project: ${prj_name} | ID: ${prj_id} | Code: ${prj_code}"/>
+												</core:if>
+												<!-- Fetching tasks that have been updated (task duration or % complete) -->
+												<sql:query dataSource="${database}" escapeText="false"
+                        var="tasks">
+													<![CDATA[
+			SELECT  tsk.prid,
+					tsk.prname,
+					tsk.prwbslevel,
+					tsk.prexternalid
+			FROM    prtask tsk
+			JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE   tsk.prprojectid = ?
+				AND tsk.pristask = 1
+				AND odf_tsk.cpc_update = 1
+			ORDER BY tsk.prwbssequence
+		]]>
+													<sql:param value="${prj_id}"/>
+												</sql:query>
+												<core:forEach items="${tasks.rows}" trim="true" var="row2">
+													<core:set value="${row2.prid}" var="tsk_id"/>
+													<core:set value="${row2.prname}" var="tsk_name"/>
+													<core:set value="${row2.prwbslevel}" var="tsk_outline_level"/>
+													<core:set value="${row2.prexternalid}" var="tsk_ext_id"/>
+													<core:if test="${ debug == 1 }">
+														<gel:log level="debug" message="Working with Task: ${tsk_name} | ID: ${tsk_id} | Level: ${tsk_outline_level} | External ID: ${tsk_ext_id}"/>
+													</core:if>
+													<!-- If the external ID is null, it's not possible to update the task through XOG, so I'm filling out this field before updating -->
+													<!-- I'm doing a direct database update, because there's no way to update only the task external ID through XOG -->
+													<core:if test="${ tsk_ext_id == null }">
+														<sql:update dataSource="${database}"
+                            escapeText="0">
+															<![CDATA[
+						UPDATE prtask SET prexternalid=? where prid=?
+					]]>
+															<sql:param value="${tsk_id}"/>
+															<sql:param value="${tsk_id}"/>
+															<core:set value="${tsk_id}" var="tsk_ext_id"/>
+															<core:if test="${ debug == 1 }">
+																<gel:log level="debug" message="Task External ID updated from null to ${tsk_id}"/>
+															</core:if>
+														</sql:update>
+													</core:if>
+													<!-- Creating xog write to update tasks -->
+													<gel:parse var="updateTasks">
+														<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_project.xsd">
+															<Header action="write" externalSource="NIKU" objectType="project" version="15.6.1.265"/>
+															<Projects>
+																<Project name="${prj_name}" projectID="${prj_code}">
+																	<Tasks>
+																		<Task internalTaskID="${tsk_id}" name="${tsk_name}" outlineLevel="${tsk_outline_level}" taskID="${tsk_ext_id}">
+																			<CustomInformation>
+																				<ColumnValue name="cpc_update">0</ColumnValue>
+																			</CustomInformation>
+																		</Task>
+																	</Tasks>
+																</Project>
+															</Projects>
+														</NikuDataBus>
+													</gel:parse>
+													<!-- Executing xog write -->
+													<soap:invoke endpoint="internal" var="result">
+														<soap:message>
+															<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xog="http://www.niku.com/xog">
+																<soapenv:Header>
+																	<xog:Auth>
+																		<xog:SessionID>${sessionID}</xog:SessionID>
+																	</xog:Auth>
+																</soapenv:Header>
+																<soapenv:Body>
+																	<gel:include select="$updateTasks"/>
+																</soapenv:Body>
+															</soapenv:Envelope>
+														</soap:message>
+													</soap:invoke>
+													<!-- Checking if xog returned any error -->
+													<gel:set asString="true" select="$result//Statistics/@failureRecords" var="failureRecs"/>
+													<core:if test="${failureRecs != '0'}">
+														<gel:log level="error" message="A Problem with the XOG happened!"/>
+														<gel:log level="error">Caught Exception was: <gel:expr select="$result"/>
+														</gel:log>
+													</core:if>
+												</core:forEach>
+											</core:catch>
+											<!-- Checking if custom script has returned any error -->
+											<core:if test="${ customScript != null }">
+												<gel:log level="error" message="Error: ${customScript}"/>
+											</core:if>
+											<!-- Logging out of Clarity -->
+											<soap:invoke endpoint="internal" var="logout">
+												<soap:message>
+													<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xog="http://www.niku.com/xog">
+														<soapenv:Header>
+															<xog:Auth>
+																<xog:SessionID>${sessionID}</xog:SessionID>
+															</xog:Auth>
+														</soapenv:Header>
+														<soapenv:Body>
+															<xog:Logout/>
+														</soapenv:Body>
+													</soapenv:Envelope>
+												</soap:message>
+											</soap:invoke>
+										</gel:script>
+									</scriptText>
+								</customScript>
+								<Notifications notifyOwner="false">
+									<NotifyWhen stepActionInError="false" stepActionPerformed="false" value="0"/>
+									<Assignees/>
+								</Notifications>
+							</Action>
+						</Operations>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_SIMPLE_MERGE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_SEQUENCE">
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<Transitions/>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+					<Step id="cpc_update_tasks" isMileStone="false" sequenceNo="3">
+						<nls languageCode="ca" name="Update Detail Tasks"/>
+						<nls languageCode="cs" name="Update Detail Tasks"/>
+						<nls languageCode="da" name="Update Detail Tasks"/>
+						<nls languageCode="de" name="Update Detail Tasks"/>
+						<nls description="Updates Days Complete for detail tasks" languageCode="en" name="Update Detail Tasks"/>
+						<nls languageCode="es" name="Update Detail Tasks"/>
+						<nls languageCode="fi" name="Update Detail Tasks"/>
+						<nls languageCode="fr" name="Update Detail Tasks"/>
+						<nls languageCode="hu" name="Update Detail Tasks"/>
+						<nls languageCode="it" name="Update Detail Tasks"/>
+						<nls languageCode="ja" name="Update Detail Tasks"/>
+						<nls languageCode="ko" name="Update Detail Tasks"/>
+						<nls languageCode="nl" name="Update Detail Tasks"/>
+						<nls languageCode="no" name="Update Detail Tasks"/>
+						<nls languageCode="pl" name="Update Detail Tasks"/>
+						<nls description="Atualiza os dias concluídos das tarefas" languageCode="pt" name="Atualiza tarefas"/>
+						<nls languageCode="ru" name="Update Detail Tasks"/>
+						<nls languageCode="sv" name="Update Detail Tasks"/>
+						<nls languageCode="tr" name="Update Detail Tasks"/>
+						<nls languageCode="zh" name="Update Detail Tasks"/>
+						<nls languageCode="zh_TW" name="Update Detail Tasks"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations>
+							<Action code="cpc_calc_days_complete" synchronized="true" type="BPM_SAT_CUSTOM">
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="ca" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="cs" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="da" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="de" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="en" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="es" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="fi" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="fr" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="hu" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="it" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="ja" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="ko" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="nl" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="no" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="pl" name="Calculate Days Complete"/>
+								<nls description="Calcula os dias concluídos das tarefas. Dias Concluídos = Duração * % Concluído" languageCode="pt" name="Calcular Dias Concluídos"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="ru" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="sv" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="tr" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="zh" name="Calculate Days Complete"/>
+								<nls description="Calculates Days Complete for detail tasks. Days Complete = Task Duration * % Complete" languageCode="zh_TW" name="Calculate Days Complete"/>
+								<customScript languageCode="gel">
+									<scriptText>
+										<gel:script xmlns:core="jelly:core" xmlns:email="jelly:email" xmlns:file="jelly:com.niku.union.gel.FileTagLibrary"
+                  xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary"
+                  xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sql="jelly:sql"
+                  xmlns:xog="http://www.niku.com/xog" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+											<!-- Setting the database -->
+											<core:catch var="connFail">
+												<gel:setDataSource dbId="Niku" var="database"/>
+											</core:catch>
+											<!-- Checking if database is available -->
+											<core:if test="${ connFail != null }">
+												<gel:log level="error" message="Database not available!"/>
+											</core:if>
+											<!-- Debugging -->
+											<core:if test="${ debug == 1 }">
+												<gel:log level="debug" message="Session ID: ${sessionID}"/>
+												<gel:log level="debug" message="Database Connection: ${database} | ${connFail}"/>
+											</core:if>
+											<!-- Capturing custom script output -->
+											<core:catch var="customScript">
+												<!-- Fetching active projects, no templates, which native calculation method is manual,  -->
+												<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
+												<sql:query dataSource="${database}" escapeText="false" var="project">
+													<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+				AND     inv.id = ${gel_objectInstanceId}
+		]]>
+												</sql:query>
+												<core:set value="${project.rows[0].id}" var="prj_id"/>
+												<core:set value="${project.rows[0].name}" var="prj_name"/>
+												<core:set value="${project.rows[0].code}" var="prj_code"/>
+												<core:if test="${ debug == 1 }">
+													<gel:log level="debug" message="Working with Project: ${prj_name} | ID: ${prj_id} | Code: ${prj_code}"/>
+												</core:if>
+												<!-- Fetching tasks that have been updated (task duration or % complete) -->
+												<sql:query dataSource="${database}" escapeText="false"
+                        var="tasks">
+													<![CDATA[
+			SELECT  tsk.prid,
+					tsk.prname,
+					tsk.prwbslevel,
+					tsk.prexternalid,
+					tsk.prduration,
+					ROUND(tsk.prduration * tsk.prpctcomplete, 2) days_complete
+			FROM    prtask tsk
+			JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE   tsk.prprojectid = ?
+				AND tsk.pristask = 1
+				AND odf_tsk.cpc_update = 1
+			ORDER BY tsk.prwbssequence
+		]]>
+													<sql:param value="${prj_id}"/>
+												</sql:query>
+												<core:forEach items="${tasks.rows}" trim="true" var="row2">
+													<core:set value="${row2.prid}" var="tsk_id"/>
+													<core:set value="${row2.prname}" var="tsk_name"/>
+													<core:set value="${row2.prwbslevel}" var="tsk_outline_level"/>
+													<core:set value="${row2.prexternalid}" var="tsk_ext_id"/>
+													<core:set value="${row2.prduration}" var="tsk_duration"/>
+													<core:set value="${row2.days_complete}" var="tsk_days_complete"/>
+													<core:if test="${ debug == 1 }">
+														<gel:log level="debug" message="Working with Task: ${tsk_name} | ID: ${tsk_id} | Level: ${tsk_outline_level} | External ID: ${tsk_ext_id} | Duration: ${tsk_duration} | Days Complete: ${tsk_days_complete}"/>
+													</core:if>
+													<!-- If the external ID is null, it's not possible to update the task through XOG, so I'm filling out this field before updating -->
+													<!-- I'm doing a direct database update, because there's no way to update only the task external ID through XOG -->
+													<core:if test="${ tsk_ext_id == null }">
+														<sql:update dataSource="${database}"
+                            escapeText="0">
+															<![CDATA[
+						UPDATE prtask SET prexternalid=? where prid=?
+					]]>
+															<sql:param value="${tsk_id}"/>
+															<sql:param value="${tsk_id}"/>
+															<core:set value="${tsk_id}" var="tsk_ext_id"/>
+														</sql:update>
+													</core:if>
+													<!-- Creating xog write to update tasks -->
+													<gel:parse var="updateTasks">
+														<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_project.xsd">
+															<Header action="write" externalSource="NIKU" objectType="project" version="15.6.1.265"/>
+															<Projects>
+																<Project name="${prj_name}" projectID="${prj_code}">
+																	<Tasks>
+																		<Task internalTaskID="${tsk_id}" name="${tsk_name}" outlineLevel="${tsk_outline_level}" taskID="${tsk_ext_id}">
+																			<CustomInformation>
+																				<ColumnValue name="cpc_days_complete">${tsk_days_complete}</ColumnValue>
+																				<ColumnValue name="cpc_duration">${tsk_duration}</ColumnValue>
+																			</CustomInformation>
+																		</Task>
+																	</Tasks>
+																</Project>
+															</Projects>
+														</NikuDataBus>
+													</gel:parse>
+													<!-- Executing xog write -->
+													<soap:invoke endpoint="internal" var="result">
+														<soap:message>
+															<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xog="http://www.niku.com/xog">
+																<soapenv:Header>
+																	<xog:Auth>
+																		<xog:SessionID>${sessionID}</xog:SessionID>
+																	</xog:Auth>
+																</soapenv:Header>
+																<soapenv:Body>
+																	<gel:include select="$updateTasks"/>
+																</soapenv:Body>
+															</soapenv:Envelope>
+														</soap:message>
+													</soap:invoke>
+													<!-- Checking if xog returned any error -->
+													<gel:set asString="true" select="$result//Statistics/@failureRecords" var="failureRecs"/>
+													<core:if test="${failureRecs != '0'}">
+														<gel:log level="error" message="A Problem with the XOG happened!"/>
+														<gel:log level="error">Caught Exception was: <gel:expr select="$result"/>
+														</gel:log>
+													</core:if>
+												</core:forEach>
+											</core:catch>
+											<!-- Checking if custom script has returned any error -->
+											<core:if test="${ customScript != null }">
+												<gel:log level="error" message="Error: ${customScript}"/>
+											</core:if>
+										</gel:script>
+									</scriptText>
+								</customScript>
+								<Notifications notifyOwner="false">
+									<NotifyWhen stepActionInError="false" stepActionPerformed="false" value="0"/>
+									<Assignees/>
+								</Notifications>
+							</Action>
+						</Operations>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_NONE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_SEQUENCE">
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<Transitions>
+											<Transition to="cpc_update_summary_tasks"/>
+										</Transitions>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+					<Step id="cpc_duration" isMileStone="false" sequenceNo="4">
+						<nls languageCode="ca" name="DURATION"/>
+						<nls languageCode="cs" name="DURATION"/>
+						<nls languageCode="da" name="DURATION"/>
+						<nls languageCode="de" name="DURATION"/>
+						<nls description="Calculation method = Duration" languageCode="en" name="DURATION"/>
+						<nls languageCode="es" name="DURATION"/>
+						<nls languageCode="fi" name="DURATION"/>
+						<nls languageCode="fr" name="DURATION"/>
+						<nls languageCode="hu" name="DURATION"/>
+						<nls languageCode="it" name="DURATION"/>
+						<nls languageCode="ja" name="DURATION"/>
+						<nls languageCode="ko" name="DURATION"/>
+						<nls languageCode="nl" name="DURATION"/>
+						<nls languageCode="no" name="DURATION"/>
+						<nls languageCode="pl" name="DURATION"/>
+						<nls description="Método de cálculo = Duração" languageCode="pt" name="DURAÇÃO"/>
+						<nls languageCode="ru" name="DURATION"/>
+						<nls languageCode="sv" name="DURATION"/>
+						<nls languageCode="tr" name="DURATION"/>
+						<nls languageCode="zh" name="DURATION"/>
+						<nls languageCode="zh_TW" name="DURATION"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations/>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_NONE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_SEQUENCE">
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<Transitions>
+											<Transition to="cpc_update_tasks"/>
+										</Transitions>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+					<Step id="cpc_update_summary_tasks" isMileStone="false" sequenceNo="5">
+						<nls description="Updates % Complete for summary tasks." languageCode="ca" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="cs" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="da" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="de" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="en" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="es" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="fi" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="fr" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="hu" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="it" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="ja" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="ko" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="nl" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="no" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="pl" name="Update Summary Tasks"/>
+						<nls description="Atualiza o % Concluído das tarefas agregadoras." languageCode="pt" name="Atualiza Tarefas Agregadoras"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="ru" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="sv" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="tr" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="zh" name="Update Summary Tasks"/>
+						<nls description="Updates % Complete for summary tasks." languageCode="zh_TW" name="Update Summary Tasks"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations>
+							<Action code="cpc_update_summary" synchronized="true" type="BPM_SAT_CUSTOM">
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="ca" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="cs" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="da" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="de" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="en" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="es" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="fi" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="fr" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="hu" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="it" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="ja" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="ko" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="nl" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="no" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="pl" name="Calculate Summary Tasks % Complete"/>
+								<nls
+              description="Calcula o % Concluído para tarefas agregadoras. % Concluído = Total Dias Concluídos das Filhas / Total Duração das Filhas"
+              languageCode="pt" name="Calcular % Concluído das Tarefas Agregadoras"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="ru" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="sv" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="tr" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="zh" name="Calculate Summary Tasks % Complete"/>
+								<nls description="Calculates % Complete for summary tasks. % Complete = Total Childs Days Complete / Total Childs Duration"
+              languageCode="zh_TW" name="Calculate Summary Tasks % Complete"/>
+								<customScript languageCode="gel">
+									<scriptText>
+										<gel:script xmlns:core="jelly:core" xmlns:email="jelly:email" xmlns:file="jelly:com.niku.union.gel.FileTagLibrary"
+                  xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary"
+                  xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sql="jelly:sql"
+                  xmlns:xog="http://www.niku.com/xog" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+											<!-- Setting the database -->
+											<core:catch var="connFail">
+												<gel:setDataSource dbId="Niku" var="database"/>
+											</core:catch>
+											<!-- Checking if database is available -->
+											<core:if test="${ connFail != null }">
+												<gel:log level="error" message="Database not available!"/>
+											</core:if>
+											<!-- Debugging -->
+											<core:if test="${ debug == 1 }">
+												<gel:log level="debug" message="Session ID: ${sessionID}"/>
+												<gel:log level="debug" message="Database Connection: ${database} | ${connFail}"/>
+											</core:if>
+											<!-- Capturing custom script output -->
+											<core:catch var="customScript">
+												<!-- Fetching active projects, no templates, which native calculation method is manual,  -->
+												<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
+												<!-- If there's no change on detail tasks, there's no need to update summary tasks -->
+												<sql:query dataSource="${database}" escapeText="false" var="project">
+													<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+				AND     inv.id = ${gel_objectInstanceId}
+		]]>
+												</sql:query>
+												<core:set value="${project.rows[0].id}" var="prj_id"/>
+												<core:set value="${project.rows[0].name}" var="prj_name"/>
+												<core:set value="${project.rows[0].code}" var="prj_code"/>
+												<core:set value="0" var="wbs_level"/>
+												<sql:query dataSource="${database}" escapeText="false"
+                        var="wbs">
+													<![CDATA[
+			SELECT MAX(prwbslevel) wbs_levels
+			FROM 	prtask
+			WHERE 	prprojectid = ?
+			AND 	pristask = 0
+		]]>
+													<sql:param value="${prj_id}"/>
+												</sql:query>
+												<core:set value="${wbs.rows[0].wbs_levels}" var="wbs_level"/>
+												<core:if test="${ debug == 1 }">
+													<gel:log level="debug" message="Working with Project: ${prj_name} | ID: ${prj_id} | Code: ${prj_code}"/>
+													<gel:log level="debug" message="This Gantt has ${wbs_level} levels of summary tasks"/>
+												</core:if>
+												<core:while test="${wbs_level > 0}">
+													<!-- Fetching only summary tasks that need to be updated -->
+													<sql:query dataSource="${database}" escapeText="false"
+                          var="tasks">
+														<![CDATA[
+				SELECT  gantt.parent_id,
+						gantt.parent_task,
+						gantt.prwbslevel,
+						gantt.prexternalid,
+						SUM(gantt.cpc_duration) prduration,
+						SUM(gantt.days_complete) days_complete,
+						CASE SUM(gantt.cpc_duration) WHEN 0 THEN 0 ELSE ROUND(SUM(gantt.days_complete) / SUM(gantt.cpc_duration), 2) END pct_complete
+				FROM (
+					SELECT  tsk.prprojectid,
+							parent_task.prid parent_id,
+							parent_task.prname parent_task,
+							parent_task.prwbslevel,
+							parent_task.prexternalid,
+							odf_tsk.cpc_duration,
+							cpc_days_complete days_complete
+					FROM        prtask tsk
+					LEFT JOIN   ( SELECT prid, prname, prprojectid, prwbssequence, pristask, prwbslevel, prexternalid
+								  FROM prtask ) parent_task    ON   parent_task.prwbssequence = tsk.wbs_parseq
+															   AND  parent_task.prprojectid = tsk.prprojectid
+															   AND  parent_task.pristask = 0
+					JOIN    odf_ca_task odf_tsk                ON   tsk.prid = odf_tsk.id
+					WHERE 	odf_tsk.cpc_exclude = 0 
+							AND tsk.prismilestone = 0
+					CONNECT BY PRIOR tsk.prid = parent_task.prid
+					START WITH parent_task.prid IS NULL
+					ORDER BY tsk. prwbssequence
+				) gantt
+				WHERE gantt.prprojectid = ?
+					  AND gantt.parent_id IS NOT NULL
+					  AND gantt.prwbslevel = ?
+				GROUP BY gantt.parent_id, gantt.parent_task, gantt.prwbslevel, gantt.prexternalid
+			]]>
+														<sql:param value="${prj_id}"/>
+														<sql:param value="${wbs_level}"/>
+													</sql:query>
+													<core:forEach items="${tasks.rows}" trim="true" var="row2">
+														<core:set value="${row2.parent_id}" var="tsk_id"/>
+														<core:set value="${row2.parent_task}" var="tsk_name"/>
+														<core:set value="${row2.prwbslevel}" var="tsk_outline_level"/>
+														<core:set value="${row2.prexternalid}" var="tsk_ext_id"/>
+														<core:set value="${row2.days_complete}" var="tsk_days_complete"/>
+														<core:set value="${row2.prduration}" var="tsk_duration"/>
+														<core:set value="${row2.pct_complete}" var="tsk_pctcomplete"/>
+														<core:if test="${ debug == 1 }">
+															<gel:log level="debug" message="Working with Summary Task: ${tsk_name} | ID: ${tsk_id} | Level: ${tsk_outline_level} | External ID: ${tsk_ext_id} | Duration: ${tsk_duration} | Days Complete: ${tsk_days_complete} | Pct Complete: ${tsk_pctcomplete}"/>
+														</core:if>
+														<!-- If the external ID is null, it's not possible to update the task through XOG, so I'm filling out this field before updating -->
+														<!-- I'm doing a direct database update, because there's no way to update only the task external ID through XOG -->
+														<core:if test="${ tsk_ext_id == null }">
+															<sql:update dataSource="${database}"
+                              escapeText="0">
+																<![CDATA[
+							UPDATE prtask SET prexternalid=? where prid=?
+						]]>
+																<sql:param value="${tsk_id}"/>
+																<sql:param value="${tsk_id}"/>
+																<core:set value="${tsk_id}" var="tsk_ext_id"/>
+																<core:if test="${ debug == 1 }">
+																	<gel:log level="debug" message="Task External ID updated from null to ${tsk_id}"/>
+																</core:if>
+															</sql:update>
+														</core:if>
+														<!-- Creating xog write to update tasks -->
+														<gel:parse var="updateTasks">
+															<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_project.xsd">
+																<Header action="write" externalSource="NIKU" objectType="project" version="15.6.1.265"/>
+																<Projects>
+																	<Project name="${prj_name}" projectID="${prj_code}">
+																		<Tasks>
+																			<Task internalTaskID="${tsk_id}" name="${tsk_name}" outlineLevel="${tsk_outline_level}"
+                                    percComp="${tsk_pctcomplete}" taskID="${tsk_ext_id}">
+																				<CustomInformation>
+																					<ColumnValue name="cpc_days_complete">${tsk_days_complete}</ColumnValue>
+																					<ColumnValue name="cpc_duration">${tsk_duration}</ColumnValue>
+																				</CustomInformation>
+																			</Task>
+																		</Tasks>
+																	</Project>
+																</Projects>
+															</NikuDataBus>
+														</gel:parse>
+														<!-- Executing xog write -->
+														<soap:invoke endpoint="internal" var="result">
+															<soap:message>
+																<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xog="http://www.niku.com/xog">
+																	<soapenv:Header>
+																		<xog:Auth>
+																			<xog:SessionID>${sessionID}</xog:SessionID>
+																		</xog:Auth>
+																	</soapenv:Header>
+																	<soapenv:Body>
+																		<gel:include select="$updateTasks"/>
+																	</soapenv:Body>
+																</soapenv:Envelope>
+															</soap:message>
+														</soap:invoke>
+														<!-- Checking if xog returned any error -->
+														<gel:set asString="true" select="$result//Statistics/@failureRecords" var="failureRecs"/>
+														<core:if test="${failureRecs != '0'}">
+															<gel:log level="error" message="A Problem with the XOG happened!"/>
+															<gel:log level="error">Caught Exception was: <gel:expr select="$result"/>
+															</gel:log>
+														</core:if>
+													</core:forEach>
+													<core:set value="${wbs_level - 1}" var="wbs_level"/>
+												</core:while>
+											</core:catch>
+											<!-- Checking if custom script has returned any error -->
+											<core:if test="${ customScript != null }">
+												<gel:log level="error" message="Error: ${customScript}"/>
+											</core:if>
+										</gel:script>
+									</scriptText>
+								</customScript>
+								<Notifications notifyOwner="false">
+									<NotifyWhen stepActionInError="false" stepActionPerformed="false" value="0"/>
+									<Assignees/>
+								</Notifications>
+							</Action>
+						</Operations>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_NONE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_SEQUENCE">
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<Transitions>
+											<Transition to="cpc_update_project"/>
+										</Transitions>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+					<Step id="cpc_update_project" isMileStone="false" sequenceNo="6">
+						<nls languageCode="ca" name="Update Project"/>
+						<nls languageCode="cs" name="Update Project"/>
+						<nls languageCode="da" name="Update Project"/>
+						<nls languageCode="de" name="Update Project"/>
+						<nls description="Updates % Complete for projects" languageCode="en" name="Update Project"/>
+						<nls languageCode="es" name="Update Project"/>
+						<nls languageCode="fi" name="Update Project"/>
+						<nls languageCode="fr" name="Update Project"/>
+						<nls languageCode="hu" name="Update Project"/>
+						<nls languageCode="it" name="Update Project"/>
+						<nls languageCode="ja" name="Update Project"/>
+						<nls languageCode="ko" name="Update Project"/>
+						<nls languageCode="nl" name="Update Project"/>
+						<nls languageCode="no" name="Update Project"/>
+						<nls languageCode="pl" name="Update Project"/>
+						<nls description="Atualiza o % Concluído do projeto" languageCode="pt" name="Atualiza Projeto"/>
+						<nls languageCode="ru" name="Update Project"/>
+						<nls languageCode="sv" name="Update Project"/>
+						<nls languageCode="tr" name="Update Project"/>
+						<nls languageCode="zh" name="Update Project"/>
+						<nls languageCode="zh_TW" name="Update Project"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations>
+							<Action code="cpc_update_prj" synchronized="true" type="BPM_SAT_CUSTOM">
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="ca" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="cs" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="da" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="de" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for the project. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="en" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="es" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="fi" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="fr" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="hu" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="it" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="ja" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="ko" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="nl" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="no" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="pl" name="Calculate Project % Complete"/>
+								<nls description="Calcula o % Concluído do projeto. % Concluído = Total Dias Concluídos Nível 1 / Duração Total Nível 1" languageCode="pt" name="Calcula % Concluído do Projeto"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="ru" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="sv" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="tr" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="zh" name="Calculate Project % Complete"/>
+								<nls description="Calculates % Complete for projects. % Complete = Total Level 1 Tasks Days Complete / Total Level 1 Tasks Duration"
+              languageCode="zh_TW" name="Calculate Project % Complete"/>
+								<customScript languageCode="gel">
+									<scriptText>
+										<gel:script xmlns:core="jelly:core" xmlns:email="jelly:email" xmlns:file="jelly:com.niku.union.gel.FileTagLibrary"
+                  xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary"
+                  xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sql="jelly:sql"
+                  xmlns:xog="http://www.niku.com/xog" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+											<!-- Setting the database -->
+											<core:catch var="connFail">
+												<gel:setDataSource dbId="Niku" var="database"/>
+											</core:catch>
+											<!-- Checking if database is available -->
+											<core:if test="${ connFail != null }">
+												<gel:log level="error" message="Database not available!"/>
+											</core:if>
+											<!-- Debugging -->
+											<core:if test="${ debug == 1 }">
+												<gel:log level="debug" message="Session ID: ${sessionID}"/>
+												<gel:log level="debug" message="Database Connection: ${database} | ${connFail}"/>
+											</core:if>
+											<!-- Capturing custom script output -->
+											<core:catch var="customScript">
+												<!-- Fetching active projects, no templates, which native calculation method is manual,  -->
+												<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
+												<!-- If there's no change on detail tasks, there's no need to update the project % complete -->
+												<sql:query dataSource="${database}" escapeText="false" var="project">
+													<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+				AND		inv.id = ${gel_objectInstanceId}
+		]]>
+												</sql:query>
+												<core:set value="${project.rows[0].id}" var="prj_id"/>
+												<core:set value="${project.rows[0].name}" var="prj_name"/>
+												<core:set value="${project.rows[0].code}" var="prj_code"/>
+												<sql:query dataSource="${database}" escapeText="false"
+                        var="prj_cpc">
+													<![CDATA[
+			SELECT  CASE SUM(tsk.prduration) WHEN 0 THEN 0 ELSE ROUND(SUM(odf_tsk.cpc_days_complete) / SUM(odf_tsk.cpc_duration), 2) END pct_complete
+			FROM    prtask tsk
+			JOIN    odf_ca_task odf_tsk ON tsk.prid = odf_tsk.id
+			WHERE   tsk.prwbslevel = 1
+				AND odf_tsk.cpc_exclude = 0
+				AND tsk.prprojectid = ?
+				AND tsk.prismilestone = 0
+		]]>
+													<sql:param value="${prj_id}"/>
+												</sql:query>
+												<core:set value="${prj_cpc.rows[0].pct_complete}" var="prj_pctcomplete"/>
+												<core:if test="${ debug == 1 }">
+													<gel:log level="debug" message="Working with Project: ${prj_name} | ID: ${prj_id} | Code: ${prj_code} | Pct Complete: ${prj_pctcomplete}"/>
+												</core:if>
+												<!-- Creating xog write to update the Project % Complete -->
+												<gel:parse var="updateProject">
+													<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_project.xsd">
+														<Header action="write" externalSource="NIKU" objectType="project" version="15.6.1.265"/>
+														<Projects>
+															<Project name="${prj_name}" percentComplete="${prj_pctcomplete}" projectID="${prj_code}"/>
+														</Projects>
+													</NikuDataBus>
+												</gel:parse>
+												<!-- Executing xog write -->
+												<soap:invoke endpoint="internal" var="result">
+													<soap:message>
+														<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xog="http://www.niku.com/xog">
+															<soapenv:Header>
+																<xog:Auth>
+																	<xog:SessionID>${sessionID}</xog:SessionID>
+																</xog:Auth>
+															</soapenv:Header>
+															<soapenv:Body>
+																<gel:include select="$updateProject"/>
+															</soapenv:Body>
+														</soapenv:Envelope>
+													</soap:message>
+												</soap:invoke>
+												<!-- Checking if xog returned any error -->
+												<gel:set asString="true" select="$result//Statistics/@failureRecords" var="failureRecs"/>
+												<core:if test="${failureRecs != '0'}">
+													<gel:log level="error" message="A Problem with the XOG happened!"/>
+													<gel:log level="error">Caught Exception was: <gel:expr select="$result"/>
+													</gel:log>
+												</core:if>
+											</core:catch>
+											<!-- Checking if custom script has returned any error -->
+											<core:if test="${ customScript != null }">
+												<gel:log level="error" message="Error: ${customScript}"/>
+											</core:if>
+										</gel:script>
+									</scriptText>
+								</customScript>
+								<Notifications notifyOwner="false">
+									<NotifyWhen stepActionInError="false" stepActionPerformed="false" value="0"/>
+									<Assignees/>
+								</Notifications>
+							</Action>
+						</Operations>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_NONE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_SEQUENCE">
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<Transitions>
+											<Transition to="Finish"/>
+										</Transitions>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+				</Steps>
+				<Groups/>
+				<OBSAssocs complete="false"/>
+			</Process>
 			<Process allowOneRunningInstance="true" code="cpc_calc_duration" createdBy="admin" endStep="Finish" source="customer" startOption="ON_DEMAND" startStep="Start">
 				<nls languageCode="ca" name="CPC - Calculate Custom % Complete - DURATION"/>
 				<nls languageCode="cs" name="CPC - Calculate Custom % Complete - DURATION"/>
@@ -310,7 +1470,7 @@
 													</core:if>
 												</core:otherwise>
 											</core:choose>
-											<!-- Persistent variables -->
+											<!-- Persistent varibles -->
 											<gel:persist scope="INSTANCE" value="${sessionID}" var="sessionID"/>
 											<gel:persist scope="INSTANCE" value="${debug}" var="debug"/>
 										</gel:script>
@@ -413,23 +1573,23 @@
 												<!-- Fetching active projects, no templates, which native calculation method is manual,  -->
 												<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
 												<sql:query dataSource="${database}" escapeText="false" var="projects">
-												<![CDATA[
-													SELECT DISTINCT 
-																inv.id,
-																inv.name,
-																inv.code
-													FROM        inv_projects prj
-														JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
-														JOIN    inv_investments inv     ON prj.prid = inv.id
-														JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
-														JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
-													WHERE       prj.is_template = 0 
-														AND     inv.odf_object_code = 'project' 
-														AND     inv.is_active = 1
-														AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
-														AND     odf_tsk.cpc_update = 1
-														AND     tsk.pristask = 1
-												]]>
+													<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+		]]>
 												</sql:query>
 												<core:forEach items="${projects.rows}" trim="true" var="row">
 													<core:set value="${row.id}" var="prj_id"/>
@@ -441,18 +1601,18 @@
 													<!-- Fetching tasks that have been updated (task duration or % complete) -->
 													<sql:query dataSource="${database}" escapeText="false"
                           var="tasks">
-													<![CDATA[
-														SELECT  tsk.prid,
-																tsk.prname,
-																tsk.prwbslevel,
-																tsk.prexternalid
-														FROM    prtask tsk
-														JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
-														WHERE   tsk.prprojectid = ?
-															AND tsk.pristask = 1
-															AND odf_tsk.cpc_update = 1
-														ORDER BY tsk.prwbssequence
-													]]>
+														<![CDATA[
+				SELECT  tsk.prid,
+						tsk.prname,
+						tsk.prwbslevel,
+						tsk.prexternalid
+				FROM    prtask tsk
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+				WHERE   tsk.prprojectid = ?
+					AND tsk.pristask = 1
+					AND odf_tsk.cpc_update = 1
+				ORDER BY tsk.prwbssequence
+			]]>
 														<sql:param value="${prj_id}"/>
 													</sql:query>
 													<core:forEach items="${tasks.rows}" trim="true" var="row2">
@@ -469,8 +1629,8 @@
 															<sql:update dataSource="${database}"
                               escapeText="0">
 																<![CDATA[
-																	UPDATE prtask SET prexternalid=? where prid=?
-																]]>
+							UPDATE prtask SET prexternalid=? where prid=?
+						]]>
 																<sql:param value="${tsk_id}"/>
 																<sql:param value="${tsk_id}"/>
 																<core:set value="${tsk_id}" var="tsk_ext_id"/>
@@ -637,23 +1797,23 @@
 												<!-- Fetching active projects, no templates, which native calculation method is manual,  -->
 												<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
 												<sql:query dataSource="${database}" escapeText="false" var="projects">
-												<![CDATA[
-													SELECT DISTINCT 
-																inv.id,
-																inv.name,
-																inv.code
-													FROM        inv_projects prj
-														JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
-														JOIN    inv_investments inv     ON prj.prid = inv.id
-														JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
-														JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
-													WHERE       prj.is_template = 0 
-														AND     inv.odf_object_code = 'project' 
-														AND     inv.is_active = 1
-														AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
-														AND     odf_tsk.cpc_update = 1
-														AND     tsk.pristask = 1
-												]]>
+													<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+		]]>
 												</sql:query>
 												<core:forEach items="${projects.rows}" trim="true" var="row">
 													<core:set value="${row.id}" var="prj_id"/>
@@ -665,20 +1825,20 @@
 													<!-- Fetching tasks that have been updated (task duration or % complete) -->
 													<sql:query dataSource="${database}" escapeText="false"
                           var="tasks">
-													<![CDATA[
-														SELECT  tsk.prid,
-																tsk.prname,
-																tsk.prwbslevel,
-																tsk.prexternalid,
-																tsk.prduration,
-																ROUND(tsk.prduration * tsk.prpctcomplete, 2) days_complete
-														FROM    prtask tsk
-														JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
-														WHERE   tsk.prprojectid = ?
-															AND tsk.pristask = 1
-															AND odf_tsk.cpc_update = 1
-														ORDER BY tsk.prwbssequence
-													]]>
+														<![CDATA[
+				SELECT  tsk.prid,
+						tsk.prname,
+						tsk.prwbslevel,
+						tsk.prexternalid,
+						tsk.prduration,
+						ROUND(tsk.prduration * tsk.prpctcomplete, 2) days_complete
+				FROM    prtask tsk
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+				WHERE   tsk.prprojectid = ?
+					AND tsk.pristask = 1
+					AND odf_tsk.cpc_update = 1
+				ORDER BY tsk.prwbssequence
+			]]>
 														<sql:param value="${prj_id}"/>
 													</sql:query>
 													<core:forEach items="${tasks.rows}" trim="true" var="row2">
@@ -697,8 +1857,8 @@
 															<sql:update dataSource="${database}"
                               escapeText="0">
 																<![CDATA[
-																	UPDATE prtask SET prexternalid=? where prid=?
-																]]>
+							UPDATE prtask SET prexternalid=? where prid=?
+						]]>
 																<sql:param value="${tsk_id}"/>
 																<sql:param value="${tsk_id}"/>
 																<core:set value="${tsk_id}" var="tsk_ext_id"/>
@@ -854,23 +2014,23 @@
 												<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
 												<!-- If there's no change on detail tasks, there's no need to update summary tasks -->
 												<sql:query dataSource="${database}" escapeText="false" var="projects">
-												<![CDATA[
-													SELECT DISTINCT 
-																inv.id,
-																inv.name,
-																inv.code
-													FROM        inv_projects prj
-														JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
-														JOIN    inv_investments inv     ON prj.prid = inv.id
-														JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
-														JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
-													WHERE       prj.is_template = 0 
-														AND     inv.odf_object_code = 'project' 
-														AND     inv.is_active = 1
-														AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
-														AND     odf_tsk.cpc_update = 1
-														AND     tsk.pristask = 1
-												]]>
+													<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+		]]>
 												</sql:query>
 												<core:forEach items="${projects.rows}" trim="true" var="row">
 													<core:set value="${row.id}" var="prj_id"/>
@@ -879,12 +2039,12 @@
 													<core:set value="0" var="wbs_level"/>
 													<sql:query dataSource="${database}" escapeText="false"
                           var="wbs">
-													<![CDATA[
-														SELECT MAX(prwbslevel) wbs_levels
-														FROM 	prtask
-														WHERE 	prprojectid = ?
-														AND 	pristask = 0
-													]]>
+														<![CDATA[
+				SELECT MAX(prwbslevel) wbs_levels
+				FROM 	prtask
+				WHERE 	prprojectid = ?
+				AND 	pristask = 0
+			]]>
 														<sql:param value="${prj_id}"/>
 													</sql:query>
 													<core:set value="${wbs.rows[0].wbs_levels}" var="wbs_level"/>
@@ -896,39 +2056,39 @@
 														<!-- Fetching only summary tasks that need to be updated -->
 														<sql:query dataSource="${database}" escapeText="false"
                             var="tasks">
-														<![CDATA[
-															SELECT  gantt.parent_id,
-																	gantt.parent_task,
-																	gantt.prwbslevel,
-																	gantt.prexternalid,
-																	SUM(gantt.cpc_duration) prduration,
-																	SUM(gantt.days_complete) days_complete,
-																	CASE SUM(gantt.cpc_duration) WHEN 0 THEN 0 ELSE ROUND(SUM(gantt.days_complete) / SUM(gantt.cpc_duration), 2) END pct_complete
-															FROM (
-																SELECT  tsk.prprojectid,
-																		parent_task.prid parent_id,
-																		parent_task.prname parent_task,
-																		parent_task.prwbslevel,
-																		parent_task.prexternalid,
-																		odf_tsk.cpc_duration,
-																		cpc_days_complete days_complete
-																FROM        prtask tsk
-																LEFT JOIN   ( SELECT prid, prname, prprojectid, prwbssequence, pristask, prwbslevel, prexternalid
-																			  FROM prtask ) parent_task    ON   parent_task.prwbssequence = tsk.wbs_parseq
-																										   AND  parent_task.prprojectid = tsk.prprojectid
-																										   AND  parent_task.pristask = 0
-																JOIN    odf_ca_task odf_tsk                ON   tsk.prid = odf_tsk.id
-																WHERE 	odf_tsk.cpc_exclude = 0 
-																		AND tsk.prismilestone = 0
-																CONNECT BY PRIOR tsk.prid = parent_task.prid
-																START WITH parent_task.prid IS NULL
-																ORDER BY tsk. prwbssequence
-															) gantt
-															WHERE gantt.prprojectid = ?
-																  AND gantt.parent_id IS NOT NULL
-																  AND gantt.prwbslevel = ?
-															GROUP BY gantt.parent_id, gantt.parent_task, gantt.prwbslevel, gantt.prexternalid
-														]]>
+															<![CDATA[
+					SELECT  gantt.parent_id,
+							gantt.parent_task,
+							gantt.prwbslevel,
+							gantt.prexternalid,
+							SUM(gantt.cpc_duration) prduration,
+							SUM(gantt.days_complete) days_complete,
+							CASE SUM(gantt.cpc_duration) WHEN 0 THEN 0 ELSE ROUND(SUM(gantt.days_complete) / SUM(gantt.cpc_duration), 2) END pct_complete
+					FROM (
+						SELECT  tsk.prprojectid,
+								parent_task.prid parent_id,
+								parent_task.prname parent_task,
+								parent_task.prwbslevel,
+								parent_task.prexternalid,
+								odf_tsk.cpc_duration,
+								cpc_days_complete days_complete
+						FROM        prtask tsk
+						LEFT JOIN   ( SELECT prid, prname, prprojectid, prwbssequence, pristask, prwbslevel, prexternalid
+									  FROM prtask ) parent_task    ON   parent_task.prwbssequence = tsk.wbs_parseq
+																   AND  parent_task.prprojectid = tsk.prprojectid
+																   AND  parent_task.pristask = 0
+						JOIN    odf_ca_task odf_tsk                ON   tsk.prid = odf_tsk.id
+						WHERE 	odf_tsk.cpc_exclude = 0 
+								AND tsk.prismilestone = 0
+						CONNECT BY PRIOR tsk.prid = parent_task.prid
+						START WITH parent_task.prid IS NULL
+						ORDER BY tsk. prwbssequence
+					) gantt
+					WHERE gantt.prprojectid = ?
+						  AND gantt.parent_id IS NOT NULL
+						  AND gantt.prwbslevel = ?
+					GROUP BY gantt.parent_id, gantt.parent_task, gantt.prwbslevel, gantt.prexternalid
+				]]>
 															<sql:param value="${prj_id}"/>
 															<sql:param value="${wbs_level}"/>
 														</sql:query>
@@ -949,8 +2109,8 @@
 																<sql:update dataSource="${database}"
                                 escapeText="0">
 																	<![CDATA[
-																		UPDATE prtask SET prexternalid=? where prid=?
-																	]]>
+								UPDATE prtask SET prexternalid=? where prid=?
+							]]>
 																	<sql:param value="${tsk_id}"/>
 																	<sql:param value="${tsk_id}"/>
 																	<core:set value="${tsk_id}" var="tsk_ext_id"/>
@@ -1112,23 +2272,23 @@
 												<!-- custom calculation method is duration and have updates on DETAIL task duration or % complete -->
 												<!-- If there's no change on detail tasks, there's no need to update the project % complete -->
 												<sql:query dataSource="${database}" escapeText="false" var="projects">
-												<![CDATA[
-													SELECT DISTINCT 
-																inv.id,
-																inv.name,
-																inv.code
-													FROM        inv_projects prj
-														JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
-														JOIN    inv_investments inv     ON prj.prid = inv.id
-														JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
-														JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
-													WHERE       prj.is_template = 0 
-														AND     inv.odf_object_code = 'project' 
-														AND     inv.is_active = 1
-														AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
-														AND     odf_tsk.cpc_update = 1
-														AND     tsk.pristask = 1
-												]]>
+													<![CDATA[
+			SELECT DISTINCT 
+						inv.id,
+						inv.name,
+						inv.code
+			FROM        inv_projects prj
+				JOIN    odf_ca_project odf_prj  ON prj.prid = odf_prj.id
+				JOIN    inv_investments inv     ON prj.prid = inv.id
+				JOIN    prtask tsk              ON prj.prid = tsk.prprojectid
+				JOIN    odf_ca_task odf_tsk     ON tsk.prid = odf_tsk.id
+			WHERE       prj.is_template = 0 
+				AND     inv.odf_object_code = 'project' 
+				AND     inv.is_active = 1
+				AND     (prj.percent_calc_mode = 0 AND odf_prj.cpc_calc_method = 'DURATION')
+				AND     odf_tsk.cpc_update = 1
+				AND     tsk.pristask = 1
+		]]>
 												</sql:query>
 												<core:forEach items="${projects.rows}" trim="true" var="row">
 													<core:set value="${row.id}" var="prj_id"/>
@@ -1137,14 +2297,14 @@
 													<sql:query dataSource="${database}" escapeText="false"
                           var="prj_cpc">
 														<![CDATA[
-															SELECT  CASE SUM(tsk.prduration) WHEN 0 THEN 0 ELSE ROUND(SUM(odf_tsk.cpc_days_complete) / SUM(odf_tsk.cpc_duration), 2) END pct_complete
-															FROM    prtask tsk
-															JOIN    odf_ca_task odf_tsk ON tsk.prid = odf_tsk.id
-															WHERE   tsk.prwbslevel = 1
-																AND odf_tsk.cpc_exclude = 0
-																AND tsk.prprojectid = ?
-																AND tsk.prismilestone = 0
-														]]>
+				SELECT  CASE SUM(tsk.prduration) WHEN 0 THEN 0 ELSE ROUND(SUM(odf_tsk.cpc_days_complete) / SUM(odf_tsk.cpc_duration), 2) END pct_complete
+				FROM    prtask tsk
+				JOIN    odf_ca_task odf_tsk ON tsk.prid = odf_tsk.id
+				WHERE   tsk.prwbslevel = 1
+					AND odf_tsk.cpc_exclude = 0
+					AND tsk.prprojectid = ?
+					AND tsk.prismilestone = 0
+			]]>
 														<sql:param value="${prj_id}"/>
 													</sql:query>
 													<core:set value="${prj_cpc.rows[0].pct_complete}" var="prj_pctcomplete"/>
@@ -1249,12 +2409,14 @@
 					<nls description="Lav" languageCode="da" name="Lav"/>
 					<nls description="Niedrig" languageCode="de" name="Niedrig"/>
 					<nls description="Low" languageCode="en" name="Low"/>
+					<nls description="低" languageCode="ja" name="低"/>
+					<nls description="Düşük" languageCode="tr" name="Düşük"/>
+					<nls description="低" languageCode="zh_TW" name="低"/>
 					<nls description="Bajo" languageCode="es" name="Bajo"/>
 					<nls description="Matala" languageCode="fi" name="Matala"/>
 					<nls description="Faible" languageCode="fr" name="Faible"/>
 					<nls description="Alacsony" languageCode="hu" name="Alacsony"/>
 					<nls description="Bassa" languageCode="it" name="Bassa"/>
-					<nls description="低" languageCode="ja" name="低"/>
 					<nls description="낮음" languageCode="ko" name="낮음"/>
 					<nls description="Laag" languageCode="nl" name="Laag"/>
 					<nls description="Lav" languageCode="no" name="Lav"/>
@@ -1262,9 +2424,7 @@
 					<nls description="Baixo" languageCode="pt" name="Baixo"/>
 					<nls description="Низкий" languageCode="ru" name="Низкий"/>
 					<nls description="Låg" languageCode="sv" name="Låg"/>
-					<nls description="Düşük" languageCode="tr" name="Düşük"/>
 					<nls description="低" languageCode="zh" name="低"/>
-					<nls description="低" languageCode="zh_TW" name="低"/>
 				</lookupValue>
 				<lookupValue code="CAL_MEDIUM" sortOrder="2" status="active">
 					<nls description="Medi" languageCode="ca" name="Medi"/>
