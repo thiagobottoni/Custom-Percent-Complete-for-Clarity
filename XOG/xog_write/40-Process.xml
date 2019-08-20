@@ -391,17 +391,13 @@
 										<nls description="Project not configured properly to use CPC" languageCode="tr" name="Project not configured properly to use CPC"/>
 										<nls description="Project not configured properly to use CPC" languageCode="zh" name="Project not configured properly to use CPC"/>
 										<nls description="Project not configured properly to use CPC" languageCode="zh_TW" name="Project not configured properly to use CPC"/>
-										<ExpressionText>
-											<![CDATA[( project.p.percent_calc_mode !=  lookup("PRJ_PERCENT_CALC_MODE", 0) ) ||  ( project.p.cpc_calc_method !=  lookup("CPC_CALC_METHODS", "DURATION") )]]>
-										</ExpressionText>
+										<ExpressionText><![CDATA[( project.p.percent_calc_mode !=  lookup("PRJ_PERCENT_CALC_MODE", 0) ) ||  ( project.p.cpc_calc_method !=  lookup("CPC_CALC_METHODS", "DURATION") )]]></ExpressionText>
 										<Transitions>
 											<Transition to="Finish"/>
 										</Transitions>
 									</Condition>
 									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
-										<ExpressionText>
-											<![CDATA[( project.p.percent_calc_mode ==  lookup("PRJ_PERCENT_CALC_MODE", 0) ) &&  ( project.p.cpc_calc_method ==  lookup("CPC_CALC_METHODS", "DURATION") )]]>
-										</ExpressionText>
+										<ExpressionText><![CDATA[( project.p.percent_calc_mode ==  lookup("PRJ_PERCENT_CALC_MODE", 0) ) &&  ( project.p.cpc_calc_method ==  lookup("CPC_CALC_METHODS", "DURATION") )]]></ExpressionText>
 										<Transitions>
 											<Transition to="cpc_duration"/>
 										</Transitions>
@@ -2485,10 +2481,4 @@
 			</staticLookup>
 		</lookups>
 	</contentPack>
-	<XOGOutput>
-		<Object type="contentPack"/>
-		<Status state="SUCCESS"/>
-		<Statistics insertedRecords="0" failureRecords="0" totalNumberOfRecords="4" updatedRecords="0"/>
-		<Records/>
-	</XOGOutput>
 </NikuDataBus>
